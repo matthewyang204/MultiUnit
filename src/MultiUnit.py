@@ -7,9 +7,12 @@ def splash():
     print("--------------------------------")
 
 def mainmenu():
+    # Print ou the options and messages
     print("What type of unit do you want to convert?")
+    print("0. Quit")
 
 def cfmlfm(x):
+    # Convert CFM to LFM if the input is 1
     if x == 1:
         cfm = input("Enter your CFM here: ")
         cfmint = int(cfm)
@@ -18,6 +21,7 @@ def cfmlfm(x):
         lfm = cfmint/areaint
         print("LFM = " + str(lfm))
     
+    # COnvert LFM to CFM if the input is 2
     elif x == 2:
         lfm = input("Enter your LFM here: ")
         lfmint = int(lfm)
@@ -28,3 +32,7 @@ def cfmlfm(x):
 
 # Display the welcome splash screen
 splash()
+
+# Forever loop that loops until user exits with the "quit" option
+while True:
+    mainmenu()
