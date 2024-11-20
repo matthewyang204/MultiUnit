@@ -7,9 +7,15 @@ def splash():
     print("--------------------------------")
 
 def mainmenu():
-    # Print ou the options and messages
+    # Print out the options
     print("What type of unit do you want to convert?")
     print("0. Quit")
+    option = int(input("Enter a number:"))
+    
+    # Conditional loops to parse user feedback
+    if option == 0:
+        print("Exiting...")
+        exit()
 
 def cfmlfm(x):
     # Convert CFM to LFM if the input is 1
