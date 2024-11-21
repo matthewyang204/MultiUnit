@@ -1,6 +1,6 @@
 # MultiUnit
- A simple unit converter written in Python that uses a simple CLI menu
+ A simple unit converter written in Visual Basic
 
- MultiUnit is navigated through menus in a simple CLI interface. It's pretty self-explanatory.
+ This app has a pretty self-explanatory GUI.
 
- This project is under development.
+ This project is under heavy development.
