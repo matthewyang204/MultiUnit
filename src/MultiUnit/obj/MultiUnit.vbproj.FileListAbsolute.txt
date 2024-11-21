@@ -1,4 +1,0 @@
-C:\Users\matth\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\matth\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.MultiUnit.resources
-C:\Users\matth\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.Resources.resources
-C:\Users\matth\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.vbproj.GenerateResource.Cache
