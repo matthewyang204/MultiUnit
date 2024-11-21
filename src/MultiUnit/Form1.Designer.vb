@@ -25,6 +25,7 @@ Partial Class MultiUnit
         Me.Input = New System.Windows.Forms.TextBox
         Me.inputmessage = New System.Windows.Forms.Label
         Me.UnitCategorySelector = New System.Windows.Forms.ComboBox
+        Me.UnitSelectionBox = New System.Windows.Forms.ComboBox
         Me.SuspendLayout()
         '
         'Input
@@ -56,13 +57,24 @@ Partial Class MultiUnit
         Me.UnitCategorySelector.Name = "UnitCategorySelector"
         Me.UnitCategorySelector.Size = New System.Drawing.Size(329, 57)
         Me.UnitCategorySelector.TabIndex = 2
-        Me.UnitCategorySelector.Text = "Unit"
+        Me.UnitCategorySelector.Text = "Unit Category"
+        '
+        'UnitSelectionBox
+        '
+        Me.UnitSelectionBox.Font = New System.Drawing.Font("Calibri", 15.0!)
+        Me.UnitSelectionBox.FormattingEnabled = True
+        Me.UnitSelectionBox.Location = New System.Drawing.Point(834, 323)
+        Me.UnitSelectionBox.Name = "UnitSelectionBox"
+        Me.UnitSelectionBox.Size = New System.Drawing.Size(428, 57)
+        Me.UnitSelectionBox.TabIndex = 3
+        Me.UnitSelectionBox.Text = "Units"
         '
         'MultiUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2363, 1193)
+        Me.Controls.Add(Me.UnitSelectionBox)
         Me.Controls.Add(Me.UnitCategorySelector)
         Me.Controls.Add(Me.inputmessage)
         Me.Controls.Add(Me.Input)
@@ -75,5 +87,6 @@ Partial Class MultiUnit
     Friend WithEvents Input As System.Windows.Forms.TextBox
     Friend WithEvents inputmessage As System.Windows.Forms.Label
     Friend WithEvents UnitCategorySelector As System.Windows.Forms.ComboBox
+    Friend WithEvents UnitSelectionBox As System.Windows.Forms.ComboBox
 
 End Class

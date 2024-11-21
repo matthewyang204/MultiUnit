@@ -1,5 +1,19 @@
 Public Class MultiUnit
 
+    Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        If UnitCategorySelector.Items.Count > 0 Then
+            UnitCategorySelector.SelectedIndex = 0
+        End If
+
+        If UnitSelectionBox.Items.Count > 0 Then
+            UnitSelectionBox.SelectedIndex = 0
+        End If
+
+        Me.Controls.Add(UnitCategorySelector)
+        Me.Controls.Add(UnitSelectionBox)
+    End Sub
+
     Private Sub UnitCategorySelector_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UnitCategorySelector.SelectedIndexChanged
         UnitSelectionBox.Items.Clear()
 
