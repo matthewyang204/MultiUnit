@@ -10,12 +10,18 @@ def mainmenu():
     # Print out the options
     print("What type of unit do you want to convert?")
     print("0. Quit")
+    print("1. Temperature")
     option = int(input("Enter a number:"))
     
     # Conditional loops to parse user feedback
     if option == 0:
         print("Exiting...")
         exit()
+    
+    elif option == 1:
+        print("Which units do you want to convert?")
+        print("1. Celsius -> Fahrenheit")
+        print("2. Fahrenheit -> Celsius")
 
 def cfmlfm(x):
     # Convert CFM to LFM if the input is 1
