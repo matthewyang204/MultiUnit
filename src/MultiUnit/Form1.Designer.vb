@@ -27,6 +27,9 @@ Partial Class MultiUnit
         Me.UnitCategorySelector = New System.Windows.Forms.ComboBox
         Me.UnitSelectionBox = New System.Windows.Forms.ComboBox
         Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'Input
@@ -74,17 +77,48 @@ Partial Class MultiUnit
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(782, 251)
+        Me.Label1.Location = New System.Drawing.Point(687, 251)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(581, 39)
+        Me.Label1.Size = New System.Drawing.Size(735, 39)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Select the conversion you want to perform:"
+        Me.Label1.Text = "Select the category of conversion you want to perform:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Label2.Location = New System.Drawing.Point(782, 387)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(581, 39)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Select the conversion you want to perform:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 15.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(706, 737)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(672, 56)
+        Me.TextBox1.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Label3.Location = New System.Drawing.Point(975, 695)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 39)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Result:"
         '
         'MultiUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2363, 1193)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.UnitSelectionBox)
         Me.Controls.Add(Me.UnitCategorySelector)
@@ -101,5 +135,8 @@ Partial Class MultiUnit
     Friend WithEvents UnitCategorySelector As System.Windows.Forms.ComboBox
     Friend WithEvents UnitSelectionBox As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class
