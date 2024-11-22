@@ -36,17 +36,19 @@ Partial Class MultiUnit
         'Input
         '
         Me.Input.AccessibleName = "input"
+        Me.Input.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Input.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.Input.Location = New System.Drawing.Point(377, 155)
+        Me.Input.Location = New System.Drawing.Point(228, 154)
         Me.Input.Name = "Input"
-        Me.Input.Size = New System.Drawing.Size(1446, 56)
+        Me.Input.Size = New System.Drawing.Size(953, 56)
         Me.Input.TabIndex = 0
         '
         'inputmessage
         '
+        Me.inputmessage.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.inputmessage.AutoSize = True
         Me.inputmessage.Font = New System.Drawing.Font("Calibri", 20.0!)
-        Me.inputmessage.Location = New System.Drawing.Point(683, 86)
+        Me.inputmessage.Location = New System.Drawing.Point(328, 53)
         Me.inputmessage.Name = "inputmessage"
         Me.inputmessage.Size = New System.Drawing.Size(817, 66)
         Me.inputmessage.TabIndex = 1
@@ -54,31 +56,34 @@ Partial Class MultiUnit
         '
         'UnitCategorySelector
         '
+        Me.UnitCategorySelector.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UnitCategorySelector.Cursor = System.Windows.Forms.Cursors.Default
         Me.UnitCategorySelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.UnitCategorySelector.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.UnitCategorySelector.FormattingEnabled = True
         Me.UnitCategorySelector.Items.AddRange(New Object() {"Temperature", "Length", "Weight", "Mass"})
-        Me.UnitCategorySelector.Location = New System.Drawing.Point(893, 293)
+        Me.UnitCategorySelector.Location = New System.Drawing.Point(572, 310)
         Me.UnitCategorySelector.Name = "UnitCategorySelector"
         Me.UnitCategorySelector.Size = New System.Drawing.Size(329, 57)
         Me.UnitCategorySelector.TabIndex = 2
         '
         'UnitSelectionBox
         '
+        Me.UnitSelectionBox.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UnitSelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.UnitSelectionBox.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.UnitSelectionBox.FormattingEnabled = True
-        Me.UnitSelectionBox.Location = New System.Drawing.Point(834, 439)
+        Me.UnitSelectionBox.Location = New System.Drawing.Point(522, 470)
         Me.UnitSelectionBox.Name = "UnitSelectionBox"
         Me.UnitSelectionBox.Size = New System.Drawing.Size(428, 57)
         Me.UnitSelectionBox.TabIndex = 3
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(687, 251)
+        Me.Label1.Location = New System.Drawing.Point(369, 239)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(735, 39)
         Me.Label1.TabIndex = 4
@@ -86,9 +91,10 @@ Partial Class MultiUnit
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(782, 387)
+        Me.Label2.Location = New System.Drawing.Point(446, 399)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(581, 39)
         Me.Label2.TabIndex = 5
@@ -96,8 +102,9 @@ Partial Class MultiUnit
         '
         'ResultBox
         '
+        Me.ResultBox.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ResultBox.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.ResultBox.Location = New System.Drawing.Point(706, 737)
+        Me.ResultBox.Location = New System.Drawing.Point(400, 709)
         Me.ResultBox.Name = "ResultBox"
         Me.ResultBox.ReadOnly = True
         Me.ResultBox.Size = New System.Drawing.Size(672, 56)
@@ -105,9 +112,10 @@ Partial Class MultiUnit
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(975, 695)
+        Me.Label3.Location = New System.Drawing.Point(683, 638)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(106, 39)
         Me.Label3.TabIndex = 7
@@ -115,8 +123,9 @@ Partial Class MultiUnit
         '
         'ConvertButton
         '
+        Me.ConvertButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ConvertButton.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.ConvertButton.Location = New System.Drawing.Point(851, 579)
+        Me.ConvertButton.Location = New System.Drawing.Point(561, 559)
         Me.ConvertButton.Name = "ConvertButton"
         Me.ConvertButton.Size = New System.Drawing.Size(351, 47)
         Me.ConvertButton.TabIndex = 8
