@@ -158,7 +158,28 @@
                 ResultBox.Text = calcTemp.ToString
 
             Case "Pound-force -> Kilonewton"
+                calcTemp = userInput / 224.808943
+                ResultBox.Text = calcTemp.ToString
 
+            Case "Kilonewton -> Pound-force"
+                calcTemp = userInput * 224.808943
+                ResultBox.Text = calcTemp.ToString
+
+            Case "Pound-force -> Kilopond"
+                calcTemp = userInput * 0.45359237
+                ResultBox.Text = calcTemp.ToString
+
+            Case "Kilopond -> Pound-force"
+                calcTemp = userInput / 0.45359237
+                ResultBox.Text = calcTemp.ToString
+
+            Case "Pound-force -> Newton"
+                calcTemp = userInput * 4.44822
+                ResultBox.Text = calcTemp.ToString
+
+            Case "Newton -> Pound-force"
+                calcTemp = userInput / 4.44822
+                ResultBox.Text = calcTemp.ToString
 
         End Select
     End Sub
