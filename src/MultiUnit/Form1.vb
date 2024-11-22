@@ -35,18 +35,18 @@
                 UnitSelectionBox.Items.Add("Miles -> Kilometers")
 
             Case "Weight"
-                UnitSelectonBox.Items.Add("Dyne -> Newton")
-                UnitSelectonBox.Items.Add("Newton -> Dyne")
-                UnitSelectonBox.Items.Add("Kilopond -> Newton")
-                UnitSelectonBox.Items.Add("Newton -> Kilopond")
-                UnitSelectonBox.Items.Add("Kilonewton -> Newton")
-                UnitSelectonBox.Items.Add("Newton -> Kilonewton")
-                UnitSelectonBox.Items.Add("Pound-force -> Kilonewton")
-                UnitSelectonBox.Items.Add("Kilonewton -> Pound-force")
-                UnitSelectonBox.Items.Add("Pound-force -> Kilopond")
-                UnitSelectonBox.Items.Add("Kilopond -> Pound-force")
-                UnitSelectonBox.Items.Add("Pound-force -> Newton")
-                UnitSelectonBox.Items.Add("Newton -> Pound-force")
+                UnitSelectionBox.Items.Add("Dyne -> Newton")
+                UnitSelectionBox.Items.Add("Newton -> Dyne")
+                UnitSelectionBox.Items.Add("Kilopond -> Newton")
+                UnitSelectionBox.Items.Add("Newton -> Kilopond")
+                UnitSelectionBox.Items.Add("Kilonewton -> Newton")
+                UnitSelectionBox.Items.Add("Newton -> Kilonewton")
+                UnitSelectionBox.Items.Add("Pound-force -> Kilonewton")
+                UnitSelectionBox.Items.Add("Kilonewton -> Pound-force")
+                UnitSelectionBox.Items.Add("Pound-force -> Kilopond")
+                UnitSelectionBox.Items.Add("Kilopond -> Pound-force")
+                UnitSelectionBox.Items.Add("Pound-force -> Newton")
+                UnitSelectionBox.Items.Add("Newton -> Pound-force")
 
 
 
