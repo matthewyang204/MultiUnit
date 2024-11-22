@@ -28,8 +28,9 @@ Partial Class MultiUnit
         Me.UnitSelectionBox = New System.Windows.Forms.ComboBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
-        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.ResultBox = New System.Windows.Forms.TextBox
         Me.Label3 = New System.Windows.Forms.Label
+        Me.ConvertButton = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Input
@@ -93,13 +94,14 @@ Partial Class MultiUnit
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Select the conversion you want to perform:"
         '
-        'TextBox1
+        'ResultBox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(706, 737)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(672, 56)
-        Me.TextBox1.TabIndex = 6
+        Me.ResultBox.Font = New System.Drawing.Font("Calibri", 15.0!)
+        Me.ResultBox.Location = New System.Drawing.Point(706, 737)
+        Me.ResultBox.Name = "ResultBox"
+        Me.ResultBox.ReadOnly = True
+        Me.ResultBox.Size = New System.Drawing.Size(672, 56)
+        Me.ResultBox.TabIndex = 6
         '
         'Label3
         '
@@ -111,13 +113,24 @@ Partial Class MultiUnit
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Result:"
         '
+        'ConvertButton
+        '
+        Me.ConvertButton.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.ConvertButton.Location = New System.Drawing.Point(851, 579)
+        Me.ConvertButton.Name = "ConvertButton"
+        Me.ConvertButton.Size = New System.Drawing.Size(351, 47)
+        Me.ConvertButton.TabIndex = 8
+        Me.ConvertButton.Text = "Convert"
+        Me.ConvertButton.UseVisualStyleBackColor = True
+        '
         'MultiUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2363, 1193)
+        Me.Controls.Add(Me.ConvertButton)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ResultBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.UnitSelectionBox)
@@ -136,7 +149,8 @@ Partial Class MultiUnit
     Friend WithEvents UnitSelectionBox As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents ResultBox As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ConvertButton As System.Windows.Forms.Button
 
 End Class
