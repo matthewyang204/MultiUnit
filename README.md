@@ -15,7 +15,8 @@
 
 **Windows XP or later**
 1. Download the .zip file.
-2. Copy the executable to your Program Files folder and link it to your Start Menu manually.
+2. Copy the executable within to your Program Files folder and link it to your Start Menu manually.
+3. Copy dotnetfx35.exe in the ZIP folder out and run it.
 
 # Building
 1. Install Microsoft Visual Studio 2005 if you haven't. I have an [Internet Archive](https://archive.org/details/msdn-library-disk-2) page with a valid license key if you don't have a copy.
