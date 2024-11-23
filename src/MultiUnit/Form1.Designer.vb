@@ -38,19 +38,19 @@ Partial Class MultiUnit
         Me.Input.AccessibleName = "input"
         Me.Input.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Input.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.Input.Location = New System.Drawing.Point(242, 177)
+        Me.Input.Location = New System.Drawing.Point(435, 177)
         Me.Input.Name = "Input"
-        Me.Input.Size = New System.Drawing.Size(953, 56)
+        Me.Input.Size = New System.Drawing.Size(516, 56)
         Me.Input.TabIndex = 0
         '
         'inputmessage
         '
         Me.inputmessage.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.inputmessage.AutoSize = True
-        Me.inputmessage.Font = New System.Drawing.Font("Calibri", 20.0!)
-        Me.inputmessage.Location = New System.Drawing.Point(310, 79)
+        Me.inputmessage.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.inputmessage.Location = New System.Drawing.Point(458, 135)
         Me.inputmessage.Name = "inputmessage"
-        Me.inputmessage.Size = New System.Drawing.Size(817, 66)
+        Me.inputmessage.Size = New System.Drawing.Size(493, 39)
         Me.inputmessage.TabIndex = 1
         Me.inputmessage.Text = "Enter the value you want to convert:"
         '
