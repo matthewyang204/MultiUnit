@@ -20,9 +20,7 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-; Remove the following line to run in administrative install mode (install for all users.)
-PrivilegesRequired=lowest
-PrivilegesRequiredOverridesAllowed=dialog
+PrivilegesRequired=admin
 OutputBaseFilename=multiunit-setup
 Compression=lzma
 SolidCompression=yes
@@ -41,4 +39,4 @@ Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-Filename: "{app}\dotnetfx35.exe"; StatusMsg: "Installing .NET Framework 3.5..."; Flags: postinstall runhidden waituntilterminated
+Filename: "{app}\dotnetfx35.exe"; StatusMsg: "Installing .NET Framework 3.5..."; Flags: waituntilterminated
