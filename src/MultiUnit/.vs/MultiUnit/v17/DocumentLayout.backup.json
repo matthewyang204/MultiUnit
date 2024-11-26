@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{284C63C5-2CBA-4E7C-99BD-76B778787FD6}|MultiUnit.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{284C63C5-2CBA-4E7C-99BD-76B778787FD6}|MultiUnit.vbproj|c:\\users\\matth\\documents\\github\\multiunit\\src\\multiunit\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{284C63C5-2CBA-4E7C-99BD-76B778787FD6}|MultiUnit.vbproj|C:\\Users\\matth\\Documents\\GitHub\\MultiUnit\\src\\MultiUnit\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{284C63C5-2CBA-4E7C-99BD-76B778787FD6}|MultiUnit.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -26,8 +26,8 @@
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Users\\matth\\Documents\\GitHub\\MultiUnit\\src\\MultiUnit\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\matth\\Documents\\GitHub\\MultiUnit\\src\\MultiUnit\\Form1.vb*",
-              "RelativeToolTip": "Form1.vb*",
+              "ToolTip": "C:\\Users\\matth\\Documents\\GitHub\\MultiUnit\\src\\MultiUnit\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
               "ViewState": "AgIAAPQAAAAAAAAAAAAtwAEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-11-26T01:38:56.379Z",
@@ -39,8 +39,8 @@
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "C:\\Users\\matth\\Documents\\GitHub\\MultiUnit\\src\\MultiUnit\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\matth\\Documents\\GitHub\\MultiUnit\\src\\MultiUnit\\Form1.vb [Design]*",
-              "RelativeToolTip": "Form1.vb [Design]*",
+              "ToolTip": "C:\\Users\\matth\\Documents\\GitHub\\MultiUnit\\src\\MultiUnit\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-11-26T01:38:14.102Z",
               "EditorCaption": " [Design]"
