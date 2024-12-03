@@ -9,7 +9,7 @@
 # Installing
 
 1. Download the installer or build it (see next section)
-2. Run the installer as admin. While the main installer installs, if the .NET 3.5 installer pops up, walk through it.
+2. Run the installer, and select whether you want to install it to your system's Program Files or just for your user.
 
 # Building
 1. Install Microsoft Visual Studio 2022
