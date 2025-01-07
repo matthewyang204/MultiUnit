@@ -58,6 +58,10 @@
                 UnitSelectionBox.Items.Add("Long Tonnes -> Metric Tonnes")
                 UnitSelectionBox.Items.Add("Short Tonnes -> Long Tonnes")
                 UnitSelectionBox.Items.Add("Long Tonnes -> Short Tonnes")
+            
+            Case "Air Flow"
+                UnitSelectionBox.Items.Add("CFM -> LFM")
+                UnitSelectionBox.Items.Add("LFM -> CFM")
 
                 ' Display error if the user doesn't select proper number
             Case Else
@@ -229,7 +233,15 @@
             Case "Long Tonnes -> Short Tonnes"
                 calcTemp = userInput * 0.892857
                 ResultBox.Text = calcTemp.ToString()
-
+            
+            Case "CFM -> LFM"
+                calcTemp = userInput * 196.850394
+                ResultBox.Text = calcTemp.ToString()
+            
+            Case "LFM -> CFM"
+                calcTemp = userInput / 196.850394
+                ResultBox.Text = calcTemp.ToString()
+            
             Case Else
                 MessageBox.Show("Please select a conversion from the list.")
 
