@@ -1,7 +1,5 @@
 # MultiUnit
- A simple unit converter written in Visual Basic
-
- This app has a pretty self-explanatory GUI.
+ A simple unit converter written in Visual Basic. This app has a pretty self-explanatory GUI. Additionally, this app has a portable version that doesn't need to be installed alongside the ordinary installable version.
 
 # System Requirements
 - Windows 7 or later

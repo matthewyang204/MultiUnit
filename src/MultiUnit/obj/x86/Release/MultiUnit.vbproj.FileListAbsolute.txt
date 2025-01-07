@@ -1,0 +1,7 @@
+/workspaces/MultiUnit/src/MultiUnit/bin/x86/Release/MultiUnit.exe
+/workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.AssemblyReference.cache
+/workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.MultiUnit.resources
+/workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.Resources.resources
+/workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.GenerateResource.cache
+/workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.CoreCompileInputs.cache
+/workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.exe
