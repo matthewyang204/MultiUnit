@@ -234,6 +234,7 @@
                 calcTemp = userInput * 0.892857
                 ResultBox.Text = calcTemp.ToString()
             
+            ' Airflow conversions
             Case "CFM -> LFM"
                 calcTemp = userInput * 196.850394
                 ResultBox.Text = calcTemp.ToString()
