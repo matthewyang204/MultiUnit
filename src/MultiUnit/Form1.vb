@@ -236,11 +236,18 @@
             
             ' Airflow conversions
             Case "CFM -> LFM"
-                calcTemp = userInput * 196.850394
+                Dim areaString as String
+                Dim area as Double
+                areaString = InputBox("Enter the area in ft^2, which is required for this conversion formula: " + "Area")
+                area = CDbl(areaString)
+                calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
             
             Case "LFM -> CFM"
-                calcTemp = userInput / 196.850394
+                Dim areaString as String
+                Dim area as Double
+                areaString = InputBox("Enter the area ft^2, which is required for thsi conversion formula: " + "Area")
+                calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
             
             Case Else
