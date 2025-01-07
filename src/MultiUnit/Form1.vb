@@ -242,6 +242,8 @@
                 area = CDbl(areaString)
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
+                Set areaString = Nothing
+                Set area = Nothing
             
             Case "LFM -> CFM"
                 Dim areaString as String
@@ -249,6 +251,8 @@
                 areaString = InputBox("Enter the area ft^2, which is required for thsi conversion formula: " + "Area")
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
+                Set areaString = Nothing
+                Set area = Nothing
             
             Case Else
                 MessageBox.Show("Please select a conversion from the list.")
