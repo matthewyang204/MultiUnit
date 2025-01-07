@@ -249,7 +249,7 @@
                 Dim areaString as String
                 Dim area as Double
                 areaString = InputBox("Enter the area ft^2, which is required for thsi conversion formula: " + "Area")
-                calcTemp = userInput / area
+                calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
                 areaString = Nothing
                 area = Nothing
