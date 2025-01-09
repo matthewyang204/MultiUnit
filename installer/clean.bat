@@ -1,1 +1,1 @@
-rmdir /s Output
+rmdir /s /q Output
