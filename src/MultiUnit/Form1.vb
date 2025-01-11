@@ -75,12 +75,12 @@
     ' Detects when "Convert" button is clicked
     Private Sub ConvertButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConvertButton.Click
         ' Get the user input as String from Input box
-        Dim userInputSTR As String = Input.Text
+        Dim userInputStr As String = Input.Text
         ' Create a blank Double variable
         Dim userInput As Double
         ' Convert the String to a Double and store it in a plain userInput value
         Try
-            userInput = CDbl(userInputSTR)
+            userInput = CDbl(userInputStr)
         Catch ex As Exception
             MessageBox.Show("Invalid input. Please enter a valid number.")
             Exit Sub
@@ -242,15 +242,17 @@
                 area = CDbl(areaString)
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
+                ' Clear these variables before finishing the Case
                 areaString = Nothing
                 area = Nothing
             
             Case "LFM -> CFM"
                 Dim areaString as String
                 Dim area as Double
-                areaString = InputBox("Enter the area ft^2, which is required for thsi conversion formula: " + "Area")
+                areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
                 calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
+                ' Clear these variables before finishing the Case
                 areaString = Nothing
                 area = Nothing
             
