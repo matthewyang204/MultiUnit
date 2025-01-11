@@ -250,6 +250,7 @@
                 Dim areaString as String
                 Dim area as Double
                 areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
+                area = CDbl(areaString)
                 calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
