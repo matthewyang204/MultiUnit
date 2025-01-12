@@ -58,7 +58,7 @@
                 UnitSelectionBox.Items.Add("Long Tonnes -> Metric Tonnes")
                 UnitSelectionBox.Items.Add("Short Tonnes -> Long Tonnes")
                 UnitSelectionBox.Items.Add("Long Tonnes -> Short Tonnes")
-            
+
             Case "Air Flow"
                 UnitSelectionBox.Items.Add("CFM -> LFM")
                 UnitSelectionBox.Items.Add("LFM -> CFM")
@@ -233,11 +233,11 @@
             Case "Long Tonnes -> Short Tonnes"
                 calcTemp = userInput * 0.892857
                 ResultBox.Text = calcTemp.ToString()
-            
+
             ' Airflow conversions
             Case "CFM -> LFM"
-                Dim areaString as String
-                Dim area as Double
+                Dim areaString As String
+                Dim area As Double
                 areaString = InputBox("Enter the area in ft^2, which is required for this conversion formula: " + "Area")
                 area = CDbl(areaString)
                 calcTemp = userInput / area
@@ -245,10 +245,10 @@
                 ' Clear these variables before finishing the Case
                 areaString = Nothing
                 area = Nothing
-            
+
             Case "LFM -> CFM"
-                Dim areaString as String
-                Dim area as Double
+                Dim areaString As String
+                Dim area As Double
                 areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
                 area = CDbl(areaString)
                 calcTemp = userInput * area
@@ -256,7 +256,7 @@
                 ' Clear these variables before finishing the Case
                 areaString = Nothing
                 area = Nothing
-            
+
             Case Else
                 MessageBox.Show("Please select a conversion from the list.")
 
