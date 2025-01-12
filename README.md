@@ -10,7 +10,7 @@
 2. Run the installer, and select whether you want to install it to your system's Program Files or just for your user.
 
 # Building
-1. Install Microsoft Visual Studio 2022
+1. Install a version of Microsoft Visual Studio that supports .NET 4.0.
 2. Open up the solution within src\MultiUnit. From the menu bar, hit Build > Build MultiUnit.
 3. Windows 7 or later: Now, install Inno Setup if you haven't. Then, compile the installer from the installer folder.
 
