@@ -1,1 +1,2 @@
-rmdir /s Output
+@echo off
+rmdir /s /q Output

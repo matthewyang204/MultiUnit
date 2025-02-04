@@ -58,7 +58,7 @@
                 UnitSelectionBox.Items.Add("Long Tonnes -> Metric Tonnes")
                 UnitSelectionBox.Items.Add("Short Tonnes -> Long Tonnes")
                 UnitSelectionBox.Items.Add("Long Tonnes -> Short Tonnes")
-            
+
             Case "Air Flow"
                 UnitSelectionBox.Items.Add("CFM -> LFM")
                 UnitSelectionBox.Items.Add("LFM -> CFM")
@@ -75,12 +75,12 @@
     ' Detects when "Convert" button is clicked
     Private Sub ConvertButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConvertButton.Click
         ' Get the user input as String from Input box
-        Dim userInputSTR As String = Input.Text
+        Dim userInputStr As String = Input.Text
         ' Create a blank Double variable
         Dim userInput As Double
         ' Convert the String to a Double and store it in a plain userInput value
         Try
-            userInput = CDbl(userInputSTR)
+            userInput = CDbl(userInputStr)
         Catch ex As Exception
             MessageBox.Show("Invalid input. Please enter a valid number.")
             Exit Sub
@@ -233,27 +233,30 @@
             Case "Long Tonnes -> Short Tonnes"
                 calcTemp = userInput * 0.892857
                 ResultBox.Text = calcTemp.ToString()
-            
+
             ' Airflow conversions
             Case "CFM -> LFM"
-                Dim areaString as String
-                Dim area as Double
+                Dim areaString As String
+                Dim area As Double
                 areaString = InputBox("Enter the area in ft^2, which is required for this conversion formula: " + "Area")
                 area = CDbl(areaString)
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
+                ' Clear these variables before finishing the Case
                 areaString = Nothing
                 area = Nothing
-            
+
             Case "LFM -> CFM"
-                Dim areaString as String
-                Dim area as Double
-                areaString = InputBox("Enter the area ft^2, which is required for thsi conversion formula: " + "Area")
+                Dim areaString As String
+                Dim area As Double
+                areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
+                area = CDbl(areaString)
                 calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
+                ' Clear these variables before finishing the Case
                 areaString = Nothing
                 area = Nothing
-            
+
             Case Else
                 MessageBox.Show("Please select a conversion from the list.")
 
