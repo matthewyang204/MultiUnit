@@ -16,4 +16,4 @@
 2. Open up the solution within src\MultiUnit. From the menu bar, hit Build > Build MultiUnit.
 3. Now, install Inno Setup if you haven't.
 4. Download the offline .NET 3.5 installer from [this page](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net35-sp1) and put it in the installer folder.
-5. Build the installer with Inno Setup.
+5. Build the installer with Inno Setup. If you are using Inno Setup 6 (requires Windows 7 or later), build the regular file, 'multiunit-setup.iss'. However, if you are using Inno Setup 5 (definitely what you are using if you are on XP or Vista), there is a separate installer file that is written to work properly in Inno Setup 5. Its name is 'multiunit-setup-is5.iss".
