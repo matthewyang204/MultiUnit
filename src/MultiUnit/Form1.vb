@@ -239,7 +239,12 @@
                 Dim areaString As String
                 Dim area As Double
                 areaString = InputBox("Enter the area in ft^2, which is required for this conversion formula: " + "Area")
-                area = CDbl(areaString)
+                Try
+                    area = CDbl(areaString)
+                Catch ex As Exception
+                    MessageBox.Show("Invalid input. Please enter a valid number.")
+                    Exit Sub
+                End Try    
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
@@ -250,7 +255,12 @@
                 Dim areaString As String
                 Dim area As Double
                 areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
-                area = CDbl(areaString)
+                Try
+                    area = CDbl(areaString)
+                Catch ex As Exception
+                    MessageBox.Show("Invalid input. Please enter a valid number.")
+                    Exit Sub
+                End Try
                 calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
