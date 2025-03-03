@@ -140,6 +140,23 @@
                 calcTemp = userInput / 0.62137119
                 ResultBox.Text = calcTemp.ToString()
 
+                ' Speed conversions
+            Case "MPH -> km/h"
+                calcTemp = userInput * 1.609344
+                ResultBox.Text = calcTemp.ToString()
+
+            Case "km/h -> MPH"
+                calcTemp = userInput * 0.62137119
+                ResultBox.Text = calcTemp.ToString()
+
+            Case "ft/s -> m/s"
+                calcTemp = userInput * 0.3048
+                ResultBox.Text = calcTemp.ToString
+
+            Case "m/s -> ft/s"
+                calcTemp = userInput * 3.2808399
+                ResultBox.Text = calcTemp.ToString
+
                 ' Weight conversions
             Case "Dyne -> Newton"
                 calcTemp = userInput / 100000
