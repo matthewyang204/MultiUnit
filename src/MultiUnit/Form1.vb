@@ -23,6 +23,12 @@
                 UnitSelectionBox.Items.Add("K -> C")
                 UnitSelectionBox.Items.Add("K -> F")
 
+            Case "Speed"
+                UnitSelectionBox.Items.Add("MPH -> km/h")
+                UnitSelectionBox.Items.Add("km/h -> MPH")
+                UnitSelectionBox.Items.Add("ft/s -> m/s")
+                UnitSelectionBox.Items.Add("m/s -> ft/s")
+
             Case "Length"
                 UnitSelectionBox.Items.Add("Meters -> Yards")
                 UnitSelectionBox.Items.Add("Yards -> Meters")
