@@ -23,6 +23,12 @@
                 UnitSelectionBox.Items.Add("K -> C")
                 UnitSelectionBox.Items.Add("K -> F")
 
+            Case "Speed"
+                UnitSelectionBox.Items.Add("MPH -> km/h")
+                UnitSelectionBox.Items.Add("km/h -> MPH")
+                UnitSelectionBox.Items.Add("ft/s -> m/s")
+                UnitSelectionBox.Items.Add("m/s -> ft/s")
+
             Case "Length"
                 UnitSelectionBox.Items.Add("Meters -> Yards")
                 UnitSelectionBox.Items.Add("Yards -> Meters")
@@ -140,6 +146,23 @@
                 calcTemp = userInput / 0.62137119
                 ResultBox.Text = calcTemp.ToString()
 
+                ' Speed conversions
+            Case "MPH -> km/h"
+                calcTemp = userInput * 1.609344
+                ResultBox.Text = calcTemp.ToString()
+
+            Case "km/h -> MPH"
+                calcTemp = userInput * 0.62137119
+                ResultBox.Text = calcTemp.ToString()
+
+            Case "ft/s -> m/s"
+                calcTemp = userInput * 0.3048
+                ResultBox.Text = calcTemp.ToString
+
+            Case "m/s -> ft/s"
+                calcTemp = userInput * 3.2808399
+                ResultBox.Text = calcTemp.ToString
+
                 ' Weight conversions
             Case "Dyne -> Newton"
                 calcTemp = userInput / 100000
@@ -244,7 +267,7 @@
                 Catch ex As Exception
                     MessageBox.Show("Invalid input. Please enter a valid number.")
                     Exit Sub
-                End Try    
+                End Try
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
@@ -255,12 +278,13 @@
                 Dim areaString As String
                 Dim area As Double
                 areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
+                ' Convert the area to Double, but make sure to catch exception, otherwise program will crash into hell
                 Try
                     area = CDbl(areaString)
                 Catch ex As Exception
                     MessageBox.Show("Invalid input. Please enter a valid number.")
                     Exit Sub
-                End Try
+                End Try    
                 calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
@@ -295,3 +319,4 @@
 
     End Sub
 End Class
+
