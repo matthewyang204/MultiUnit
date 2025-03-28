@@ -17,4 +17,4 @@
 # Building on non-Windows platforms
 On macOS, you can use the free tier of JetBrains Rider. You also need Mono.framework somewhere in your /Library/Frameworks folder. You can use Inno Setup running in Wine to package the installer.
 
-You'll have to use Mono + MSBuild. You can use Inno Setup running in Wine the same way as you can in macOS.
+On Linux, you'll have to use Mono + MSBuild. You can use Inno Setup running in Wine the same way as you can in macOS.
