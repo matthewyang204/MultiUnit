@@ -69,7 +69,7 @@
                 UnitSelectionBox.Items.Add("CFM -> LFM")
                 UnitSelectionBox.Items.Add("LFM -> CFM")
 
-                ' Display error if the user doesn't select proper number
+                ' Display error if the user doesn't select proper category
             Case Else
                 MessageBox.Show("Please select a valid category.")
         End Select
