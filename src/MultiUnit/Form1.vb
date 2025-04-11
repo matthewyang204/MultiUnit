@@ -78,6 +78,14 @@
             UnitSelectionBox.SelectedIndex = 0
         End If
     End Sub
+
+    ' Simulate ConvertButton click when user hits enter key with the Input box focused
+    Private Sub EnterKey_Press(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Input.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ConvertButton.PerformClick()
+        End If
+    End Sub
+
     ' Detects when "Convert" button is clicked
     Private Sub ConvertButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConvertButton.Click
         ' Get the user input as String from Input box
