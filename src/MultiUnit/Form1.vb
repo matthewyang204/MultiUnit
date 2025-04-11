@@ -79,6 +79,7 @@
         End If
     End Sub
 
+    ' Simulate ConvertButton click when user hits enter key with the Input box focused
     Private Sub EnterKey_Press(sender As Object, e As KeyEventArgs) Handles Input.KeyDown
         If e.KeyCode = Keys.Enter Then
             ConvertButton.PerformClick()
