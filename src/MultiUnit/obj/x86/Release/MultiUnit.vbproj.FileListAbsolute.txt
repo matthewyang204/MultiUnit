@@ -5,10 +5,3 @@
 /workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.GenerateResource.cache
 /workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.CoreCompileInputs.cache
 /workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.exe
-C:\Users\Matthew Yang\Documents\GitHub\MultiUnit\src\MultiUnit\bin\x86\Release\MultiUnit.exe
-C:\Users\Matthew Yang\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.vbproj.AssemblyReference.cache
-C:\Users\Matthew Yang\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.MultiUnit.resources
-C:\Users\Matthew Yang\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.Resources.resources
-C:\Users\Matthew Yang\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.vbproj.GenerateResource.cache
-C:\Users\Matthew Yang\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.vbproj.CoreCompileInputs.cache
-C:\Users\Matthew Yang\Documents\GitHub\MultiUnit\src\MultiUnit\obj\x86\Release\MultiUnit.exe
