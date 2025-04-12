@@ -5,3 +5,10 @@
 /workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.GenerateResource.cache
 /workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.CoreCompileInputs.cache
 /workspaces/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.exe
+/Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/bin/x86/Release/MultiUnit.exe
+/Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.AssemblyReference.cache
+/Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.MultiUnit.resources
+/Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.Resources.resources
+/Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.GenerateResource.cache
+/Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.CoreCompileInputs.cache
+/Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.exe
