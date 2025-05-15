@@ -56,3 +56,6 @@ nunit-*.xml
 # Inno Setup
 Output/
 *.exe
+
+# macOS annoyances
+.DS_Store
