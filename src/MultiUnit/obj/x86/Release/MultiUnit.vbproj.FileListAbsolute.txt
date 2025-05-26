@@ -12,3 +12,10 @@
 /Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.GenerateResource.cache
 /Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.CoreCompileInputs.cache
 /Users/matthewyang/Downloads/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.exe
+/Users/matthewyang/Documents/GitHub/MultiUnit/src/MultiUnit/bin/x86/Release/MultiUnit.exe
+/Users/matthewyang/Documents/GitHub/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.AssemblyReference.cache
+/Users/matthewyang/Documents/GitHub/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.MultiUnit.resources
+/Users/matthewyang/Documents/GitHub/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.Resources.resources
+/Users/matthewyang/Documents/GitHub/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.GenerateResource.cache
+/Users/matthewyang/Documents/GitHub/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.vbproj.CoreCompileInputs.cache
+/Users/matthewyang/Documents/GitHub/MultiUnit/src/MultiUnit/obj/x86/Release/MultiUnit.exe
