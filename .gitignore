@@ -56,3 +56,9 @@ nunit-*.xml
 # Inno Setup
 Output/
 *.exe
+
+# macOS annoyances
+.DS_Store
+
+# Visual Studio temporary files
+MultiUnit.vbproj.FileListAbsolute.txt
