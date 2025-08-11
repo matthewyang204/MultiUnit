@@ -138,11 +138,11 @@
                 calcTemp = userInput / 1.09361
                 ResultBox.Text = calcTemp.ToString()
 
-            Case "Centimeters -> Inches"
+            Case "Inches -> Centimeters"
                 calcTemp = userInput * 2.54
                 ResultBox.Text = calcTemp.ToString()
 
-            Case "Inches -> Centimeters"
+            Case "Centimeters -> Inches"
                 calcTemp = userInput / 2.54
                 ResultBox.Text = calcTemp.ToString()
 
