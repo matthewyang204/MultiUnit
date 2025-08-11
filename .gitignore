@@ -59,3 +59,6 @@ Output/
 
 # macOS annoyances
 .DS_Store
+
+# Visual Studio temporary files
+MultiUnit.vbproj.FileListAbsolute.txt
