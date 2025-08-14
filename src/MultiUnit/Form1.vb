@@ -272,6 +272,9 @@
                     MessageBox.Show("Invalid input. Please enter a valid number.")
                     Exit Sub
                 End Try
+                If area <= 0 Then
+                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+                End If
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
@@ -288,7 +291,10 @@
                 Catch ex As Exception
                     MessageBox.Show("Invalid input. Please enter a valid number.")
                     Exit Sub
-                End Try    
+                End Try
+                If area <= 0 Then
+                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+                End If
                 calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
