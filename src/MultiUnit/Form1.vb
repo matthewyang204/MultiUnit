@@ -165,11 +165,11 @@
 
             Case "ft/s -> m/s"
                 calcTemp = userInput * 0.3048
-                ResultBox.Text = calcTemp.ToString
+                ResultBox.Text = calcTemp.ToString()
 
             Case "m/s -> ft/s"
                 calcTemp = userInput * 3.2808399
-                ResultBox.Text = calcTemp.ToString
+                ResultBox.Text = calcTemp.ToString()
 
                 ' Weight conversions
             Case "Dyne -> Newton"
