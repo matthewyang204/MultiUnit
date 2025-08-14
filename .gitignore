@@ -62,3 +62,6 @@ Output/
 
 # Visual Studio temporary files
 MultiUnit.vbproj.FileListAbsolute.txt
+*.cache
+*.suo
+.NETFramework,Version=v4.0.AssemblyAttributes.vb
