@@ -189,11 +189,11 @@
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Kilonewton -> Newton"
-                calcTemp = userInput / 1000
+                calcTemp = userInput * 1000
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Newton -> Kilonewton"
-                calcTemp = userInput * 1000
+                calcTemp = userInput / 1000
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Pound-force -> Kilonewton"
