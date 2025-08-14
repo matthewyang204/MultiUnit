@@ -31,7 +31,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: "..\src\MultiUnit\bin\x86\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "dotnetfx35.exe"; DestDir: "{app}"; Flags: ignoreversion
+; Source: "dotnetfx35.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
@@ -39,4 +39,4 @@ Name: "{commonprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-Filename: "{app}\dotnetfx35.exe"; StatusMsg: "Installing .NET Framework 3.5..."; Flags: waituntilterminated
+; Filename: "{app}\dotnetfx35.exe"; StatusMsg: "Installing .NET Framework 3.5..."; Flags: waituntilterminated
