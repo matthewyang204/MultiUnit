@@ -165,11 +165,11 @@
 
             Case "ft/s -> m/s"
                 calcTemp = userInput * 0.3048
-                ResultBox.Text = calcTemp.ToString
+                ResultBox.Text = calcTemp.ToString()
 
             Case "m/s -> ft/s"
                 calcTemp = userInput * 3.2808399
-                ResultBox.Text = calcTemp.ToString
+                ResultBox.Text = calcTemp.ToString()
 
                 ' Weight conversions
             Case "Dyne -> Newton"
@@ -189,11 +189,11 @@
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Kilonewton -> Newton"
-                calcTemp = userInput / 1000
+                calcTemp = userInput * 1000
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Newton -> Kilonewton"
-                calcTemp = userInput * 1000
+                calcTemp = userInput / 1000
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Pound-force -> Kilonewton"
@@ -245,16 +245,12 @@
                 calcTemp = userInput / 1.10231
                 ResultBox.Text = calcTemp.ToString()
 
-            Case "Metric Tonnes -> Short Tonnes"
+            Case "Metric Tonnes -> Long Tonnes"
                 calcTemp = userInput * 0.984207
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Long Tonnes -> Metric Tonnes"
                 calcTemp = userInput / 0.984207
-                ResultBox.Text = calcTemp.ToString()
-
-            Case "Metric Tonnes -> Long Tonnes"
-                calcTemp = userInput / 0.985207
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Short Tonnes -> Long Tonnes"
@@ -276,6 +272,9 @@
                     MessageBox.Show("Invalid input. Please enter a valid number.")
                     Exit Sub
                 End Try
+                If area <= 0 Then
+                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+                End If
                 calcTemp = userInput / area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
@@ -292,7 +291,10 @@
                 Catch ex As Exception
                     MessageBox.Show("Invalid input. Please enter a valid number.")
                     Exit Sub
-                End Try    
+                End Try
+                If area <= 0 Then
+                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+                End If
                 calcTemp = userInput * area
                 ResultBox.Text = calcTemp.ToString()
                 ' Clear these variables before finishing the Case
