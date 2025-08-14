@@ -245,16 +245,12 @@
                 calcTemp = userInput / 1.10231
                 ResultBox.Text = calcTemp.ToString()
 
-            Case "Metric Tonnes -> Short Tonnes"
+            Case "Metric Tonnes -> Long Tonnes"
                 calcTemp = userInput * 0.984207
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Long Tonnes -> Metric Tonnes"
                 calcTemp = userInput / 0.984207
-                ResultBox.Text = calcTemp.ToString()
-
-            Case "Metric Tonnes -> Long Tonnes"
-                calcTemp = userInput / 0.985207
                 ResultBox.Text = calcTemp.ToString()
 
             Case "Short Tonnes -> Long Tonnes"
