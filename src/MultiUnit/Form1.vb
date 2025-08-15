@@ -23,12 +23,11 @@
         ' Get UnitCategorySelector and set UnitSelectionBox accordingly
         Select Case UnitCategorySelector.SelectedItem.ToString()
             Case "Temperature"
-                UnitSelectionBox.Items.Add("C -> F")
-                UnitSelectionBox.Items.Add("C -> K")
-                UnitSelectionBox.Items.Add("F -> C")
-                UnitSelectionBox.Items.Add("F -> K")
-                UnitSelectionBox.Items.Add("K -> C")
-                UnitSelectionBox.Items.Add("K -> F")
+                Units.Add("C")
+                Units.Add("F")
+                Units.Add("K")
+                UnitSelectionBox.Items.AddRange(Units.ToArray())
+                Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Speed"
                 UnitSelectionBox.Items.Add("MPH -> km/h")
