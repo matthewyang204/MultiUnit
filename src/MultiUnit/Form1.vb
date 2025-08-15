@@ -149,6 +149,7 @@
             MessageBox.Show("Invalid input. Please enter a valid number.")
             Exit Sub
         End Try
+        Dim calcTemp As Double
         Dim category As String = UnitCategorySelector.SelectedItem.ToString()
         Dim fromUnit As String = UnitSelectionBox.SelectedItem.ToString()
         Dim toUnit As String = Unit2SelectionBox.SelectedItem.ToString()
