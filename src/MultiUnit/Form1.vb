@@ -90,23 +90,23 @@
 
     ' Define the ratios for each unit
     ' Length ratios
-    Dim LengthRatios As Dictionary(Of String, Double)
-    LengthRatios("Meters") = 1
-    LengthRatios("Yards") = 0.9144
-    LengthRatios("Centimeters") = 0.01
-    LengthRatios("Inches") = 0.0254
-    LengthRatios("Kilometers") = 1000.0
-    LengthRatios("Miles") = 1609.34
+    Dim LengthRatios As New Dictionary(Of String, Double)
+    LengthRatios.Add("Meters", 1)
+    LengthRatios.Add("Yards", 0.9144)
+    LengthRatios.Add("Centimeters", 0.01)
+    LengthRatios.Add("Inches", 0.0254)
+    LengthRatios.Add("Kilometers", 1000.0)
+    LengthRatios.Add("Miles", 1609.34)
 
     ' Speed ratios
-    Dim SpeedRatios As Dictionary(Of String, Double)
+    Dim SpeedRatios As New Dictionary(Of String, Double)
     SpeedRatios.Add("MPH", 0.44704)
     SpeedRatios.Add("km/h", 0.277777778)
     SpeedRatios.Add("ft/s", 0.3048)
     SpeedRatios.Add("m/s", 1)
 
     ' Mass ratios
-    Dim MassRatios As Dictionary(Of String, Double)
+    Dim MassRatios As New Dictionary(Of String, Double)
     MassRatios.Add("Grams", 0.001)
     MassRatios.Add("Ounces", 0.0283495)
     MassRatios.Add("Kilograms", 1)
@@ -116,7 +116,7 @@
     MassRatios.Add("Long Tonnes", 1016.0469088)
 
     ' Weight ratios
-    Dim WeightRatios As Dictionary(Of String, Double)
+    Dim WeightRatios As New Dictionary(Of String, Double)
     WeightRatios.Add("Dyne", 0.00001)
     WeightRatios.Add("Newton", 1)
     WeightRatios.Add("Kilopond", 9.80665)
