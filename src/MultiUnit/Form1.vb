@@ -98,8 +98,30 @@
     LengthRatios("Kilometers") = 1000.0
     LengthRatios("Miles") = 1609.34
 
+    ' Speed ratios
+    Dim SpeedRatios As Dictionary(Of String, Double)
+    SpeedRatios.Add("MPH", 0.44704)
+    SpeedRatios.Add("km/h", 0.277777778)
+    SpeedRatios.Add("ft/s", 0.3048)
+    SpeedRatios.Add("m/s", 1)
 
+    ' Mass ratios
+    Dim MassRatios As Dictionary(Of String, Double)
+    MassRatios.Add("Grams", 0.001)
+    MassRatios.Add("Ounces", 0.0283495)
+    MassRatios.Add("Kilograms", 1)
+    MassRatios.Add("Pounds", 0.45359237)
+    MassRatios.Add("Metric Tonnes", 1000)
+    MassRatios.Add("Short Tonnes", 907.18474)
+    MassRatios.Add("Long Tonnes", 1016.0469088)
 
+    ' Weight ratios
+    Dim WeightRatios As Dictionary(Of String, Double)
+    WeightRatios.Add("Dyne", 0.00001)
+    WeightRatios.Add("Newton", 1)
+    WeightRatios.Add("Kilopond", 9.80665)
+    WeightRatios.Add("Kilonewton", 1000)
+    WeightRatios.Add("Pound-force", 4.44822)
 
     ' Simulate ConvertButton click when user hits enter key with the Input box focused
     Private Sub EnterKey_Press(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Input.KeyDown
