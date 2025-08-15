@@ -154,6 +154,20 @@
         Dim fromUnit As String = UnitSelectionBox.SelectedItem.ToString()
         Dim toUnit As String = Unit2SelectionBox.SelectedItem.ToString()
 
+        Select Case category
+            Case "Length"
+                ratioDict = LengthRatios
+            Case "Speed"
+                ratioDict = SpeedRatios
+            Case "Mass"
+                ratioDict = MassRatios
+            Case "Weight"
+                ratioDict = WeightRatios
+            Case Else
+                MessageBox.Show("Unknown category.")
+                Exit Sub
+        End Select
+
         Exit Sub
             Select Case UnitCategorySelector.SelectedItem.ToString()
 
