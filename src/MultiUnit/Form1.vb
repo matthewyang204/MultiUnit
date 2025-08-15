@@ -129,6 +129,38 @@
         WeightRatios.Add("Pound-force", 4.44822)
     End Sub
 
+    ' Temperature conversion function
+    Private Sub TempConvert(ByVal fromUnit As String, ByVal toUnit As String, ByVal userInput As Double)
+        Dim calcTemp As Double
+
+        If fromUnit = "C" And toUnit = "F" Then
+            calcTemp = (userInput * (9 / 5)) + 32
+            ResultBox.Text = calcTemp.ToString()
+
+        ElseIf fromUnit = "C" And toUnit = "K" Then
+            calcTemp = userInput + 273.15
+            ResultBox.Text = calcTemp.ToString()
+
+        ElseIf fromUnit = "F" And toUnit = "C" Then
+            calcTemp = (userInput - 32) * 5 / 9
+            ResultBox.Text = calcTemp.ToString()
+
+        ElseIf fromUnit = "F" And toUnit = "K" Then
+            calcTemp = (userInput - 32) * 5 / 9 + 273.15
+            ResultBox.Text = calcTemp.ToString()
+
+        ElseIf fromUnit = "K" And toUnit = "C" Then
+            calcTemp = userInput - 273.15
+            ResultBox.Text = calcTemp.ToString()
+
+        ElseIf fromUnit = "K" And toUnit = "F" Then
+            calcTemp = (userInput - 273.15) * 9 / 5 + 32
+            ResultBox.Text = calcTemp.ToString()
+        Else
+            MessageBox.Show("Invalid temperature conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
+        End If
+    End Sub
+
     ' Simulate ConvertButton click when user hits enter key with the Input box focused
     Private Sub EnterKey_Press(sender As Object, e As KeyEventArgs) Handles Input.KeyDown
         If e.KeyCode = Keys.Enter Then
@@ -165,6 +197,9 @@
                 ratioDict = MassRatios
             Case "Weight"
                 ratioDict = WeightRatios
+            Case "Temperature"
+                TempConvert(fromUnit, toUnit, userInput)
+                Exit Sub
             Case Else
                 MessageBox.Show("Unknown category. Please select a known category from the list.")
                 Exit Sub
