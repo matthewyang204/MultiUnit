@@ -11,7 +11,7 @@
         End If
 
         If Unit2SelectionBox.Items.Count > 0 Then
-            Unit2SelectionBox.SelectedIndex = 0
+            Unit2SelectionBox.SelectedIndex = 1
         End If
     End Sub
 
@@ -86,7 +86,7 @@
             UnitSelectionBox.SelectedIndex = 0
         End If
         If Unit2SelectionBox.Items.Count > 0 Then
-            Unit2SelectionBox.SelectedIndex = 0
+            Unit2SelectionBox.SelectedIndex = 1
         End If
     End Sub
 
