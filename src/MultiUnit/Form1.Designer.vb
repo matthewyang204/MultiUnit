@@ -31,6 +31,8 @@ Partial Class MultiUnit
         Me.ResultBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ConvertButton = New System.Windows.Forms.Button()
+        Me.Unit2SelectionBox = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Input
@@ -76,10 +78,10 @@ Partial Class MultiUnit
         Me.UnitSelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.UnitSelectionBox.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.UnitSelectionBox.FormattingEnabled = True
-        Me.UnitSelectionBox.Location = New System.Drawing.Point(167, 584)
+        Me.UnitSelectionBox.Location = New System.Drawing.Point(45, 584)
         Me.UnitSelectionBox.Margin = New System.Windows.Forms.Padding(4)
         Me.UnitSelectionBox.Name = "UnitSelectionBox"
-        Me.UnitSelectionBox.Size = New System.Drawing.Size(428, 57)
+        Me.UnitSelectionBox.Size = New System.Drawing.Size(256, 57)
         Me.UnitSelectionBox.TabIndex = 3
         '
         'Label1
@@ -141,11 +143,37 @@ Partial Class MultiUnit
         Me.ConvertButton.Text = "Convert"
         Me.ConvertButton.UseVisualStyleBackColor = True
         '
+        'Unit2SelectionBox
+        '
+        Me.Unit2SelectionBox.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Unit2SelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Unit2SelectionBox.Font = New System.Drawing.Font("Calibri", 15.0!)
+        Me.Unit2SelectionBox.FormattingEnabled = True
+        Me.Unit2SelectionBox.Location = New System.Drawing.Point(461, 584)
+        Me.Unit2SelectionBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.Unit2SelectionBox.Name = "Unit2SelectionBox"
+        Me.Unit2SelectionBox.Size = New System.Drawing.Size(256, 57)
+        Me.Unit2SelectionBox.TabIndex = 9
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Label4.Location = New System.Drawing.Point(356, 595)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(47, 39)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "To"
+        '
         'MultiUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(763, 1000)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Unit2SelectionBox)
         Me.Controls.Add(Me.ConvertButton)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ResultBox)
@@ -171,5 +199,6 @@ Partial Class MultiUnit
     Friend WithEvents ResultBox As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ConvertButton As System.Windows.Forms.Button
-
+    Friend WithEvents Unit2SelectionBox As ComboBox
+    Friend WithEvents Label4 As Label
 End Class
