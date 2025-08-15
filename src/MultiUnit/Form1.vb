@@ -166,7 +166,7 @@
             Case "Weight"
                 ratioDict = WeightRatios
             Case Else
-                MessageBox.Show("Unknown category.")
+                MessageBox.Show("Unknown category. Please select a known category from the list.")
                 Exit Sub
         End Select
 
