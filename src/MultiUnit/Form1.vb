@@ -161,6 +161,55 @@
         End If
     End Sub
 
+    ' Airflow Conversions
+    Private Sub AFConvert(ByVal fromUnit As String, ByVal toUnit As String, ByVal userInput As Double)
+        Dim calcTemp As Double
+
+        ' Airflow conversions
+        If fromUnit = "CFM" And toUnit = "LFM" Then
+            Dim areaString As String
+                Dim area As Double
+                areaString = InputBox("Enter the area in ft^2, which is required for this conversion formula: " + "Area")
+                Try
+                    area = CDbl(areaString)
+                Catch ex As Exception
+                    MessageBox.Show("Invalid input. Please enter a valid number.")
+                    Exit Sub
+                End Try
+                If area <= 0 Then
+                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+                End If
+                calcTemp = userInput / area
+                ResultBox.Text = calcTemp.ToString()
+                ' Clear these variables before finishing the Case
+                areaString = Nothing
+                area = Nothing
+
+            If fromUnit = "LFM" And toUnit = "CFM" Then
+                Dim areaString As String
+                Dim area As Double
+                areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
+                ' Convert the area to Double, but make sure to catch exception, otherwise program will crash into hell
+                Try
+                    area = CDbl(areaString)
+                Catch ex As Exception
+                    MessageBox.Show("Invalid input. Please enter a valid number.")
+                    Exit Sub
+                End Try
+                If area <= 0 Then
+                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+                End If
+                calcTemp = userInput * area
+                ResultBox.Text = calcTemp.ToString()
+                ' Clear these variables before finishing the Case
+                areaString = Nothing
+                area = Nothing
+
+            Case Else
+        MessageBox.Show("Please select a conversion from the list.")
+    End Sub
+
+
     ' Simulate ConvertButton click when user hits enter key with the Input box focused
     Private Sub EnterKey_Press(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Input.KeyDown
         If e.KeyCode = Keys.Enter Then
