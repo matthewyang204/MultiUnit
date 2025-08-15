@@ -156,6 +156,10 @@
         ElseIf fromUnit = "K" And toUnit = "F" Then
             calcTemp = (userInput - 273.15) * 9 / 5 + 32
             ResultBox.Text = calcTemp.ToString()
+
+        ElseIf fromUnit = toUnit Then
+            ResultBox.Text = userInput.ToString()
+
         Else
             MessageBox.Show("Invalid temperature conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
         End If
@@ -198,6 +202,9 @@
             End If
             calcTemp = userInput * area
             ResultBox.Text = calcTemp.ToString()
+
+        ElseIf fromUnit = toUnit Then
+            ResultBox.Text = userInput.ToString()
 
         Else
             MessageBox.Show("Invalid Airflow conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
