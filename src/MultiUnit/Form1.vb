@@ -153,7 +153,7 @@
         Dim fromUnit As String = UnitSelectionBox.SelectedItem.ToString()
         Dim toUnit As String = Unit2SelectionBox.SelectedItem.ToString()
 
-        Select Case UnitSelectionBox.SelectedItem.ToString()
+        Select Case UnitCategorySelector.SelectedItem.ToString()
 
             ' Temperature conversions
             Case "C -> F"
