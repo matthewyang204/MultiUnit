@@ -153,6 +153,8 @@
         Dim category As String = UnitCategorySelector.SelectedItem.ToString()
         Dim fromUnit As String = UnitSelectionBox.SelectedItem.ToString()
         Dim toUnit As String = Unit2SelectionBox.SelectedItem.ToString()
+        Dim ratioDict As Dictionary(Of String, Double)
+        Dim result As Double
 
         Select Case category
             Case "Length"
