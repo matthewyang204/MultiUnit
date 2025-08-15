@@ -19,7 +19,9 @@
     Dim Units As New List(Of String)
 
     Private Sub UnitCategorySelector_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UnitCategorySelector.SelectedIndexChanged
+        Units.Clear()
         UnitSelectionBox.Items.Clear()
+        Unit2SelectionBox.Items.Clear()
         ' Get UnitCategorySelector and set UnitSelectionBox accordingly
         Select Case UnitCategorySelector.SelectedItem.ToString()
             Case "Temperature"
