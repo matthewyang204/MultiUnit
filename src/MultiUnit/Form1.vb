@@ -149,8 +149,9 @@
             MessageBox.Show("Invalid input. Please enter a valid number.")
             Exit Sub
         End Try
-        ' Create a temporary variable that is cleaned up after each use
-        Dim calcTemp As Double
+        Dim category As String = UnitCategorySelector.SelectedItem.ToString()
+        Dim fromUnit As String = UnitSelectionBox.SelectedItem.ToString()
+        Dim toUnit As String = Unit2SelectionBox.SelectedItem.ToString()
 
         Select Case UnitSelectionBox.SelectedItem.ToString()
 
