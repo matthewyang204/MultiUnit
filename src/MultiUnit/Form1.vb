@@ -85,6 +85,9 @@
         If UnitSelectionBox.Items.Count > 0 Then
             UnitSelectionBox.SelectedIndex = 0
         End If
+        If Unit2SelectionBox.Items.Count > 0 Then
+            Unit2SelectionBox.SelectedIndex = 0
+        End If
     End Sub
 
     ' Simulate ConvertButton click when user hits enter key with the Input box focused
