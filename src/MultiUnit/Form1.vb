@@ -168,45 +168,41 @@
         ' Airflow conversions
         If fromUnit = "CFM" And toUnit = "LFM" Then
             Dim areaString As String
-                Dim area As Double
-                areaString = InputBox("Enter the area in ft^2, which is required for this conversion formula: " + "Area")
-                Try
-                    area = CDbl(areaString)
-                Catch ex As Exception
-                    MessageBox.Show("Invalid input. Please enter a valid number.")
-                    Exit Sub
-                End Try
-                If area <= 0 Then
-                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
-                End If
-                calcTemp = userInput / area
-                ResultBox.Text = calcTemp.ToString()
-                ' Clear these variables before finishing the Case
-                areaString = Nothing
-                area = Nothing
+            Dim area As Double
+            areaString = InputBox("Enter the area in ft^2, which is required for this conversion formula: " + "Area")
+            Try
+                area = CDbl(areaString)
+            Catch ex As Exception
+                MessageBox.Show("Invalid input. Please enter a valid number.")
+                Exit Sub
+            End Try
+            If area <= 0 Then
+                MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+            End If
+            calcTemp = userInput / area
+            ResultBox.Text = calcTemp.ToString()
 
-            If fromUnit = "LFM" And toUnit = "CFM" Then
-                Dim areaString As String
-                Dim area As Double
-                areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
-                ' Convert the area to Double, but make sure to catch exception, otherwise program will crash into hell
-                Try
-                    area = CDbl(areaString)
-                Catch ex As Exception
-                    MessageBox.Show("Invalid input. Please enter a valid number.")
-                    Exit Sub
-                End Try
-                If area <= 0 Then
-                    MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
-                End If
-                calcTemp = userInput * area
-                ResultBox.Text = calcTemp.ToString()
-                ' Clear these variables before finishing the Case
-                areaString = Nothing
-                area = Nothing
+        ElseIf fromUnit = "LFM" And toUnit = "CFM" Then
+            Dim areaString As String
+            Dim area As Double
+            areaString = InputBox("Enter the area ft^2, which is required for this conversion formula: " + "Area")
+            ' Convert the area to Double, but make sure to catch exception, otherwise program will crash into hell
+            Try
+                area = CDbl(areaString)
+            Catch ex As Exception
+                MessageBox.Show("Invalid input. Please enter a valid number.")
+                Exit Sub
+            End Try
+            If area <= 0 Then
+                MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+            End If
+            calcTemp = userInput * area
+            ResultBox.Text = calcTemp.ToString()
 
-            Case Else
-        MessageBox.Show("Please select a conversion from the list.")
+        Else
+            MessageBox.Show("Invalid Airflow conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
+            Exit Sub
+        End If
     End Sub
 
 
