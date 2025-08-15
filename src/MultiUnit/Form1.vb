@@ -13,6 +13,9 @@
         If Unit2SelectionBox.Items.Count > 0 Then
             Unit2SelectionBox.SelectedIndex = 1
         End If
+
+        ' Load the ratios
+        LoadRatios()
     End Sub
 
     ' Declare the variables
@@ -89,39 +92,42 @@
     End Sub
 
     ' Define the ratios for each unit
-    ' Length ratios
-    Dim LengthRatios As New Dictionary(Of String, Double)
-    LengthRatios.Add("Meters", 1)
-    LengthRatios.Add("Yards", 0.9144)
-    LengthRatios.Add("Centimeters", 0.01)
-    LengthRatios.Add("Inches", 0.0254)
-    LengthRatios.Add("Kilometers", 1000.0)
-    LengthRatios.Add("Miles", 1609.34)
+    Private LengthRatios As New Dictionary(Of String, Double)
+    Private SpeedRatios As New Dictionary(Of String, Double)
+    Private MassRatios As New Dictionary(Of String, Double)
+    Private WeightRatios As New Dictionary(Of String, Double)
 
-    ' Speed ratios
-    Dim SpeedRatios As New Dictionary(Of String, Double)
-    SpeedRatios.Add("MPH", 0.44704)
-    SpeedRatios.Add("km/h", 0.277777778)
-    SpeedRatios.Add("ft/s", 0.3048)
-    SpeedRatios.Add("m/s", 1)
+    Private Sub LoadRatios()
+        ' Length ratios
+        LengthRatios.Add("Meters", 1)
+        LengthRatios.Add("Yards", 0.9144)
+        LengthRatios.Add("Centimeters", 0.01)
+        LengthRatios.Add("Inches", 0.0254)
+        LengthRatios.Add("Kilometers", 1000.0)
+        LengthRatios.Add("Miles", 1609.34)
 
-    ' Mass ratios
-    Dim MassRatios As New Dictionary(Of String, Double)
-    MassRatios.Add("Grams", 0.001)
-    MassRatios.Add("Ounces", 0.0283495)
-    MassRatios.Add("Kilograms", 1)
-    MassRatios.Add("Pounds", 0.45359237)
-    MassRatios.Add("Metric Tonnes", 1000)
-    MassRatios.Add("Short Tonnes", 907.18474)
-    MassRatios.Add("Long Tonnes", 1016.0469088)
+        ' Speed ratios
+        SpeedRatios.Add("MPH", 0.44704)
+        SpeedRatios.Add("km/h", 0.277777778)
+        SpeedRatios.Add("ft/s", 0.3048)
+        SpeedRatios.Add("m/s", 1)
 
-    ' Weight ratios
-    Dim WeightRatios As New Dictionary(Of String, Double)
-    WeightRatios.Add("Dyne", 0.00001)
-    WeightRatios.Add("Newton", 1)
-    WeightRatios.Add("Kilopond", 9.80665)
-    WeightRatios.Add("Kilonewton", 1000)
-    WeightRatios.Add("Pound-force", 4.44822)
+        ' Mass ratios
+        MassRatios.Add("Grams", 0.001)
+        MassRatios.Add("Ounces", 0.0283495)
+        MassRatios.Add("Kilograms", 1)
+        MassRatios.Add("Pounds", 0.45359237)
+        MassRatios.Add("Metric Tonnes", 1000)
+        MassRatios.Add("Short Tonnes", 907.18474)
+        MassRatios.Add("Long Tonnes", 1016.0469088)
+
+        ' Weight ratios
+        WeightRatios.Add("Dyne", 0.00001)
+        WeightRatios.Add("Newton", 1)
+        WeightRatios.Add("Kilopond", 9.80665)
+        WeightRatios.Add("Kilonewton", 1000)
+        WeightRatios.Add("Pound-force", 4.44822)
+    End Sub
 
     ' Simulate ConvertButton click when user hits enter key with the Input box focused
     Private Sub EnterKey_Press(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Input.KeyDown
