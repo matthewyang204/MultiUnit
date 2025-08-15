@@ -15,6 +15,9 @@
         End If
     End Sub
 
+    ' Declare the variables
+    Dim Units As New List(Of String)
+
     Private Sub UnitCategorySelector_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UnitCategorySelector.SelectedIndexChanged
         UnitSelectionBox.Items.Clear()
         ' Get UnitCategorySelector and set UnitSelectionBox accordingly
