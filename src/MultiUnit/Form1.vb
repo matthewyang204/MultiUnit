@@ -245,6 +245,9 @@
             Case "Temperature"
                 TempConvert(fromUnit, toUnit, userInput)
                 Exit Sub
+            Case "Air Flow"
+                AFConvert(fromUnit, toUnit, userInput)
+                Exit Sub
             Case Else
                 MessageBox.Show("Unknown category. Please select a known category from the list.")
                 Exit Sub
