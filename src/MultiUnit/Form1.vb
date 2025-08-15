@@ -170,6 +170,9 @@
                 Exit Sub
         End Select
 
+        result = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
+        ResultBox.Text = result.ToString()
+
         Exit Sub
             Select Case UnitCategorySelector.SelectedItem.ToString()
 
