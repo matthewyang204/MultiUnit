@@ -88,6 +88,19 @@
         End If
     End Sub
 
+    ' Define the ratios for each unit
+    ' Length ratios
+    Dim LengthRatios As Dictionary(Of String, Double)
+    LengthRatios("Meters") = 1
+    LengthRatios("Yards") = 0.9144
+    LengthRatios("Centimeters") = 0.01
+    LengthRatios("Inches") = 0.0254
+    LengthRatios("Kilometers") = 1000.0
+    LengthRatios("Miles") = 1609.34
+
+
+
+
     ' Simulate ConvertButton click when user hits enter key with the Input box focused
     Private Sub EnterKey_Press(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Input.KeyDown
         If e.KeyCode = Keys.Enter Then
