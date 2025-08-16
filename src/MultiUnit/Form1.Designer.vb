@@ -65,7 +65,7 @@ Partial Class MultiUnit
         Me.UnitCategorySelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.UnitCategorySelector.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.UnitCategorySelector.FormattingEnabled = True
-        Me.UnitCategorySelector.Items.AddRange(New Object() {"Temperature", "Length", "Speed", "Weight", "Mass", "Air Flow"})
+        Me.UnitCategorySelector.Items.AddRange(New Object() {"Temperature", "Length", "Area", "Speed", "Weight", "Mass", "Air Flow"})
         Me.UnitCategorySelector.Location = New System.Drawing.Point(217, 416)
         Me.UnitCategorySelector.Margin = New System.Windows.Forms.Padding(4)
         Me.UnitCategorySelector.Name = "UnitCategorySelector"

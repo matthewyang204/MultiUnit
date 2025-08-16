@@ -52,6 +52,17 @@
                 Units.Add("Feet")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
+            
+            Case "Area"
+                Units.Add("Square Meters")
+                Units.Add("Square Yards")
+                Units.Add("Square Centimeters")
+                Units.Add("Square Inches")
+                Units.Add("Square Kilometers")
+                Units.Add("Square Miles")
+                Units.Add("Square Feet")
+                UnitSelectionBox.Items.AddRange(Units.ToArray())
+                Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Weight"
                 Units.Add("Dyne")
