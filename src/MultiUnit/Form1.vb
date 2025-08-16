@@ -266,6 +266,8 @@
         Select Case category
             Case "Length"
                 ratioDict = LengthRatios
+            Case "Area"
+                ratioDict = AreaRatios
             Case "Speed"
                 ratioDict = SpeedRatios
             Case "Mass"
