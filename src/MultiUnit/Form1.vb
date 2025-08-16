@@ -191,13 +191,13 @@
     ' Airflow Conversions
     Private Sub AFConvert(ByVal fromUnit As String, ByVal toUnit As String, ByVal userInput As Double)
         Dim calcTemp As Double
-        Dim areaBox As String = "Enter the area in ft^2, which is required for this conversion formula: " + "Area"
+        Dim areaBox As String = "Enter the area in square feet, which is required for this conversion formula: "
 
         ' Airflow conversions
         If fromUnit = "CFM" And toUnit = "LFM" Then
             Dim areaString As String
             Dim area As Double
-            areaString = InputBox(areaBox)
+            areaString = InputBox(areaBox + "Area")
             Try
                 area = CDbl(areaString)
             Catch ex As Exception
@@ -213,7 +213,7 @@
         ElseIf fromUnit = "LFM" And toUnit = "CFM" Then
             Dim areaString As String
             Dim area As Double
-            areaString = InputBox(areaBox)
+            areaString = InputBox(areaBox + "Area")
             ' Convert the area to Double, but make sure to catch exception, otherwise program will crash into hell
             Try
                 area = CDbl(areaString)
