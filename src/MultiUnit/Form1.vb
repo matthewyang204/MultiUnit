@@ -49,6 +49,7 @@
                 Units.Add("Inches")
                 Units.Add("Kilometers")
                 Units.Add("Miles")
+                Units.Add("Feet")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -105,6 +106,7 @@
         LengthRatios.Add("Inches", 0.0254)
         LengthRatios.Add("Kilometers", 1000.0)
         LengthRatios.Add("Miles", 1609.34)
+        LengthRatios.Add("Feet", 0.3048)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
