@@ -2,8 +2,7 @@
  A simple unit converter written in Visual Basic. This app has a pretty self-explanatory GUI. Additionally, this app has a portable version that doesn't need to be installed alongside the ordinary installable version. You can get the source code from the branch called dotnet2.0, which implements all features but uses .NET 2.0 to build and run, which allows it to run on Windows 9x and 2000.
 
 # System Requirements
-- Windows 7 or later (if building an installer)
-- Windows XP or later (if just building the core app or running one of the prebuilt installers)
+- Windows XP or later
 
 # Installing
 
