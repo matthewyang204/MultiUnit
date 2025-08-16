@@ -4,7 +4,8 @@
  This app has a pretty self-explanatory GUI.
 
 # System Requirements
-- Windows XP or later
+- Windows XP or later (if building an installer)
+- Windows 95/98 or later (if running a prebuilt installer)
 
 # Installing
 1. Download the installer or build it (see next section)
