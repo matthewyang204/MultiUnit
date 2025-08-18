@@ -237,21 +237,23 @@
         Dim area As Double
         Dim areaUnit As String = AreaUnitSelector.SelectedItem.ToString()
         ' Convert the length and width to Double, but make sure to catch exception, otherwise program will crash into hell
-        Try
-            rawDimensions.Add(CDbl(AreaInputBox.Text))
-            rawDimensions.Add(CDbl(Area2InputBox.Text))
-        Catch ex As Exception
-            MessageBox.Show("Invalid input. Please enter a valid number.")
-            Exit Sub
-        End Try
-        dimensions.Add(rawDimensions(0) * LengthRatios(areaUnit) / LengthRatios("Feet"))
-        dimensions.Add(rawDimensions(1) * LengthRatios(areaUnit) / LengthRatios("Feet"))
-        area = dimensions(0) * dimensions(1)
-        If area <= 0 Then
-            MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
-        Else
-            ' Enable only to debug area value
-            ' MessageBox.Show(area)
+        If fromUnit = "CFM" Or toUnit = "CFM" Then
+            Try
+                rawDimensions.Add(CDbl(AreaInputBox.Text))
+                rawDimensions.Add(CDbl(Area2InputBox.Text))
+            Catch ex As Exception
+                MessageBox.Show("Invalid input. Please enter a valid number.")
+                Exit Sub
+            End Try
+            dimensions.Add(rawDimensions(0) * LengthRatios(areaUnit) / LengthRatios("Feet"))
+            dimensions.Add(rawDimensions(1) * LengthRatios(areaUnit) / LengthRatios("Feet"))
+            area = dimensions(0) * dimensions(1)
+            If area <= 0 Then
+                MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+            Else
+                ' Enable only to debug area value
+                ' MessageBox.Show(area)
+            End If
         End If
 
         ' Airflow conversions
