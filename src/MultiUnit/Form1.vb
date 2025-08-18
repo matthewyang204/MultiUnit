@@ -188,6 +188,7 @@
         SpeedRatios.Add("km/h", 0.277777778)
         SpeedRatios.Add("ft/s", 0.3048)
         SpeedRatios.Add("m/s", 1)
+        SpeedRatios.Add("LFM", 0.00508)
 
         ' Mass ratios
         MassRatios.Add("Grams", 0.001)
