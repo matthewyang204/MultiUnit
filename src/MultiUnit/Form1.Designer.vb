@@ -194,6 +194,7 @@ Partial Class MultiUnit
         'AreaUnitSelector
         '
         Me.AreaUnitSelector.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.AreaUnitSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.AreaUnitSelector.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.AreaUnitSelector.FormattingEnabled = True
         Me.AreaUnitSelector.Location = New System.Drawing.Point(461, 572)
