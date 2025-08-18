@@ -28,13 +28,13 @@
 
         ' Load the area selector units
         Dim AreaUnits As New List(Of String)
-        AreaUnits.Add("Square Meters")
-        AreaUnits.Add("Square Yards")
-        AreaUnits.Add("Square Centimeters")
-        AreaUnits.Add("Square Inches")
-        AreaUnits.Add("Square Kilometers")
-        AreaUnits.Add("Square Miles")
-        AreaUnits.Add("Square Feet")
+        AreaUnits.Add("Meters")
+        AreaUnits.Add("Yards")
+        AreaUnits.Add("Centimeters")
+        AreaUnits.Add("Inches")
+        AreaUnits.Add("Kilometers")
+        AreaUnits.Add("Miles")
+        AreaUnits.Add("Feet")
         AreaUnitSelector.Items.AddRange(AreaUnits.ToArray())
 
         If AreaUnitSelector.Items.Count > 0 Then
