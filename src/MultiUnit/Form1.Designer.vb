@@ -175,6 +175,7 @@ Partial Class MultiUnit
         '
         'Label5
         '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.Label5.Location = New System.Drawing.Point(279, 509)
@@ -185,6 +186,7 @@ Partial Class MultiUnit
         '
         'AreaInputBox
         '
+        Me.AreaInputBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.AreaInputBox.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.AreaInputBox.Location = New System.Drawing.Point(98, 572)
         Me.AreaInputBox.Name = "AreaInputBox"
@@ -204,6 +206,7 @@ Partial Class MultiUnit
         '
         'Area2InputBox
         '
+        Me.Area2InputBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Area2InputBox.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.Area2InputBox.Location = New System.Drawing.Point(305, 572)
         Me.Area2InputBox.Name = "Area2InputBox"
@@ -212,6 +215,7 @@ Partial Class MultiUnit
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.Label6.Location = New System.Drawing.Point(245, 583)
@@ -222,6 +226,7 @@ Partial Class MultiUnit
         '
         'Label7
         '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.Label7.Location = New System.Drawing.Point(41, 582)
