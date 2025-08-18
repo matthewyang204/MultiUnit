@@ -16,6 +16,12 @@
 
         ' Load the ratios
         LoadRatios()
+
+        ' Make some components invisible
+        ' CFM/LFM-specific stuff
+        Label5.Visible = False
+        AreaUnitSelector.Visible = False
+        AreaInputBox.Visible = False
     End Sub
 
     ' Declare the variables
@@ -25,6 +31,12 @@
         Units.Clear()
         UnitSelectionBox.Items.Clear()
         Unit2SelectionBox.Items.Clear()
+        ' Make some components invisible
+        ' CFM/LFM-specific stuff
+        Label5.Visible = False
+        AreaUnitSelector.Visible = False
+        AreaInputBox.Visible = False
+
         ' Get UnitCategorySelector and set UnitSelectionBox accordingly
         Select Case UnitCategorySelector.SelectedItem.ToString()
             Case "Temperature"
@@ -89,6 +101,10 @@
                 Units.Add("LFM")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
+                ' Make the area input stuff visible
+                Label5.Visible = True
+                AreaUnitSelector.Visible = True
+                AreaInputBox.Visible = True
 
                 ' Display error if the user doesn't select proper category
             Case Else
@@ -313,6 +329,10 @@
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
     End Sub
 End Class
