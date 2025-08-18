@@ -166,7 +166,7 @@ Partial Class MultiUnit
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(356, 443)
+        Me.Label4.Location = New System.Drawing.Point(351, 443)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(47, 39)
@@ -178,11 +178,11 @@ Partial Class MultiUnit
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(279, 509)
+        Me.Label5.Location = New System.Drawing.Point(7, 506)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(212, 39)
+        Me.Label5.Size = New System.Drawing.Size(749, 39)
         Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Enter the area:"
+        Me.Label5.Text = "Enter the area (only required for conversions with CFM):"
         '
         'AreaInputBox
         '
