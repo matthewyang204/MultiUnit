@@ -286,8 +286,23 @@
             ResultBox.Text = userInput.ToString()
 
         ElseIf SpeedRatios.ContainsKey(fromUnit) Or SpeedRatios.ContainsKey(toUnit) Then
+            Dim ratioDict As Dictionary(Of String, Double)
+            If fromUnit IsNot "CFM" And toUnit IsNot "CFM" Then
+                ratioDict = SpeedRatios
+            ElseIf fromUnit = "CFM" Then
+                userInput = userInput / area
+                ratioDict = SpeedRatios
+                fromUnit = "LFM"
+            ElseIf toUnit = "CFM" Then
+                ratioDict = SpeedRatios
+                calcTemp = userInput * ratioDict(fromUnit) / ratioDict("LFM")
+                Dim result As Double = calcTemp * area
+                ResultBox.Text = result.ToString()
+                Exit Sub
+            End If
 
-
+            calcTemp = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
+            ResultBox.Text = calcTemp.ToString()
         Else
             MessageBox.Show("Invalid Airflow conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
             Exit Sub
