@@ -284,6 +284,9 @@
         ElseIf fromUnit = toUnit Then
             ResultBox.Text = userInput.ToString()
 
+        ElseIf SpeedRatios.ContainsKey(fromUnit) Or SpeedRatios.ContainsKey(toUnit) Then
+
+
         Else
             MessageBox.Show("Invalid Airflow conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
             Exit Sub
