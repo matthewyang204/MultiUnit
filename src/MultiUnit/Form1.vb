@@ -31,10 +31,12 @@
         AreaUnits.Add("Meters")
         AreaUnits.Add("Yards")
         AreaUnits.Add("Centimeters")
+        AreaUnits.Add("Millimeters")
         AreaUnits.Add("Inches")
         AreaUnits.Add("Kilometers")
         AreaUnits.Add("Miles")
         AreaUnits.Add("Feet")
+        AreaUnits.Add("Decimeters")
         AreaUnitSelector.Items.AddRange(AreaUnits.ToArray())
 
         If AreaUnitSelector.Items.Count > 0 Then
@@ -79,10 +81,12 @@
                 Units.Add("Meters")
                 Units.Add("Yards")
                 Units.Add("Centimeters")
+                Units.Add("Millimeters")
                 Units.Add("Inches")
                 Units.Add("Kilometers")
                 Units.Add("Miles")
                 Units.Add("Feet")
+                Units.Add("Decimeters")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
             
@@ -90,10 +94,12 @@
                 Units.Add("Square Meters")
                 Units.Add("Square Yards")
                 Units.Add("Square Centimeters")
+                Units.Add("Square Millimeters")
                 Units.Add("Square Inches")
                 Units.Add("Square Kilometers")
                 Units.Add("Square Miles")
                 Units.Add("Square Feet")
+                Units.Add("Square Decimeters")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -155,19 +161,23 @@
         LengthRatios.Add("Meters", 1)
         LengthRatios.Add("Yards", 0.9144)
         LengthRatios.Add("Centimeters", 0.01)
+        LengthRatios.Add("Millimeters", 0.001)
         LengthRatios.Add("Inches", 0.0254)
         LengthRatios.Add("Kilometers", 1000.0)
         LengthRatios.Add("Miles", 1609.34)
         LengthRatios.Add("Feet", 0.3048)
+        LengthRatios.Add("Decimeters", 0.1)
 
         ' Area ratios
         AreaRatios.Add("Square Meters", 1)
         AreaRatios.Add("Square Yards", 0.83612736)
         AreaRatios.Add("Square Centimeters", 0.0001)
+        AreaRatios.Add("Square Millimeters", 0.000001)
         AreaRatios.Add("Square Inches", 0.00064516)
         AreaRatios.Add("Square Kilometers", 1000000.0)
         AreaRatios.Add("Square Miles", 2589975.2356)
         AreaRatios.Add("Square Feet", 0.09290304)
+        AreaRatios.Add("Square Decimeters", 0.01)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
