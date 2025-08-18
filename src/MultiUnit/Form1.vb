@@ -40,6 +40,9 @@
         Label5.Visible = False
         AreaUnitSelector.Visible = False
         AreaInputBox.Visible = False
+        Area2InputBox.Visible = False
+        Label6.Visible = False
+        Label7.Visible = False
 
         ' Get UnitCategorySelector and set UnitSelectionBox accordingly
         Select Case UnitCategorySelector.SelectedItem.ToString()
@@ -109,6 +112,9 @@
                 Label5.Visible = True
                 AreaUnitSelector.Visible = True
                 AreaInputBox.Visible = True
+                Area2InputBox.Visible = True
+                Label6.Visible = True
+                Label7.Visible = True
 
                 ' Display error if the user doesn't select proper category
             Case Else
@@ -337,6 +343,10 @@
     End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
     End Sub
 End Class
