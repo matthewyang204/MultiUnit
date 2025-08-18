@@ -231,39 +231,31 @@
     ' Airflow Conversions
     Private Sub AFConvert(ByVal fromUnit As String, ByVal toUnit As String, ByVal userInput As Double)
         Dim calcTemp As Double
-        Dim areaBox As String = "Enter the area in square feet, which is required for this conversion formula: "
+        ' Dim areaBox As String = "Enter the area in square feet, which is required for this conversion formula: "
+        Dim length As Double
+        Dim width As Double
+        Dim area As Double
+        ' Convert the length and width to Double, but make sure to catch exception, otherwise program will crash into hell
+        Try
+            length = CDbl(AreaInputBox.Text)
+            width = CDbl(Area2InputBox.Text)
+        Catch ex As Exception
+            MessageBox.Show("Invalid input. Please enter a valid number.")
+            Exit Sub
+        End Try
+        area = length * width
+        If area <= 0 Then
+            MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+        End If
 
         ' Airflow conversions
         If fromUnit = "CFM" And toUnit = "LFM" Then
-            Dim areaString As String
-            Dim area As Double
-            areaString = InputBox(areaBox + "Area")
-            Try
-                area = CDbl(areaString)
-            Catch ex As Exception
-                MessageBox.Show("Invalid input. Please enter a valid number.")
-                Exit Sub
-            End Try
-            If area <= 0 Then
-                MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
-            End If
+            ' areaString = InputBox(areaBox + "Area")
             calcTemp = userInput / area
             ResultBox.Text = calcTemp.ToString()
 
         ElseIf fromUnit = "LFM" And toUnit = "CFM" Then
-            Dim areaString As String
-            Dim area As Double
-            areaString = InputBox(areaBox + "Area")
-            ' Convert the area to Double, but make sure to catch exception, otherwise program will crash into hell
-            Try
-                area = CDbl(areaString)
-            Catch ex As Exception
-                MessageBox.Show("Invalid input. Please enter a valid number.")
-                Exit Sub
-            End Try
-            If area <= 0 Then
-                MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
-            End If
+            ' areaString = InputBox(areaBox + "Area")
             calcTemp = userInput * area
             ResultBox.Text = calcTemp.ToString()
 
