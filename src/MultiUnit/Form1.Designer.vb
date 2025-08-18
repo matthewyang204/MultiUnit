@@ -33,6 +33,9 @@ Partial Class MultiUnit
         Me.ConvertButton = New System.Windows.Forms.Button()
         Me.Unit2SelectionBox = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.AreaInputBox = New System.Windows.Forms.TextBox()
+        Me.AreaUnitSelector = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Input
@@ -112,7 +115,7 @@ Partial Class MultiUnit
         '
         Me.ResultBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ResultBox.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.ResultBox.Location = New System.Drawing.Point(45, 770)
+        Me.ResultBox.Location = New System.Drawing.Point(45, 931)
         Me.ResultBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultBox.Name = "ResultBox"
         Me.ResultBox.ReadOnly = True
@@ -124,7 +127,7 @@ Partial Class MultiUnit
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(328, 727)
+        Me.Label3.Location = New System.Drawing.Point(328, 888)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(106, 39)
@@ -135,7 +138,7 @@ Partial Class MultiUnit
         '
         Me.ConvertButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ConvertButton.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.ConvertButton.Location = New System.Drawing.Point(175, 649)
+        Me.ConvertButton.Location = New System.Drawing.Point(175, 817)
         Me.ConvertButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ConvertButton.Name = "ConvertButton"
         Me.ConvertButton.Size = New System.Drawing.Size(412, 57)
@@ -167,11 +170,41 @@ Partial Class MultiUnit
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "To"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Label5.Location = New System.Drawing.Point(279, 661)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(212, 39)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "Enter the area:"
+        '
+        'AreaInputBox
+        '
+        Me.AreaInputBox.Font = New System.Drawing.Font("Calibri", 15.0!)
+        Me.AreaInputBox.Location = New System.Drawing.Point(363, 731)
+        Me.AreaInputBox.Name = "AreaInputBox"
+        Me.AreaInputBox.Size = New System.Drawing.Size(310, 56)
+        Me.AreaInputBox.TabIndex = 12
+        '
+        'AreaUnitSelector
+        '
+        Me.AreaUnitSelector.Font = New System.Drawing.Font("Calibri", 15.0!)
+        Me.AreaUnitSelector.FormattingEnabled = True
+        Me.AreaUnitSelector.Location = New System.Drawing.Point(45, 731)
+        Me.AreaUnitSelector.Name = "AreaUnitSelector"
+        Me.AreaUnitSelector.Size = New System.Drawing.Size(312, 57)
+        Me.AreaUnitSelector.TabIndex = 13
+        '
         'MultiUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(763, 1000)
+        Me.Controls.Add(Me.AreaUnitSelector)
+        Me.Controls.Add(Me.AreaInputBox)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Unit2SelectionBox)
         Me.Controls.Add(Me.ConvertButton)
@@ -201,4 +234,7 @@ Partial Class MultiUnit
     Friend WithEvents ConvertButton As System.Windows.Forms.Button
     Friend WithEvents Unit2SelectionBox As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents AreaInputBox As TextBox
+    Friend WithEvents AreaUnitSelector As ComboBox
 End Class
