@@ -126,6 +126,10 @@
             Case "Air Flow"
                 Units.Add("CFM")
                 Units.Add("LFM")
+                Units.Add("MPH")
+                Units.Add("km/h")
+                Units.Add("ft/s")
+                Units.Add("m/s")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
                 ' Make the area input stuff visible
