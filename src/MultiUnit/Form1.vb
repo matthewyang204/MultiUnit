@@ -249,6 +249,9 @@
         area = dimensions(0) * dimensions(1)
         If area <= 0 Then
             MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
+        Else
+            ' Enable only to debug area value
+            ' MessageBox.Show(area)
         End If
 
         ' Airflow conversions
