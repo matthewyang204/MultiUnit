@@ -299,6 +299,8 @@
                 Dim result As Double = calcTemp * area
                 ResultBox.Text = result.ToString()
                 Exit Sub
+            Else
+                ratioDict = SpeedRatios
             End If
 
             calcTemp = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
