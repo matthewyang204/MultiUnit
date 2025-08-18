@@ -232,18 +232,21 @@
     Private Sub AFConvert(ByVal fromUnit As String, ByVal toUnit As String, ByVal userInput As Double)
         Dim calcTemp As Double
         ' Dim areaBox As String = "Enter the area in square feet, which is required for this conversion formula: "
-        Dim length As Double
-        Dim width As Double
+        Dim rawDimensions As New List(Of Double)
+        Dim dimensions As New List(Of Double)
         Dim area As Double
+        Dim areaUnit As String = AreaUnitSelector.SelectedItem.ToString()
         ' Convert the length and width to Double, but make sure to catch exception, otherwise program will crash into hell
         Try
-            length = CDbl(AreaInputBox.Text)
-            width = CDbl(Area2InputBox.Text)
+            rawDimensions.Add(CDbl(AreaInputBox.Text))
+            rawDimensions.Add(CDbl(Area2InputBox.Text))
         Catch ex As Exception
             MessageBox.Show("Invalid input. Please enter a valid number.")
             Exit Sub
         End Try
-        area = length * width
+        dimensions.Add(rawDimensions(0) * LengthRatios(areaUnit) / LengthRatios("Feet"))
+        dimensions.Add(rawDimensions(1) * LengthRatios(areaUnit) / LengthRatios("Feet"))
+        area = dimensions(0) * dimensions(1)
         If area <= 0 Then
             MessageBox.Show("Your area is 0 or negative. This will give you meaningless results.")
         End If
