@@ -14,6 +14,10 @@
             Unit2SelectionBox.SelectedIndex = 1
         End If
 
+        If AreaUnitSelector.Items.Count > 0 Then
+            AreaUnitSelector.SelectedIndex = 1
+        End If
+
         ' Load the ratios
         LoadRatios()
 
