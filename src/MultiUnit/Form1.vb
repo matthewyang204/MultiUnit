@@ -26,6 +26,20 @@
         Label5.Visible = False
         AreaUnitSelector.Visible = False
         AreaInputBox.Visible = False
+        Area2InputBox.Visible = False
+        Label6.Visible = False
+        Label7.Visible = False
+
+        ' Load the area selector units
+        Dim AreaUnits As New List(Of String)
+        AreaUnits.Add("Square Meters")
+        AreaUnits.Add("Square Yards")
+        AreaUnits.Add("Square Centimeters")
+        AreaUnits.Add("Square Inches")
+        AreaUnits.Add("Square Kilometers")
+        AreaUnits.Add("Square Miles")
+        AreaUnits.Add("Square Feet")
+        AreaUnitSelector.Items.AddRange(AreaUnits.ToArray())
     End Sub
 
     ' Declare the variables
