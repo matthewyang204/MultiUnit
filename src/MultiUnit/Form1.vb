@@ -287,20 +287,15 @@
 
         ElseIf SpeedRatios.ContainsKey(fromUnit) Or SpeedRatios.ContainsKey(toUnit) Then
             Dim ratioDict As Dictionary(Of String, Double)
-            If fromUnit IsNot "CFM" And toUnit IsNot "CFM" Then
-                ratioDict = SpeedRatios
-            ElseIf fromUnit = "CFM" Then
+            ratioDict = SpeedRatios
+            If fromUnit = "CFM" Then
                 userInput = userInput / area
-                ratioDict = SpeedRatios
                 fromUnit = "LFM"
             ElseIf toUnit = "CFM" Then
-                ratioDict = SpeedRatios
                 calcTemp = userInput * ratioDict(fromUnit) / ratioDict("LFM")
                 Dim result As Double = calcTemp * area
                 ResultBox.Text = result.ToString()
                 Exit Sub
-            Else
-                ratioDict = SpeedRatios
             End If
 
             calcTemp = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
