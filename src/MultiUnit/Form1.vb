@@ -363,6 +363,8 @@
                 ratioDict = LengthRatios
             Case "Area"
                 ratioDict = AreaRatios
+            Case "Volume"
+                ratioDict = VolumeRatios
             Case "Speed"
                 ratioDict = SpeedRatios
             Case "Mass"
