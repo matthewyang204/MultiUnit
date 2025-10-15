@@ -103,6 +103,19 @@
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
+            Case "Volume"
+                Units.Add("Cubic Meters")
+                Units.Add("Cubic Yards")
+                Units.Add("Cubic Centimeters")
+                Units.Add("Cubic Millimeters")
+                Units.Add("Cubic Inches")
+                Units.Add("Cubic Kilometers")
+                Units.Add("Cubic Miles")
+                Units.Add("Cubic Feet")
+                Units.Add("Cubic Decimeters")
+                UnitSelectionBox.Items.AddRange(Units.ToArray())
+                Unit2SelectionBox.Items.AddRange(Units.ToArray())
+
             Case "Weight"
                 Units.Add("Dyne")
                 Units.Add("Newton")
