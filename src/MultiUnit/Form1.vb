@@ -169,6 +169,7 @@
     ' Define the ratios for each unit
     Private LengthRatios As New Dictionary(Of String, Double)
     Private AreaRatios As New Dictionary(Of String, Double)
+    Private VolumeRatios As New Dictionary(Of String, Double)
     Private SpeedRatios As New Dictionary(Of String, Double)
     Private MassRatios As New Dictionary(Of String, Double)
     Private WeightRatios As New Dictionary(Of String, Double)
@@ -195,6 +196,17 @@
         AreaRatios.Add("Square Miles", 2589975.2356)
         AreaRatios.Add("Square Feet", 0.09290304)
         AreaRatios.Add("Square Decimeters", 0.01)
+
+        ' Volume Ratios
+        VolumeRatios.Add("Cubic Meters", 1)
+        VolumeRatios.Add("Cubic Yards", 0.83612736)
+        VolumeRatios.Add("Cubic Centimeters", 0.0001)
+        VolumeRatios.Add("Cubic Millimeters", 0.000001)
+        VolumeRatios.Add("Cubic Inches", 0.00064516)
+        VolumeRatios.Add("Cubic Kilometers", 1000000.0)
+        VolumeRatios.Add("Cubic Miles", 2589975.2356)
+        VolumeRatios.Add("Cubic Feet", 0.09290304)
+        VolumeRatios.Add("Cubic Decimeters", 0.01)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
