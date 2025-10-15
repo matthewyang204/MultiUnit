@@ -199,14 +199,14 @@
 
         ' Volume Ratios
         VolumeRatios.Add("Cubic Meters", 1)
-        VolumeRatios.Add("Cubic Yards", 0.83612736)
-        VolumeRatios.Add("Cubic Centimeters", 0.0001)
-        VolumeRatios.Add("Cubic Millimeters", 0.000001)
-        VolumeRatios.Add("Cubic Inches", 0.00064516)
-        VolumeRatios.Add("Cubic Kilometers", 1000000.0)
-        VolumeRatios.Add("Cubic Miles", 2589975.2356)
-        VolumeRatios.Add("Cubic Feet", 0.09290304)
-        VolumeRatios.Add("Cubic Decimeters", 0.01)
+        VolumeRatios.Add("Cubic Yards", 0.764554857984)
+        VolumeRatios.Add("Cubic Centimeters", 1.0000000000000002e-06)
+        VolumeRatios.Add("Cubic Millimeters", 1e-09)
+        VolumeRatios.Add("Cubic Inches", 1.6387064e-05)
+        VolumeRatios.Add("Cubic Kilometers", 1000000000.0)
+        VolumeRatios.Add("Cubic Miles", 4168150745.6605034)
+        VolumeRatios.Add("Cubic Feet", 0.028316846592000004)
+        VolumeRatios.Add("Cubic Decimeters", 0.0010000000000000002)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
