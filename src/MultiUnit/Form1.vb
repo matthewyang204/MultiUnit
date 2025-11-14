@@ -200,7 +200,10 @@
         AreaRatios.Add("Square Decimeters", 0.01)
 
         ' Volume Ratios
-        
+        VolumeRatios.Add("Gallons", 0.003785411784)
+        VolumeRatios.Add("Liters", 0.001)
+        VolumeRatios.Add("Quarts", 0.000946352946)
+        VolumeRatios.Add("Pints", 0.000473176473)
         VolumeRatios.Add("US Gill", 0.00011829411825)
         VolumeRatios.Add("UK Gill", 0.0001420653125)
         VolumeRatios.Add("Cubic Meters", 1)
