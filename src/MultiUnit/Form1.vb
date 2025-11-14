@@ -113,6 +113,8 @@
                 Units.Add("Cubic Miles")
                 Units.Add("Cubic Feet")
                 Units.Add("Cubic Decimeters")
+                Units.Add("US Gill")
+                Units.Add("UK Gill")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
