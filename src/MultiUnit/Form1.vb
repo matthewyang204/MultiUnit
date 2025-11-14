@@ -104,6 +104,12 @@
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Volume"
+                Units.Add("Gallons")
+                Units.Add("Liters")
+                Units.Add("Quarts")
+                Units.Add("Pints")
+                Units.Add("US Gill")
+                Units.Add("UK Gill")
                 Units.Add("Cubic Meters")
                 Units.Add("Cubic Yards")
                 Units.Add("Cubic Centimeters")
@@ -113,8 +119,6 @@
                 Units.Add("Cubic Miles")
                 Units.Add("Cubic Feet")
                 Units.Add("Cubic Decimeters")
-                Units.Add("US Gill")
-                Units.Add("UK Gill")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
