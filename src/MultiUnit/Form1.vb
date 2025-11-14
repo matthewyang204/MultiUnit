@@ -200,6 +200,9 @@
         AreaRatios.Add("Square Decimeters", 0.01)
 
         ' Volume Ratios
+        
+        VolumeRatios.Add("US Gill", 0.00011829411825)
+        VolumeRatios.Add("UK Gill", 0.0001420653125)
         VolumeRatios.Add("Cubic Meters", 1)
         VolumeRatios.Add("Cubic Yards", 0.764554857984)
         VolumeRatios.Add("Cubic Centimeters", 1.0000000000000002e-06)
@@ -209,8 +212,6 @@
         VolumeRatios.Add("Cubic Miles", 4168150745.6605034)
         VolumeRatios.Add("Cubic Feet", 0.028316846592000004)
         VolumeRatios.Add("Cubic Decimeters", 0.0010000000000000002)
-        VolumeRatios.Add("US Gill", 0.00011829411825)
-        VolumeRatios.Add("UK Gill", 0.0001420653125)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
