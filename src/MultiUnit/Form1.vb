@@ -207,6 +207,8 @@
         VolumeRatios.Add("Cubic Miles", 4168150745.6605034)
         VolumeRatios.Add("Cubic Feet", 0.028316846592000004)
         VolumeRatios.Add("Cubic Decimeters", 0.0010000000000000002)
+        VolumeRatios.Add("US Gill", 0.00011829411825)
+        VolumeRatios.Add("UK Gill", 0.0001420653125)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
