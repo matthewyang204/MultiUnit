@@ -123,6 +123,20 @@
                 Units.Add("Cubic Decimeters")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
+            
+            Case "Energy"
+                Units.Add("Joules")
+                Units.Add("Kilojoules")
+                Units.Add("Megajoules")
+                Units.Add("Watt-hours")
+                Units.Add("Kilowatt-hours")
+                Units.Add("Electronvolts")
+                Units.Add("Calories")
+                Units.Add("Kilocalories")
+                Units.Add("BTUs (British Thermal Units)")
+                Units.Add("Foot-Pounds")
+                UnitSelectionBox.Items.AddRange(Units.ToArray())
+                Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Weight"
                 Units.Add("Dyne")
@@ -181,6 +195,7 @@
     Private SpeedRatios As New Dictionary(Of String, Double)
     Private MassRatios As New Dictionary(Of String, Double)
     Private WeightRatios As New Dictionary(Of String, Double)
+    Private EnergyRatios As New Dictionary(Of String, Double)
 
     Private Sub LoadRatios()
         ' Length ratios
@@ -223,6 +238,18 @@
         VolumeRatios.Add("Cubic Miles", 4168150745.6605034)
         VolumeRatios.Add("Cubic Feet", 0.028316846592000004)
         VolumeRatios.Add("Cubic Decimeters", 0.0010000000000000002)
+
+        ' Energy ratios
+        EnergyRatios.Add("Joules", 1)
+        EnergyRatios.Add("Kilojoules", 1000.0)
+        EnergyRatios.Add("Megajoules", 1000000.0)
+        EnergyRatios.Add("Watt-hours", 3600.0)
+        EnergyRatios.Add("Kilowatt-hours", 3600000.0)
+        EnergyRatios.Add("Electronvolts", 1.602176634e-19)
+        EnergyRatios.Add("Calories", 4.184)
+        EnergyRatios.Add("Kilocalories", 4184.0)
+        EnergyRatios.Add("BTUs (British Thermal Units)", 1055.05585)
+        EnergyRatios.Add("Foot-Pounds", 1.355817948)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
@@ -381,6 +408,8 @@
                 ratioDict = AreaRatios
             Case "Volume"
                 ratioDict = VolumeRatios
+            Case "Energy"
+                ratioDict = EnergyRatios
             Case "Speed"
                 ratioDict = SpeedRatios
             Case "Mass"
