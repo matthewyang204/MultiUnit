@@ -155,6 +155,7 @@
                 Units.Add("Metric Tonnes")
                 Units.Add("Short Tonnes")
                 Units.Add("Long Tonnes")
+                Units.Add("Stones")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -266,6 +267,7 @@
         MassRatios.Add("Metric Tonnes", 1000)
         MassRatios.Add("Short Tonnes", 907.18474)
         MassRatios.Add("Long Tonnes", 1016.0469088)
+        MassRatios.Add("Stones", 6.35029318)
 
         ' Weight ratios
         WeightRatios.Add("Dyne", 0.00001)
