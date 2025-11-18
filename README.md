@@ -1,5 +1,7 @@
 # MultiUnit
- A simple unit converter written in Visual Basic. This app has a pretty self-explanatory GUI. Additionally, this app has a portable version that doesn't need to be installed alongside the ordinary installable version. You can get the source code from the branch `dotnet2.0`, which implements all features but uses .NET 2.0 to build and run, which allows it to run on Windows 9x and 2000.
+<img width="1400" height="893" alt="image" src="https://github.com/user-attachments/assets/adbfbe49-02a2-4405-8910-8303806a9fbb" />
+
+ A simple unit converter written in Visual Basic. This app has a fairly self-explanatory GUI. Additionally, this app has a portable version that doesn't need to be installed alongside the ordinary installable version. You can get the source code from the branch `dotnet2.0`, which implements all features but uses .NET 2.0 to build and run, which allows it to run on Windows 9x and 2000.
 
 # System Requirements
 - Windows XP or later
