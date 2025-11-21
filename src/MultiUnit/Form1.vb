@@ -176,6 +176,12 @@
                 Label6.Visible = True
                 Label7.Visible = True
 
+            Case "Angle"
+                Units.Add("Degrees")
+                Units.Add("Radians")
+                UnitSelectionBox.Items.AddRange(Units.ToArray())
+                Unit2SelectionBox.Items.AddRange(Units.ToArray())
+
                 ' Display error if the user doesn't select proper category
             Case Else
                 MessageBox.Show("Please select a valid category.")
@@ -197,6 +203,7 @@
     Private MassRatios As New Dictionary(Of String, Double)
     Private WeightRatios As New Dictionary(Of String, Double)
     Private EnergyRatios As New Dictionary(Of String, Double)
+    Private AngleRatios As New Dictionary(Of String, Double)
 
     Private Sub LoadRatios()
         ' Length ratios
@@ -275,6 +282,10 @@
         WeightRatios.Add("Kilopond", 9.80665)
         WeightRatios.Add("Kilonewton", 1000)
         WeightRatios.Add("Pound-force", 4.44822)
+
+        ' Angle ratios
+        AngleRatios.Add("Degrees", 1)
+        AngleRatios.Add("Radians", 57.2958)
     End Sub
 
     ' Temperature conversion function
@@ -424,6 +435,8 @@
             Case "Air Flow"
                 AFConvert(fromUnit, toUnit, userInput)
                 Exit Sub
+            Case "Angle"
+                ratioDict = AngleRatios
             Case Else
                 MessageBox.Show("Unknown category. Please select a known category from the list.")
                 Exit Sub
