@@ -66,3 +66,7 @@ MultiUnit.vbproj.FileListAbsolute.txt
 *.suo
 .NETFramework,Version=v4.0.AssemblyAttributes.vb
 
+# IDE crap
+.vscode/
+.vs/
+.idea/
