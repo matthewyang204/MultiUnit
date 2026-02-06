@@ -82,6 +82,8 @@
                 Units.Add("Yards")
                 Units.Add("Centimeters")
                 Units.Add("Millimeters")
+                Units.Add("Micrometers")
+                Units.Add("Nanometers")
                 Units.Add("Inches")
                 Units.Add("Kilometers")
                 Units.Add("Miles")
@@ -219,6 +221,8 @@
         LengthRatios.Add("Miles", 1609.34)
         LengthRatios.Add("Feet", 0.3048)
         LengthRatios.Add("Decimeters", 0.1)
+        LengthRatios.Add("Micrometers", 1000000)
+        LengthRatios.Add("Nanometers", 1000000000)
 
         ' Area ratios
         AreaRatios.Add("Square Meters", 1)
