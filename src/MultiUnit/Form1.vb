@@ -100,6 +100,9 @@
                 Units.Add("Square Miles")
                 Units.Add("Square Feet")
                 Units.Add("Square Decimeters")
+                Units.Add("Hectares")
+                Units.Add("Acres")
+                Units.Add("Ares")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -227,6 +230,9 @@
         AreaRatios.Add("Square Miles", 2589975.2356)
         AreaRatios.Add("Square Feet", 0.09290304)
         AreaRatios.Add("Square Decimeters", 0.01)
+        AreaRatios.Add("Hectares", 0.0001)
+        AreaRatios.Add("Acres", 0.00024711)
+        AreaRatios.Add("Ares", 0.01)
 
         ' Volume Ratios
         VolumeRatios.Add("Gallons", 0.003785411784)
