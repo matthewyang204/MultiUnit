@@ -149,6 +149,14 @@
                 Units.Add("Kilopond")
                 Units.Add("Kilonewton")
                 Units.Add("Pound-force")
+                Units.Add("Earth Grams")
+                Units.Add("Earth Ounces")
+                Units.Add("Earth Kilograms")
+                Units.Add("Earth Pounds")
+                Units.Add("Earth Metric Tonnes")
+                Units.Add("Earth Short Tonnes")
+                Units.Add("Earth Long Tonnes")
+                Units.Add("Earth Stones")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -292,6 +300,9 @@
         WeightRatios.Add("Kilopond", 9.80665)
         WeightRatios.Add("Kilonewton", 1000)
         WeightRatios.Add("Pound-force", 4.44822)
+        For Each kvp As KeyValuePair(Of String, Double) In MassRatios
+            WeightRatios.Add("Earth " & kvp.Key, kvp.Value)
+        Next
 
         ' Angle ratios
         AngleRatios.Add("Degrees", 1)
