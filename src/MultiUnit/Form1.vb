@@ -306,7 +306,7 @@
 
         ' Angle ratios
         AngleRatios.Add("Degrees", 1)
-        AngleRatios.Add("Radians", 57.2958)
+        AngleRatios.Add("Radians", 180/Math.PI)
     End Sub
 
     ' Temperature conversion function
