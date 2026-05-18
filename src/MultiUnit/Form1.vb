@@ -255,7 +255,7 @@
         LengthRatios.Add("Millimeters", 0.001)
         LengthRatios.Add("Inches", 0.0254)
         LengthRatios.Add("Kilometers", 1000.0)
-        LengthRatios.Add("Miles", 1609.34)
+        LengthRatios.Add("Miles", 1609.344)
         LengthRatios.Add("Feet", 0.3048)
         LengthRatios.Add("Decimeters", 0.1)
         LengthRatios.Add("Micrometers", 0.000001)
