@@ -169,6 +169,8 @@
                 Units.Add("Kilopond")
                 Units.Add("Kilonewton")
                 Units.Add("Pound-force")
+                Units.Add("Gram-force")
+                Units.Add("Ton-force")
                 Units.Add("Earth Grams")
                 Units.Add("Earth Ounces")
                 Units.Add("Earth Kilograms")
@@ -340,6 +342,8 @@
         WeightRatios.Add("Kilopond", 9.80665)
         WeightRatios.Add("Kilonewton", 1000)
         WeightRatios.Add("Pound-force", 4.44822)
+        WeightRatios.Add("Gram-force", 0.00980665)
+        WeightRatios.Add("Ton-force", 8896.443)
         For Each kvp As KeyValuePair(Of String, Double) In MassRatios
             WeightRatios.Add("Earth " & kvp.Key, kvp.Value)
         Next
