@@ -297,14 +297,14 @@
         VolumeRatios.Add("US Gill", 0.00011829411825)
         VolumeRatios.Add("UK Gill", 0.0001420653125)
         VolumeRatios.Add("Cubic Meters", 1) ' Base unit
-        VolumeRatios.Add("Cubic Yards", 0.764554857984)
-        VolumeRatios.Add("Cubic Centimeters", 1.0000000000000002e-06)
-        VolumeRatios.Add("Cubic Millimeters", 1e-09)
-        VolumeRatios.Add("Cubic Inches", 1.6387064e-05)
-        VolumeRatios.Add("Cubic Kilometers", 1000000000.0)
-        VolumeRatios.Add("Cubic Miles", 4168150745.6605034)
-        VolumeRatios.Add("Cubic Feet", 0.028316846592000004)
-        VolumeRatios.Add("Cubic Decimeters", 0.0010000000000000002)
+        VolumeRatios.Add("Cubic Yards", Math.Pow(LengthRatios("Yards"), 3))
+        VolumeRatios.Add("Cubic Centimeters", Math.Pow(LengthRatios("Centimeters"), 3))
+        VolumeRatios.Add("Cubic Millimeters", Math.Pow(LengthRatios("Millimeters"), 3))
+        VolumeRatios.Add("Cubic Inches", Math.Pow(LengthRatios("Inches"), 3))
+        VolumeRatios.Add("Cubic Kilometers", Math.Pow(LengthRatios("Kilometers"), 3))
+        VolumeRatios.Add("Cubic Miles", Math.Pow(LengthRatios("Miles"), 3))
+        VolumeRatios.Add("Cubic Feet", Math.Pow(LengthRatios("Feet"), 3))
+        VolumeRatios.Add("Cubic Decimeters", Math.Pow(LengthRatios("Decimeters"), 3))
 
         ' Energy ratios
         EnergyRatios.Add("Joules", 1) ' Base unit
