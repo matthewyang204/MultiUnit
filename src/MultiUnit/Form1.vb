@@ -220,7 +220,7 @@
 
     Private Sub LoadRatios()
         ' Length ratios
-        LengthRatios.Add("Meters", 1)
+        LengthRatios.Add("Meters", 1) ' Base unit
         LengthRatios.Add("Yards", 0.9144)
         LengthRatios.Add("Centimeters", 0.01)
         LengthRatios.Add("Millimeters", 0.001)
@@ -233,7 +233,7 @@
         LengthRatios.Add("Nanometers", 0.000000001)
 
         ' Area ratios
-        AreaRatios.Add("Square Meters", 1)
+        AreaRatios.Add("Square Meters", 1) ' Base unit
         AreaRatios.Add("Square Yards", 0.83612736)
         AreaRatios.Add("Square Centimeters", 0.0001)
         AreaRatios.Add("Square Millimeters", 0.000001)
@@ -255,7 +255,7 @@
         VolumeRatios.Add("Fluid Ounces", 2.95735295625e-05)
         VolumeRatios.Add("US Gill", 0.00011829411825)
         VolumeRatios.Add("UK Gill", 0.0001420653125)
-        VolumeRatios.Add("Cubic Meters", 1)
+        VolumeRatios.Add("Cubic Meters", 1) ' Base unit
         VolumeRatios.Add("Cubic Yards", 0.764554857984)
         VolumeRatios.Add("Cubic Centimeters", 1.0000000000000002e-06)
         VolumeRatios.Add("Cubic Millimeters", 1e-09)
@@ -266,7 +266,7 @@
         VolumeRatios.Add("Cubic Decimeters", 0.0010000000000000002)
 
         ' Energy ratios
-        EnergyRatios.Add("Joules", 1)
+        EnergyRatios.Add("Joules", 1) ' Base unit
         EnergyRatios.Add("Kilojoules", 1000.0)
         EnergyRatios.Add("Megajoules", 1000000.0)
         EnergyRatios.Add("Watt-hours", 3600.0)
@@ -281,13 +281,13 @@
         SpeedRatios.Add("MPH", 0.44704)
         SpeedRatios.Add("km/h", 0.277777778)
         SpeedRatios.Add("ft/s", 0.3048)
-        SpeedRatios.Add("m/s", 1)
+        SpeedRatios.Add("m/s", 1) ' Base unit
         SpeedRatios.Add("LFM", 0.00508)
 
         ' Mass ratios
         MassRatios.Add("Grams", 0.001)
         MassRatios.Add("Ounces", 0.0283495)
-        MassRatios.Add("Kilograms", 1)
+        MassRatios.Add("Kilograms", 1) ' Base unit
         MassRatios.Add("Pounds", 0.45359237)
         MassRatios.Add("Metric Tonnes", 1000)
         MassRatios.Add("Short Tonnes", 907.18474)
@@ -296,7 +296,7 @@
 
         ' Weight ratios
         WeightRatios.Add("Dyne", 0.00001)
-        WeightRatios.Add("Newton", 1)
+        WeightRatios.Add("Newton", 1) ' Base unit
         WeightRatios.Add("Kilopond", 9.80665)
         WeightRatios.Add("Kilonewton", 1000)
         WeightRatios.Add("Pound-force", 4.44822)
@@ -305,7 +305,7 @@
         Next
 
         ' Angle ratios
-        AngleRatios.Add("Degrees", 1)
+        AngleRatios.Add("Degrees", 1) ' Base unit
         AngleRatios.Add("Radians", 180/Math.PI)
     End Sub
 
