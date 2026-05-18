@@ -74,6 +74,10 @@
                 Units.Add("km/h")
                 Units.Add("ft/s")
                 Units.Add("m/s")
+                Units.Add("Knots")
+                Units.Add("Mach")
+                Units.Add("cm/s")
+                Units.Add("mm/s")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -283,6 +287,10 @@
         SpeedRatios.Add("ft/s", 0.3048)
         SpeedRatios.Add("m/s", 1) ' Base unit
         SpeedRatios.Add("LFM", 0.00508)
+        SpeedRatios.Add("Knots", 0.514444)
+        SpeedRatios.Add("Mach", 343.0) ' Approximately at sea level; may change at higher or lower altitudes
+        SpeedRatios.Add("cm/s", 0.01)
+        SpeedRatios.Add("mm/s", 0.001)
 
         ' Mass ratios
         MassRatios.Add("Grams", 0.001)
