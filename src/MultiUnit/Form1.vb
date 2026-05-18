@@ -184,6 +184,10 @@
 
             Case "Mass"
                 Units.Add("Grams")
+                Units.Add("Milligrams")
+                Units.Add("Micrograms")
+                Units.Add("Carats")
+                Units.Add("Atomic Mass Units")
                 Units.Add("Ounces")
                 Units.Add("Kilograms")
                 Units.Add("Pounds")
@@ -328,6 +332,10 @@
 
         ' Mass ratios
         MassRatios.Add("Grams", 0.001)
+        MassRatios.Add("Milligrams", 0.000001)
+        MassRatios.Add("Micrograms", 0.000000001)
+        MassRatios.Add("Carats", 0.0002)
+        MassRatios.Add("Atomic Mass Units", 1.6605390666E-27)
         MassRatios.Add("Ounces", 0.0283495)
         MassRatios.Add("Kilograms", 1) ' Base unit
         MassRatios.Add("Pounds", 0.45359237)
