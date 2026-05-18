@@ -156,6 +156,10 @@
                 Units.Add("Kilocalories")
                 Units.Add("BTUs (British Thermal Units)")
                 Units.Add("Foot-Pounds")
+                Units.Add("Ergs")
+                Units.Add("Therms")
+                Units.Add("Ton TNT")
+                Units.Add("Horsepower-hours")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -304,6 +308,10 @@
         EnergyRatios.Add("Kilocalories", 4184.0)
         EnergyRatios.Add("BTUs (British Thermal Units)", 1055.05585)
         EnergyRatios.Add("Foot-Pounds", 1.355817948)
+        EnergyRatios.Add("Ergs", 0.0000001)
+        EnergyRatios.Add("Therms", 105505585.257)
+        EnergyRatios.Add("Ton TNT", 4184000000.0)
+        EnergyRatios.Add("Horsepower-hours", 2684519.54)
 
         ' Speed ratios
         SpeedRatios.Add("MPH", 0.44704)
