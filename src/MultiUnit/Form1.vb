@@ -93,6 +93,11 @@
                 Units.Add("Miles")
                 Units.Add("Feet")
                 Units.Add("Decimeters")
+                Units.Add("Microns")
+                Units.Add("Nautical Miles")
+                Units.Add("Astronomical Units")
+                Units.Add("Light Years")
+                Units.Add("Parsecs")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
             
@@ -235,6 +240,11 @@
         LengthRatios.Add("Decimeters", 0.1)
         LengthRatios.Add("Micrometers", 0.000001)
         LengthRatios.Add("Nanometers", 0.000000001)
+        LengthRatios.Add("Microns", 0.000001)
+        LengthRatios.Add("Nautical Miles", 1852)
+        LengthRatios.Add("Astronomical Units", 149597870700.0)
+        LengthRatios.Add("Light Years", 9.4607E+15)
+        LengthRatios.Add("Parsecs", 3.0857E+16)
 
         ' Area ratios
         AreaRatios.Add("Square Meters", 1) ' Base unit
