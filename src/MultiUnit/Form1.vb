@@ -229,8 +229,8 @@
         LengthRatios.Add("Miles", 1609.34)
         LengthRatios.Add("Feet", 0.3048)
         LengthRatios.Add("Decimeters", 0.1)
-        LengthRatios.Add("Micrometers", 1000000)
-        LengthRatios.Add("Nanometers", 1000000000)
+        LengthRatios.Add("Micrometers", 0.000001)
+        LengthRatios.Add("Nanometers", 0.000000001)
 
         ' Area ratios
         AreaRatios.Add("Square Meters", 1)
