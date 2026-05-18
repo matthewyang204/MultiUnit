@@ -268,18 +268,18 @@
 
         ' Area ratios
         AreaRatios.Add("Square Meters", 1) ' Base unit
-        AreaRatios.Add("Square Yards", 0.83612736)
-        AreaRatios.Add("Square Centimeters", 0.0001)
-        AreaRatios.Add("Square Millimeters", 0.000001)
-        AreaRatios.Add("Square Inches", 0.00064516)
-        AreaRatios.Add("Square Kilometers", 1000000.0)
-        AreaRatios.Add("Square Miles", 2589975.2356)
-        AreaRatios.Add("Square Feet", 0.09290304)
-        AreaRatios.Add("Square Decimeters", 0.01)
-        AreaRatios.Add("Hectares", 0.0001)
-        AreaRatios.Add("Acres", 0.00024711)
-        AreaRatios.Add("Ares", 0.01)
-        AreaRatios.Add("Square Nautical Miles", 3429904)
+        AreaRatios.Add("Square Yards", Math.Pow(LengthRatios("Yards"), 2))
+        AreaRatios.Add("Square Centimeters", Math.Pow(LengthRatios("Centimeters"), 2))
+        AreaRatios.Add("Square Millimeters", Math.Pow(LengthRatios("Millimeters"), 2))
+        AreaRatios.Add("Square Inches", Math.Pow(LengthRatios("Inches"), 2))
+        AreaRatios.Add("Square Kilometers", Math.Pow(LengthRatios("Kilometers"), 2))
+        AreaRatios.Add("Square Miles", Math.Pow(LengthRatios("Miles"), 2))
+        AreaRatios.Add("Square Feet", Math.Pow(LengthRatios("Feet"), 2))
+        AreaRatios.Add("Square Decimeters", Math.Pow(LengthRatios("Decimeters"), 2))
+        AreaRatios.Add("Hectares", 10000.0)
+        AreaRatios.Add("Acres", 4046.8564224)
+        AreaRatios.Add("Ares", 100.0)
+        AreaRatios.Add("Square Nautical Miles", Math.Pow(LengthRatios("Nautical Miles"), 2))
         AreaRatios.Add("Barns", 1E-28)
 
         ' Volume Ratios
