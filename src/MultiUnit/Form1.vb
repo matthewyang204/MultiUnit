@@ -114,6 +114,8 @@
                 Units.Add("Hectares")
                 Units.Add("Acres")
                 Units.Add("Ares")
+                Units.Add("Square Nautical Miles")
+                Units.Add("Barns")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -259,6 +261,8 @@
         AreaRatios.Add("Hectares", 0.0001)
         AreaRatios.Add("Acres", 0.00024711)
         AreaRatios.Add("Ares", 0.01)
+        AreaRatios.Add("Square Nautical Miles", 3429904)
+        AreaRatios.Add("Barns", 1E-28)
 
         ' Volume Ratios
         VolumeRatios.Add("Gallons", 0.003785411784)
