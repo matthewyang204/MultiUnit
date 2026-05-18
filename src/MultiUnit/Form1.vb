@@ -218,6 +218,9 @@
             Case "Angle"
                 Units.Add("Degrees")
                 Units.Add("Radians")
+                Units.Add("Gradians")
+                Units.Add("Arcminutes")
+                Units.Add("Arcseconds")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -359,6 +362,9 @@
         ' Angle ratios
         AngleRatios.Add("Degrees", 1) ' Base unit
         AngleRatios.Add("Radians", 180/Math.PI)
+        AngleRatios.Add("Gradians", 0.9)
+        AngleRatios.Add("Arcminutes", 1.0 / 60)
+        AngleRatios.Add("Arcseconds", 1.0 / 3600)
     End Sub
 
     ' Temperature conversion function
