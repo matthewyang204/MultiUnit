@@ -120,6 +120,11 @@
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Volume"
+                Units.Add("Milliliters")
+                Units.Add("Tablespoons")
+                Units.Add("Teaspoons")
+                Units.Add("Barrels")
+                Units.Add("Imperial Gallons")
                 Units.Add("Gallons")
                 Units.Add("Liters")
                 Units.Add("Quarts")
@@ -265,6 +270,11 @@
         AreaRatios.Add("Barns", 1E-28)
 
         ' Volume Ratios
+        VolumeRatios.Add("Milliliters", 0.000001)
+        VolumeRatios.Add("Tablespoons", 0.0000147868)
+        VolumeRatios.Add("Teaspoons", 0.00000492892)
+        VolumeRatios.Add("Barrels", 0.158987294928)
+        VolumeRatios.Add("Imperial Gallons", 0.00454609)
         VolumeRatios.Add("Gallons", 0.003785411784)
         VolumeRatios.Add("Liters", 0.001)
         VolumeRatios.Add("Quarts", 0.000946352946)
