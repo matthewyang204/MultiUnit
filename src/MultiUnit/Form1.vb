@@ -100,7 +100,7 @@
                 Units.Add("Parsecs")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
-            
+
             Case "Area"
                 Units.Add("Square Meters")
                 Units.Add("Square Yards")
@@ -144,7 +144,7 @@
                 Units.Add("Cubic Decimeters")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
-            
+
             Case "Energy"
                 Units.Add("Joules")
                 Units.Add("Kilojoules")
@@ -280,7 +280,7 @@
         AreaRatios.Add("Acres", 4046.8564224)
         AreaRatios.Add("Ares", 100.0)
         AreaRatios.Add("Square Nautical Miles", Math.Pow(LengthRatios("Nautical Miles"), 2))
-        AreaRatios.Add("Barns", 1E-28)
+        AreaRatios.Add("Barns", 1.0E-28)
 
         ' Volume Ratios
         VolumeRatios.Add("Milliliters", 0.000001)
@@ -293,7 +293,7 @@
         VolumeRatios.Add("Quarts", 0.000946352946)
         VolumeRatios.Add("Pints", 0.000473176473)
         VolumeRatios.Add("Cups", 0.0002365882365)
-        VolumeRatios.Add("Fluid Ounces", 2.95735295625e-05)
+        VolumeRatios.Add("Fluid Ounces", 0.0000295735295625)
         VolumeRatios.Add("US Gill", 0.00011829411825)
         VolumeRatios.Add("UK Gill", 0.0001420653125)
         VolumeRatios.Add("Cubic Meters", 1) ' Base unit
@@ -312,7 +312,7 @@
         EnergyRatios.Add("Megajoules", 1000000.0)
         EnergyRatios.Add("Watt-hours", 3600.0)
         EnergyRatios.Add("Kilowatt-hours", 3600000.0)
-        EnergyRatios.Add("Electronvolts", 1.602176634e-19)
+        EnergyRatios.Add("Electronvolts", 1.602176634E-19)
         EnergyRatios.Add("Calories", 4.184)
         EnergyRatios.Add("Kilocalories", 4184.0)
         EnergyRatios.Add("BTUs (British Thermal Units)", 1055.05585)
@@ -361,7 +361,7 @@
 
         ' Angle ratios
         AngleRatios.Add("Degrees", 1) ' Base unit
-        AngleRatios.Add("Radians", 180/Math.PI)
+        AngleRatios.Add("Radians", 180 / Math.PI)
         AngleRatios.Add("Gradians", 0.9)
         AngleRatios.Add("Arcminutes", 1.0 / 60)
         AngleRatios.Add("Arcseconds", 1.0 / 3600)
