@@ -24,9 +24,7 @@ Public Class CurrencyAPI
 
         Dim item
         For Each item In items
-            If item.base = "CNY" Then
-                dict(item.quote) = item.rate
-            End If
+            dict(item.quote) = item.rate
         Next
 
         Return dict
