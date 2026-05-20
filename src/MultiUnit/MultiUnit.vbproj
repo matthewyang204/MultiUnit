@@ -47,6 +47,12 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContinuousProgress.Designer.vb">
+      <DependentUpon>ContinuousProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContinuousProgress.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CurrencyAPI.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -73,6 +79,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ContinuousProgress.resx">
+      <DependentUpon>ContinuousProgress.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Form1.vb</DependentUpon>
