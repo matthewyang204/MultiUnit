@@ -1,4 +1,6 @@
 ﻿Public Class MultiUnit
+    Dim CurrencyAPI As New CurrencyAPI()
+
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         If UnitCategorySelector.Items.Count > 0 Then
@@ -518,6 +520,8 @@
                 Exit Sub
             Case "Angle"
                 ratioDict = AngleRatios
+            Case "Currency"
+                ratioDict = CurrencyRatios"
             Case Else
                 MessageBox.Show("Unknown category. Please select a known category from the list.")
                 Exit Sub
