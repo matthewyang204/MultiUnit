@@ -226,6 +226,11 @@
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Currency"
+                Dim progDlg As New ContinuousProgress()
+                progDlg.Label1.Text = "Downloading latest currency data..."
+                progDlg.Show()
+                Application.DoEvents()
+
                 CurrencyRatios = CurrencyAPI.RefreshRates()
                 Dim KeyName As String
                 For Each KeyName In CurrencyRatios.Keys
@@ -233,6 +238,8 @@
                 Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
+
+                progDlg.Close()
 
                 ' Display error if the user doesn't select proper category
             Case Else
