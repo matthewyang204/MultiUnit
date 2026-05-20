@@ -521,7 +521,7 @@
             Case "Angle"
                 ratioDict = AngleRatios
             Case "Currency"
-                ratioDict = CurrencyRatios"
+                ratioDict = CurrencyRatios
             Case Else
                 MessageBox.Show("Unknown category. Please select a known category from the list.")
                 Exit Sub
