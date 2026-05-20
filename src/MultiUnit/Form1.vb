@@ -227,6 +227,7 @@
 
             Case "Currency"
                 Dim progDlg As New ContinuousProgress()
+                progDlg.Text = "Currency Data Downloader"
                 progDlg.Label1.Text = "Downloading latest currency data..."
                 progDlg.Show()
                 Application.DoEvents()
