@@ -25,7 +25,7 @@ Public Class CurrencyAPI
         dict("CNY") = 1 ' Base currency
         Dim item
         For Each item In items
-            dict(item.quote) = item.rate
+            dict(item.quote) = 1 / item.rate
         Next
 
         Return dict
