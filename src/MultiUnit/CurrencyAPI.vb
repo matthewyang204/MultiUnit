@@ -22,6 +22,7 @@ Public Class CurrencyAPI
         Dim items As List(Of RateItem) = serializer.Deserialize(Of List(Of RateItem))(json)
         Dim dict As New Dictionary(Of String, Double)
 
+        dict("CNY") = 1 ' Base currency
         Dim item
         For Each item In items
             dict(item.quote) = item.rate
