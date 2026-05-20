@@ -231,13 +231,17 @@
                 progDlg.Show()
                 Application.DoEvents()
 
-                CurrencyRatios = CurrencyAPI.RefreshRates()
-                Dim KeyName As String
-                For Each KeyName In CurrencyRatios.Keys
-                    Units.Add(KeyName)
-                Next
-                UnitSelectionBox.Items.AddRange(Units.ToArray())
-                Unit2SelectionBox.Items.AddRange(Units.ToArray())
+                Try
+                    CurrencyRatios = CurrencyAPI.RefreshRates()
+                    Dim KeyName As String
+                    For Each KeyName In CurrencyRatios.Keys
+                        Units.Add(KeyName)
+                    Next
+                    UnitSelectionBox.Items.AddRange(Units.ToArray())
+                    Unit2SelectionBox.Items.AddRange(Units.ToArray())
+                Catch ex As Exception
+                    MessageBox.Show("Failed to download currency data. Please check your internet connection and try again. Error: " & vbCrLf & ex.Message)
+                End Try
 
                 progDlg.Close()
 
