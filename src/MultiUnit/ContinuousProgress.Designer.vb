@@ -23,26 +23,27 @@ Partial Class ContinuousProgress
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(91, 274)
+        Me.ProgressBar1.Location = New System.Drawing.Point(91, 292)
+        Me.ProgressBar1.MarqueeAnimationSpeed = 30
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(618, 57)
+        Me.ProgressBar1.Size = New System.Drawing.Size(618, 39)
+        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.ProgressBar1.TabIndex = 0
-        ProgressBar1.Style = ProgressBarStyle.Marquee
-        ProgressBar1.MarqueeAnimationSpeed = 30
         '
-        'TextBox1
+        'Label1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(91, 82)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(618, 141)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "Text Text Text Text"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 15.0!)
+        Me.Label1.Location = New System.Drawing.Point(82, 97)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(235, 49)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Text Text Text"
         '
         'ContinuousProgress
         '
@@ -50,7 +51,7 @@ Partial Class ContinuousProgress
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ProgressBar1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -63,10 +64,6 @@ Partial Class ContinuousProgress
 
     End Sub
 
-    Public Function SetText(text As String)
-        Me.TextBox1.Text = text
-    End Function
-
     Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
 End Class
