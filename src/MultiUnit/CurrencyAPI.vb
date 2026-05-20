@@ -9,11 +9,12 @@ Public Class RateItem
 End Class
 
 Public Class CurrencyAPI
-    Public Shared Function DownloadCurrencyData()
+    Public Shared Function DownloadCurrencyData() As String
         Dim url As String = "https://api.frankfurter.dev/v2/rates?base=CNY"
         Dim client As New WebClient()
         Dim json As String = client.DownloadString(url)
         Console.WriteLine("Downloaded new currency data: " & json)
+        Return json
     End Function
 
     Public Function ParseRates(json As String) As Dictionary(Of String, Double)
