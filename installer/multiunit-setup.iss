@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "MultiUnit"
-#define MyAppVersion "2.1.3"
+#define MyAppVersion "2.2.0"
 #define MyAppPublisher "Matthew Yang"
 #define MyAppURL "https://www.github.com/matthewyang204/MultiUnit"
 #define MyAppExeName "MultiUnit.exe"
