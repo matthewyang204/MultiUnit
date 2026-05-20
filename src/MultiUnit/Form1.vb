@@ -1,5 +1,4 @@
 ﻿Public Class MultiUnit
-
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         If UnitCategorySelector.Items.Count > 0 Then
@@ -246,6 +245,7 @@
     Private WeightRatios As New Dictionary(Of String, Double)
     Private EnergyRatios As New Dictionary(Of String, Double)
     Private AngleRatios As New Dictionary(Of String, Double)
+    Private CurrencyRatios As New Dictionary(Of String, Double)
 
     Private Sub LoadRatios()
         ' Length ratios
@@ -365,6 +365,8 @@
         AngleRatios.Add("Gradians", 0.9)
         AngleRatios.Add("Arcminutes", 1.0 / 60)
         AngleRatios.Add("Arcseconds", 1.0 / 3600)
+
+
     End Sub
 
     ' Temperature conversion function
