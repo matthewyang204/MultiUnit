@@ -60,6 +60,7 @@
         Area2InputBox.Visible = False
         Label6.Visible = False
         Label7.Visible = False
+        RefreshCurrencyDataButton.Visible = False
 
         ' Get UnitCategorySelector and set UnitSelectionBox accordingly
         Select Case UnitCategorySelector.SelectedItem.ToString()
@@ -226,6 +227,7 @@
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Currency"
+                RefreshCurrencyDataButton.Visible = True
                 Dim progDlg As New ContinuousProgress()
                 progDlg.Text = "Currency Data Downloader"
                 progDlg.Label1.Text = "Downloading latest currency data..."

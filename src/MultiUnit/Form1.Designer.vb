@@ -39,6 +39,7 @@ Partial Class MultiUnit
         Me.Area2InputBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.RefreshCurrencyDataButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Input
@@ -235,11 +236,25 @@ Partial Class MultiUnit
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "L:"
         '
+        'RefreshCurrencyDataButton
+        '
+        Me.RefreshCurrencyDataButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RefreshCurrencyDataButton.AutoSize = True
+        Me.RefreshCurrencyDataButton.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.RefreshCurrencyDataButton.Location = New System.Drawing.Point(210, 548)
+        Me.RefreshCurrencyDataButton.Name = "RefreshCurrencyDataButton"
+        Me.RefreshCurrencyDataButton.Size = New System.Drawing.Size(343, 60)
+        Me.RefreshCurrencyDataButton.TabIndex = 17
+        Me.RefreshCurrencyDataButton.Text = "Refresh Currency Data"
+        Me.RefreshCurrencyDataButton.UseVisualStyleBackColor = True
+        Me.RefreshCurrencyDataButton.Visible = False
+        '
         'MultiUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(763, 874)
+        Me.Controls.Add(Me.RefreshCurrencyDataButton)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Area2InputBox)
@@ -281,4 +296,5 @@ Partial Class MultiUnit
     Friend WithEvents Area2InputBox As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents RefreshCurrencyDataButton As Button
 End Class
