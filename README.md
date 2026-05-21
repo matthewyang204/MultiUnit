@@ -1,5 +1,5 @@
 # MultiUnit
-<img width="1400" height="893" alt="image" src="https://github.com/user-attachments/assets/adbfbe49-02a2-4405-8910-8303806a9fbb" />
+<img alt="image" src="https://raw.githubusercontent.com/matthewyang204/MultiUnit/main/assets/screenshot-1.png" />
 
  A simple unit converter written in Visual Basic. This app has a fairly self-explanatory GUI. Additionally, this app has a portable version that doesn't need to be installed alongside the ordinary installable version.
 
