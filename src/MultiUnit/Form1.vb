@@ -228,25 +228,7 @@
 
             Case "Currency"
                 RefreshCurrencyDataButton.Visible = True
-                Dim progDlg As New ContinuousProgress()
-                progDlg.Text = "Currency Data Downloader"
-                progDlg.Label1.Text = "Downloading latest currency data..."
-                progDlg.Show()
-                Application.DoEvents()
-
-                Try
-                    CurrencyRatios = CurrencyAPI.RefreshRates()
-                    Dim KeyName As String
-                    For Each KeyName In CurrencyRatios.Keys
-                        Units.Add(KeyName)
-                    Next
-                    UnitSelectionBox.Items.AddRange(Units.ToArray())
-                    Unit2SelectionBox.Items.AddRange(Units.ToArray())
-                Catch ex As Exception
-                    MessageBox.Show("Failed to download currency data. Please check your internet connection and try again. Error: " & vbCrLf & ex.Message)
-                End Try
-
-                progDlg.Close()
+                RefreshCurrencyDataButton.PerformClick()
 
                 ' Display error if the user doesn't select proper category
             Case Else
@@ -491,6 +473,28 @@
             MessageBox.Show("Invalid Airflow conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
             Exit Sub
         End If
+    End Sub
+
+    Private Sub UpdateCRatios_Click(sender As Object, e As EventArgs) Handles RefreshCurrencyDataButton.Click
+        Dim progDlg As New ContinuousProgress()
+        progDlg.Text = "Currency Data Downloader"
+        progDlg.Label1.Text = "Downloading latest currency data..."
+        progDlg.Show()
+        Application.DoEvents()
+
+        Try
+            CurrencyRatios = CurrencyAPI.RefreshRates()
+            Dim KeyName As String
+            For Each KeyName In CurrencyRatios.Keys
+                Units.Add(KeyName)
+            Next
+            UnitSelectionBox.Items.AddRange(Units.ToArray())
+            Unit2SelectionBox.Items.AddRange(Units.ToArray())
+        Catch ex As Exception
+            MessageBox.Show("Failed to download currency data. Please check your internet connection and try again. Error: " & vbCrLf & ex.Message)
+        End Try
+
+        progDlg.Close()
     End Sub
 
 
