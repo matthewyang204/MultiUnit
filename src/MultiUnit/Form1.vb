@@ -228,7 +228,7 @@
 
             Case "Currency"
                 RefreshCurrencyDataButton.Visible = True
-                RefreshCurrencyDataButton.PerformClick()
+                UpdateCRatios(Nothing, Nothing)
 
                 ' Display error if the user doesn't select proper category
             Case Else
@@ -475,7 +475,7 @@
         End If
     End Sub
 
-    Private Sub UpdateCRatios_Click(sender As Object, e As EventArgs) Handles RefreshCurrencyDataButton.Click
+    Private Sub UpdateCRatios(sender As Object, e As EventArgs) Handles RefreshCurrencyDataButton.Click
         Dim progDlg As New ContinuousProgress()
         progDlg.Text = "Currency Data Downloader"
         progDlg.Label1.Text = "Downloading latest currency data..."
