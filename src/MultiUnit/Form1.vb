@@ -1,5 +1,6 @@
 ﻿Public Class MultiUnit
     Dim CurrencyAPI As New CurrencyAPI()
+    Dim Common As New Common()
 
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -554,8 +555,14 @@
                 Exit Sub
         End Select
 
+        Dim listOfValues As New List(Of Double)
+        listOfValues.Add(ratioDict(fromUnit))
+        listOfValues.Add(ratioDict(toUnit))
+        listOfValues.Add(userInput)
+        Dim shouldRound = Common.GetHighestDecimalPlaces(listOfValues)
         result = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
-        ResultBox.Text = result.ToString()
+        Dim roundedResult = Common.Round2DecPlaces(result, shouldRound)
+        ResultBox.Text = roundedResult.ToString()
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Input.TextChanged

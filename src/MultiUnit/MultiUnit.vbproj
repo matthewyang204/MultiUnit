@@ -47,6 +47,7 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common.vb" />
     <Compile Include="ContinuousProgress.Designer.vb">
       <DependentUpon>ContinuousProgress.vb</DependentUpon>
     </Compile>
