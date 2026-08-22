@@ -1,6 +1,7 @@
 ﻿Public Class MultiUnit
     Dim CurrencyAPI As New CurrencyAPI()
     Dim Common As New Common()
+    Dim SigFigs As New SigFigs()
 
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -559,9 +560,20 @@
         listOfValues.Add(ratioDict(fromUnit))
         listOfValues.Add(ratioDict(toUnit))
         listOfValues.Add(userInput)
+
         Dim shouldRound = Common.GetHighestDecimalPlaces(listOfValues)
         result = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
-        Dim roundedResult = Common.Round2DecPlaces(result, shouldRound)
+        Dim roundedResult As Double
+
+        If CheckBox1.Checked Then
+            roundedResult = result
+        ElseIf CheckBox2.Checked Then
+            Dim sfs As Integer = SigFigs.GetSigFigsFromList(listOfValues)
+            roundedResult = SigFigs.RoundToSigFigs(result, sfs)
+        Else
+            roundedResult = Common.Round2DecPlaces(result, shouldRound)
+        End If
+
         ResultBox.Text = roundedResult.ToString()
     End Sub
 
