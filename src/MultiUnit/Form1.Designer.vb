@@ -22,6 +22,7 @@ Partial Class MultiUnit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Input = New System.Windows.Forms.TextBox()
         Me.inputmessage = New System.Windows.Forms.Label()
         Me.UnitCategorySelector = New System.Windows.Forms.ComboBox()
@@ -42,6 +43,7 @@ Partial Class MultiUnit
         Me.RefreshCurrencyDataButton = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Input
@@ -256,11 +258,12 @@ Partial Class MultiUnit
         Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.CheckBox1.Location = New System.Drawing.Point(286, 841)
+        Me.CheckBox1.Location = New System.Drawing.Point(112, 841)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(191, 43)
+        Me.CheckBox1.Size = New System.Drawing.Size(293, 43)
         Me.CheckBox1.TabIndex = 18
-        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.Text = "Display exact value"
+        Me.ToolTip1.SetToolTip(Me.CheckBox1, "Disables rounding the value to the maximum decimals found in the input(s).")
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'CheckBox2
@@ -268,12 +271,15 @@ Partial Class MultiUnit
         Me.CheckBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.CheckBox2.Location = New System.Drawing.Point(286, 881)
+        Me.CheckBox2.Location = New System.Drawing.Point(112, 881)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(191, 43)
+        Me.CheckBox2.Size = New System.Drawing.Size(548, 43)
         Me.CheckBox2.TabIndex = 19
-        Me.CheckBox2.Text = "CheckBox2"
+        Me.CheckBox2.Text = "Round using significant figures instead"
         Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'ToolTip1
+        '
         '
         'MultiUnit
         '
@@ -327,4 +333,5 @@ Partial Class MultiUnit
     Friend WithEvents RefreshCurrencyDataButton As Button
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
