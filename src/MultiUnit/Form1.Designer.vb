@@ -1,7 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MultiUnit
     Inherits System.Windows.Forms.Form
-    Dim DPIHelper As New DPIHelper()
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -23,8 +22,6 @@ Partial Class MultiUnit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        DPIHelper.EnableDPIAwareness()
-
         Me.Input = New System.Windows.Forms.TextBox()
         Me.inputmessage = New System.Windows.Forms.Label()
         Me.UnitCategorySelector = New System.Windows.Forms.ComboBox()
