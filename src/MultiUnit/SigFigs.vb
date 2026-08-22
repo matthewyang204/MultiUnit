@@ -12,16 +12,12 @@
             Return 1
         End If
         Dim strValue As String = value.ToString("G", System.Globalization.CultureInfo.InvariantCulture)
-        Dim decimalIndex As Integer = strValue.IndexOf("."c)
         Dim sigFigs As Integer = 0
         For Each c As Char In strValue
             If Char.IsDigit(c) Then
                 sigFigs += 1
             End If
         Next
-        If decimalIndex >= 0 Then
-            sigFigs -= (strValue.Length - decimalIndex - 1)
-        End If
         Return sigFigs
     End Function
 
