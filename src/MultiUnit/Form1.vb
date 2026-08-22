@@ -600,7 +600,12 @@
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-
+        If CheckBox1.Checked Then
+            CheckBox2.Checked = False
+            CheckBox2.Enabled = False
+        Else
+            CheckBox2.Enabled = True
+        End If
     End Sub
 
     Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
