@@ -47,6 +47,7 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Common.vb" />
     <Compile Include="ContinuousProgress.Designer.vb">
       <DependentUpon>ContinuousProgress.vb</DependentUpon>
@@ -79,6 +80,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SigFigs.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ContinuousProgress.resx">
