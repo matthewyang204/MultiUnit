@@ -40,6 +40,8 @@ Partial Class MultiUnit
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.RefreshCurrencyDataButton = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Input
@@ -249,11 +251,37 @@ Partial Class MultiUnit
         Me.RefreshCurrencyDataButton.UseVisualStyleBackColor = True
         Me.RefreshCurrencyDataButton.Visible = False
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.CheckBox1.Location = New System.Drawing.Point(286, 841)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(191, 43)
+        Me.CheckBox1.TabIndex = 18
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.CheckBox2.Location = New System.Drawing.Point(286, 881)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(191, 43)
+        Me.CheckBox2.TabIndex = 19
+        Me.CheckBox2.Text = "CheckBox2"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'MultiUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(763, 874)
+        Me.ClientSize = New System.Drawing.Size(763, 1076)
+        Me.Controls.Add(Me.CheckBox2)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.RefreshCurrencyDataButton)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -297,4 +325,6 @@ Partial Class MultiUnit
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents RefreshCurrencyDataButton As Button
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
 End Class
