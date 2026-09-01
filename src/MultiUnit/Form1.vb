@@ -230,6 +230,9 @@
 
             Case "Currency"
                 RefreshCurrencyDataButton.Visible = True
+                Units.Clear()
+                UnitSelectionBox.Items.Clear()
+                Unit2SelectionBox.Items.Clear()
                 UpdateCRatios(Nothing, Nothing)
 
                 ' Display error if the user doesn't select proper category
