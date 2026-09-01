@@ -507,6 +507,7 @@
         End Try
 
         progDlg.Close()
+        progDlg.Dispose()
     End Sub
 
 
