@@ -488,6 +488,10 @@
         Application.DoEvents()
 
         Try
+            Units.Clear()
+            UnitSelectionBox.Items.Clear()
+            Unit2SelectionBox.Items.Clear()
+
             CurrencyRatios = CurrencyAPI.RefreshRates()
             Dim KeyName As String
             For Each KeyName In CurrencyRatios.Keys
@@ -495,6 +499,9 @@
             Next
             UnitSelectionBox.Items.AddRange(Units.ToArray())
             Unit2SelectionBox.Items.AddRange(Units.ToArray())
+
+            UnitSelectionBox.SelectedItem = "CNY"
+            Unit2SelectionBox.SelectedIndex = 1
         Catch ex As Exception
             MessageBox.Show("Failed to download currency data. Please check your internet connection and try again. Error: " & vbCrLf & ex.Message)
         End Try
