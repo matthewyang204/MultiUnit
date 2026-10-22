@@ -3,6 +3,8 @@
     Dim Common As New Common()
     Dim SigFigs As New SigFigs()
 
+    Dim EarthGravity As Double = 9.80665
+
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         If UnitCategorySelector.Items.Count > 0 Then
@@ -368,7 +370,7 @@
         WeightRatios.Add("Gram-force", 0.00980665)
         WeightRatios.Add("Ton-force", 8896.443)
         For Each kvp As KeyValuePair(Of String, Double) In MassRatios
-            WeightRatios.Add("Earth " & kvp.Key, kvp.Value)
+            WeightRatios.Add("Earth " & kvp.Key, kvp.Value * EarthGravity)
         Next
 
         ' Angle ratios
