@@ -1,5 +1,5 @@
 # MultiUnit
- **This program has been ported to Qt and C++ and this version is now deprecated (bug fixes only). Check out the new version [here](https://github.com/matthewyang204/QMultiUnit). It will now only get bug fixes, and maybe a few features if I want to port them.**
+ **This program has been ported to Qt and C++ as well for more modern platforms. Check out the new version [here](https://github.com/matthewyang204/QMultiUnit). This version is the older one written in VB.NET.**
 
 <img alt="image" src="https://raw.githubusercontent.com/matthewyang204/MultiUnit/main/assets/screenshot-1.png" />
 
