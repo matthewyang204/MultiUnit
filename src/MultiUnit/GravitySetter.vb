@@ -4,6 +4,7 @@
 
     Public Sub New(ByVal GravityValue As Double, ByVal AltitudeValue As Double)
         InitializeComponent()
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
 
         Gravity = GravityValue
         Altitude = AltitudeValue
