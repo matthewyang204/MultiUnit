@@ -1,5 +1,5 @@
 # MultiUnit
- **This program has been ported to Qt and C++ as well for more modern platforms. Check out the new version [here](https://github.com/matthewyang204/QMultiUnit). This version is the older one written in VB.NET.**
+ **This program has been ported to Qt and C++ as well for more modern platforms, such as mobile phones. This version is more mature and highly recommended for Windows users seeking a lightweight GUI, written in VB.NET. Check out the new version [here](https://github.com/matthewyang204/QMultiUnit).**
 
 <img alt="image" src="https://raw.githubusercontent.com/matthewyang204/MultiUnit/main/assets/screenshot-1.png" />
 
