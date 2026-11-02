@@ -79,4 +79,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: MultiUnit-Build-Output
-        path: src/MultiUnit/bin/x86/Release
+        path: src/MultiUnit
