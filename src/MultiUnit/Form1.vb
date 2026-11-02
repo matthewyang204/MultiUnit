@@ -591,7 +591,7 @@
         If CheckBox1.Checked Then
             roundedResult = result
         ElseIf CheckBox2.Checked Then
-            Dim sfs As Integer = SigFigs.GetSigFigsFromList(listOfValues)
+            Dim sfs As Integer = SigFigs.GetSigFigs(userInput)
             roundedResult = SigFigs.RoundToSigFigs(result, sfs)
         Else
             roundedResult = Common.Round2DecPlaces(result, shouldRound)
