@@ -584,7 +584,7 @@
         listOfValues.Add(ratioDict(toUnit))
         listOfValues.Add(userInput)
 
-        Dim shouldRound = Common.GetHighestDecimalPlaces(listOfValues)
+        Dim shouldRound = Common.GetDecimalPlaces(userInput)
         result = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
         Dim roundedResult As Double
 
