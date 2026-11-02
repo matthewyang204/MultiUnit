@@ -138,7 +138,7 @@ Partial Class GravitySetter
         Me.Controls.Add(Me.AltitudeBox)
         Me.Controls.Add(Me.Label1)
         Me.Name = "GravitySetter"
-        Me.Text = "GravitySetter"
+        Me.Text = "Gravity Setter For MultiUnit"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
