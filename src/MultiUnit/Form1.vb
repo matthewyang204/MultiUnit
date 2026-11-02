@@ -2,8 +2,10 @@
     Dim CurrencyAPI As New CurrencyAPI()
     Dim Common As New Common()
     Dim SigFigs As New SigFigs()
+    Dim CustomGravity As New CustomGravity()
 
     Dim EarthGravity As Double = 9.80665
+    Dim CustomGravityVal As Nullable(Of Double)
 
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -377,9 +379,7 @@
         WeightRatios.Add("Pound-force", 4.44822)
         WeightRatios.Add("Gram-force", 0.00980665)
         WeightRatios.Add("Ton-force", 8896.443)
-        For Each kvp As KeyValuePair(Of String, Double) In MassRatios
-            WeightRatios.Add("Earth " & kvp.Key, kvp.Value * EarthGravity)
-        Next
+        UpdateWeightMassGravity()
 
         ' Angle ratios
         AngleRatios.Add("Degrees", 1) ' Base unit
@@ -389,6 +389,23 @@
         AngleRatios.Add("Arcseconds", 1.0 / 3600)
 
 
+    End Sub
+
+    Private Sub UpdateWeightMassGravity()
+        Dim GravityVal As Double
+        If CustomGravityVal.HasValue Then
+            GravityVal = CustomGravityVal
+        Else
+            GravityVal = EarthGravity
+        End If
+
+        For Each kvp As KeyValuePair(Of String, Double) In MassRatios
+            Try
+                WeightRatios.Add("Earth " & kvp.Key, kvp.Value * GravityVal)
+            Catch ex As ArgumentException
+                WeightRatios("Earth " & kvp.Key) = kvp.Value * GravityVal
+            End Try
+        Next
     End Sub
 
     ' Temperature conversion function
@@ -657,6 +674,11 @@
 
     Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
 
+    End Sub
+
+    Private Sub ConfigureCustomGravityToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConfigureCustomGravityToolStripMenuItem.Click
+        CustomGravityVal = CustomGravity.ConfigureGravity(EarthGravity, 0)
+        UpdateWeightMassGravity()
     End Sub
 End Class
 
