@@ -1,0 +1,82 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Build with Visual Studio 2022
+
+on:
+  push:
+    branches: [ "master", "testing" ]
+  pull_request:
+    branches: [ "master", "testing" ]
+  workflow_dispatch:
+
+env:
+  # Build the MultiUnit project in Release / x86.
+  PROJECT_FILE_PATH: src/MultiUnit/MultiUnit.vbproj
+  BUILD_CONFIGURATION: Release
+  BUILD_PLATFORM: x86
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Download exeosver
+      run: |
+        curl -LO https://github.com/camthesaxman/exeosver/releases/download/1.0/exeosver.exe
+
+    - name: Restore .NET Framework 4.0 reference assemblies
+      shell: powershell
+      run: |
+        $packageRoot = Join-Path $env:GITHUB_WORKSPACE 'packages'
+        if (!(Test-Path $packageRoot)) { New-Item -ItemType Directory -Path $packageRoot | Out-Null }
+        $refPackage = Join-Path $packageRoot 'Microsoft.NETFramework.ReferenceAssemblies.net40'
+        if (!(Test-Path $refPackage)) {
+          nuget install Microsoft.NETFramework.ReferenceAssemblies.net40 -Version 1.0.3 -OutputDirectory $packageRoot
+        }
+        $refRoot = Get-ChildItem -Path $packageRoot -Directory -Filter 'Microsoft.NETFramework.ReferenceAssemblies.net40*' | Select-Object -First 1 -ExpandProperty FullName
+        $frameworkRoot = Join-Path $refRoot 'build\.NETFramework\v4.0'
+        "FrameworkPathOverride=$frameworkRoot" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+        "TargetFrameworkRootPath=$((Join-Path $refRoot 'build'))" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+        Write-Host "FrameworkPathOverride=$frameworkRoot"
+
+    - name: Build MultiUnit
+      working-directory: ${{ github.workspace }}
+      shell: powershell
+      run: |
+        msbuild /m /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform=${{ env.BUILD_PLATFORM }} /p:FrameworkPathOverride="$env:FrameworkPathOverride" /p:TargetFrameworkRootPath="$env:TargetFrameworkRootPath" ${{ env.PROJECT_FILE_PATH }}
+
+    - name: Exeosver the build
+      run: |
+        .\exeosver.exe src\MultiUnit\bin\x86\Release\MultiUnit.exe
+
+    - name: Build Inno Setup installer
+      uses: Minionguyjpro/Inno-Setup-Action@v1.2.2
+      with:
+        path: installer/multiunit-setup.iss
+
+    - name: Exeosver the installer
+      run: |
+        .\exeosver.exe installer\Output\multiunit-*-setup.exe
+
+    - name: Upload MultiUnit installer
+      uses: actions/upload-artifact@v4
+      with:
+        name: MultiUnit-Installer-Output
+        path: installer/Output
+
+    - name: Upload MultiUnit build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: MultiUnit-Build-Output
+        path: src/MultiUnit/bin/x86/Release
