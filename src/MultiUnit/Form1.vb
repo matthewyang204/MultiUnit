@@ -389,33 +389,39 @@
 
         If fromUnit = "C" And toUnit = "F" Then
             calcTemp = (userInput * (9 / 5)) + 32
-            ResultBox.Text = calcTemp.ToString()
 
         ElseIf fromUnit = "C" And toUnit = "K" Then
             calcTemp = userInput + 273.15
-            ResultBox.Text = calcTemp.ToString()
 
         ElseIf fromUnit = "F" And toUnit = "C" Then
             calcTemp = (userInput - 32) * 5 / 9
-            ResultBox.Text = calcTemp.ToString()
 
         ElseIf fromUnit = "F" And toUnit = "K" Then
             calcTemp = (userInput - 32) * 5 / 9 + 273.15
-            ResultBox.Text = calcTemp.ToString()
 
         ElseIf fromUnit = "K" And toUnit = "C" Then
             calcTemp = userInput - 273.15
-            ResultBox.Text = calcTemp.ToString()
 
         ElseIf fromUnit = "K" And toUnit = "F" Then
             calcTemp = (userInput - 273.15) * 9 / 5 + 32
-            ResultBox.Text = calcTemp.ToString()
 
         ElseIf fromUnit = toUnit Then
-            ResultBox.Text = userInput.ToString()
+            If SciNoteBox.Checked Then
+                ResultBox.Text = userInput.ToString("e")
+            Else
+                ResultBox.Text = userInput.ToString()
+            End If
+            Return
 
         Else
             MessageBox.Show("Invalid temperature conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
+            Return
+        End If
+
+        If SciNoteBox.Checked Then
+            ResultBox.Text = calcTemp.ToString("e")
+        Else
+            ResultBox.Text = calcTemp.ToString()
         End If
     End Sub
 
@@ -475,7 +481,11 @@
             End If
 
             calcTemp = userInput * ratioDict(fromUnit) / ratioDict(toUnit)
-            ResultBox.Text = calcTemp.ToString()
+            If SciNoteBox.Checked Then
+                ResultBox.Text = calcTemp.ToString("e")
+            Else
+                ResultBox.Text = calcTemp.ToString()
+            End If
         Else
             MessageBox.Show("Invalid Airflow conversion. This is probably a bug and should be reported at https://github.com/matthewyang204/MultiUnit/issues.")
             Exit Sub
@@ -587,7 +597,11 @@
             roundedResult = Common.Round2DecPlaces(result, shouldRound)
         End If
 
-        ResultBox.Text = roundedResult.ToString()
+        If SciNoteBox.Checked Then
+            ResultBox.Text = roundedResult.ToString("e")
+        Else
+            ResultBox.Text = roundedResult.ToString()
+        End If
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Input.TextChanged
