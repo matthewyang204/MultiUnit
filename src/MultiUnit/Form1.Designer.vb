@@ -77,7 +77,6 @@ Partial Class MultiUnit
         'UnitCategorySelector
         '
         Me.UnitCategorySelector.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.UnitCategorySelector.Cursor = System.Windows.Forms.Cursors.Default
         Me.UnitCategorySelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.UnitCategorySelector.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.UnitCategorySelector.FormattingEnabled = True
@@ -349,7 +348,7 @@ Partial Class MultiUnit
         Me.MainMenuStrip = Me.MainMenuBar
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MultiUnit"
-        Me.Text = "MultiUnit"
+        Me.Text = "MultiUnit 2.2.3"
         Me.MainMenuBar.ResumeLayout(False)
         Me.MainMenuBar.PerformLayout()
         Me.ResumeLayout(False)
