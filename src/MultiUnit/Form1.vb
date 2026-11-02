@@ -2,8 +2,10 @@
     Dim CurrencyAPI As New CurrencyAPI()
     Dim Common As New Common()
     Dim SigFigs As New SigFigs()
+    Dim CustomGravity As New CustomGravity()
 
     Dim EarthGravity As Double = 9.80665
+    Dim CustomGravityVal As Nullable(Of Double)
 
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -657,6 +659,11 @@
 
     Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
 
+    End Sub
+
+    Private Sub ConfigureCustomGravityToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConfigureCustomGravityToolStripMenuItem.Click
+        CustomGravityVal = CustomGravity.ConfigureGravity(EarthGravity, 0)
+        UpdateWeightMassGravity()
     End Sub
 End Class
 
