@@ -248,6 +248,14 @@
         If Unit2SelectionBox.Items.Count > 0 Then
             Unit2SelectionBox.SelectedIndex = 1
         End If
+
+        If UnitCategorySelector.SelectedItem.ToString() Is "Temperature" Or UnitCategorySelector.SelectedItem.ToString() Is "Air Flow" Then
+            CheckBox1.Enabled = False
+            CheckBox2.Enabled = False
+        Else
+            CheckBox1.Enabled = True
+            CheckBox2.Enabled = True
+        End If
     End Sub
 
     ' Define the ratios for each unit
