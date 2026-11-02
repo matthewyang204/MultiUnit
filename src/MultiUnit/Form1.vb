@@ -379,9 +379,7 @@
         WeightRatios.Add("Pound-force", 4.44822)
         WeightRatios.Add("Gram-force", 0.00980665)
         WeightRatios.Add("Ton-force", 8896.443)
-        For Each kvp As KeyValuePair(Of String, Double) In MassRatios
-            WeightRatios.Add("Earth " & kvp.Key, kvp.Value * EarthGravity)
-        Next
+        UpdateWeightMassGravity()
 
         ' Angle ratios
         AngleRatios.Add("Degrees", 1) ' Base unit
@@ -391,6 +389,23 @@
         AngleRatios.Add("Arcseconds", 1.0 / 3600)
 
 
+    End Sub
+
+    Private Sub UpdateWeightMassGravity()
+        Dim GravityVal As Double
+        If CustomGravityVal.HasValue Then
+            GravityVal = CustomGravityVal
+        Else
+            GravityVal = EarthGravity
+        End If
+
+        For Each kvp As KeyValuePair(Of String, Double) In MassRatios
+            Try
+                WeightRatios.Add("Earth " & kvp.Key, kvp.Value * GravityVal)
+            Catch ex As ArgumentException
+                WeightRatios("Earth " & kvp.Key) = kvp.Value * GravityVal
+            End Try
+        Next
     End Sub
 
     ' Temperature conversion function
