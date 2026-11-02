@@ -31,6 +31,9 @@ Partial Class GravitySetter
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GravityButton = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.PresetsBox = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PresetsButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -117,17 +120,50 @@ Partial Class GravitySetter
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(104, 259)
+        Me.Label5.Location = New System.Drawing.Point(104, 467)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(472, 35)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "When you are finished, close this dialog."
+        '
+        'PresetsBox
+        '
+        Me.PresetsBox.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.PresetsBox.FormattingEnabled = True
+        Me.PresetsBox.Location = New System.Drawing.Point(33, 303)
+        Me.PresetsBox.Name = "PresetsBox"
+        Me.PresetsBox.Size = New System.Drawing.Size(291, 43)
+        Me.PresetsBox.TabIndex = 9
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Label6.Location = New System.Drawing.Point(27, 265)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(259, 35)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Some gravity presets:"
+        '
+        'PresetsButton
+        '
+        Me.PresetsButton.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.PresetsButton.Location = New System.Drawing.Point(336, 302)
+        Me.PresetsButton.Name = "PresetsButton"
+        Me.PresetsButton.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.PresetsButton.Size = New System.Drawing.Size(193, 42)
+        Me.PresetsButton.TabIndex = 11
+        Me.PresetsButton.Text = "Set Gravity"
+        Me.PresetsButton.UseVisualStyleBackColor = True
         '
         'GravitySetter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(681, 505)
+        Me.Controls.Add(Me.PresetsButton)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.PresetsBox)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GravityButton)
         Me.Controls.Add(Me.Label4)
@@ -152,4 +188,7 @@ Partial Class GravitySetter
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GravityButton As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents PresetsBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents PresetsButton As System.Windows.Forms.Button
 End Class
