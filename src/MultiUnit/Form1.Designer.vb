@@ -46,7 +46,7 @@ Partial Class MultiUnit
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SciNoteBox = New System.Windows.Forms.CheckBox()
         Me.MainMenuBar = New System.Windows.Forms.MenuStrip()
-        Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GravityMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfigureCustomGravityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainMenuBar.SuspendLayout()
         Me.SuspendLayout()
@@ -299,19 +299,19 @@ Partial Class MultiUnit
         '
         'MainMenuBar
         '
-        Me.MainMenuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu})
+        Me.MainMenuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GravityMenu})
         Me.MainMenuBar.Location = New System.Drawing.Point(0, 0)
         Me.MainMenuBar.Name = "MainMenuBar"
         Me.MainMenuBar.Size = New System.Drawing.Size(699, 38)
         Me.MainMenuBar.TabIndex = 21
         Me.MainMenuBar.Text = "MainMenuBar"
         '
-        'FileMenu
+        'GravityMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfigureCustomGravityToolStripMenuItem})
-        Me.FileMenu.Name = "FileMenu"
-        Me.FileMenu.Size = New System.Drawing.Size(56, 34)
-        Me.FileMenu.Text = "File"
+        Me.GravityMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfigureCustomGravityToolStripMenuItem})
+        Me.GravityMenu.Name = "GravityMenu"
+        Me.GravityMenu.Size = New System.Drawing.Size(89, 34)
+        Me.GravityMenu.Text = "Gravity"
         '
         'ConfigureCustomGravityToolStripMenuItem
         '
@@ -379,6 +379,6 @@ Partial Class MultiUnit
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents SciNoteBox As System.Windows.Forms.CheckBox
     Friend WithEvents MainMenuBar As System.Windows.Forms.MenuStrip
-    Friend WithEvents FileMenu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GravityMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfigureCustomGravityToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
