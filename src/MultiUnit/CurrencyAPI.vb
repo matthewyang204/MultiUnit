@@ -36,4 +36,45 @@ Public Class CurrencyAPI
         Dim rates = ParseRates(json)
         Return rates
     End Function
+
+    Public Shared Sub SaveToJSON(contents As String)
+        Dim dialog As New SaveFileDialog()
+
+        dialog.Title = "Save Currency Rates"
+        dialog.Filter = "JSON Files (*.json)|*.json"
+        dialog.DefaultExt = "json"
+        dialog.FileName = "rates.json"
+
+        If dialog.ShowDialog() = DialogResult.OK Then
+            IO.File.WriteAllText(dialog.FileName, contents)
+        End If
+
+        dialog.Dispose()
+    End Sub
+
+    Public Shared Function LoadFromJSON() As String
+        Dim dialog As New OpenFileDialog()
+        dialog.Title = "Load Currency Rates"
+        dialog.Filter = "JSON Files (*.json)|*.json"
+        dialog.DefaultExt = "json"
+        If dialog.ShowDialog() = DialogResult.OK Then
+            Dim json As String = IO.File.ReadAllText(dialog.FileName)
+            Return json
+        Else
+            dialog.Dispose()
+            Return Nothing
+        End If
+    End Function
+
+    Public Shared Function SaveCurrencyRatios(ratios As Dictionary(Of String, Double)) As Boolean
+        Try
+            Dim serializer As New JavaScriptSerializer()
+            Dim json As String = serializer.Serialize(ratios)
+            SaveToJSON(json)
+            Return True
+        Catch ex As Exception
+            Console.WriteLine("Error saving currency ratios: " & ex.Message)
+            Return False
+        End Try
+    End Function
 End Class
