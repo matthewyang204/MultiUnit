@@ -31,6 +31,12 @@ Public Class CurrencyAPI
         Return dict
     End Function
 
+    Public Function ParseJSON(json As String) As Dictionary(Of String, Double)
+        Dim serializer As New JavaScriptSerializer()
+        Dim dict As Dictionary(Of String, Double) = serializer.Deserialize(Of Dictionary(Of String, Double))(json)
+        Return dict
+    End Function
+
     Public Function RefreshRates() As Dictionary(Of String, Double)
         Dim json = DownloadCurrencyData()
         Dim rates = ParseRates(json)
