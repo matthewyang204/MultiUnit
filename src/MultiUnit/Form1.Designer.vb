@@ -307,7 +307,7 @@ Partial Class MultiUnit
         Me.MainMenuBar.Location = New System.Drawing.Point(0, 0)
         Me.MainMenuBar.Name = "MainMenuBar"
         Me.MainMenuBar.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.MainMenuBar.Size = New System.Drawing.Size(763, 40)
+        Me.MainMenuBar.Size = New System.Drawing.Size(763, 42)
         Me.MainMenuBar.TabIndex = 21
         Me.MainMenuBar.Text = "MainMenuBar"
         '
@@ -328,7 +328,7 @@ Partial Class MultiUnit
         '
         Me.CurrencyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadCurrencyDataFromFileToolStripMenuItem, Me.SaveCurrencyDataToFileToolStripMenuItem})
         Me.CurrencyToolStripMenuItem.Name = "CurrencyToolStripMenuItem"
-        Me.CurrencyToolStripMenuItem.Size = New System.Drawing.Size(129, 36)
+        Me.CurrencyToolStripMenuItem.Size = New System.Drawing.Size(129, 38)
         Me.CurrencyToolStripMenuItem.Text = "Currency"
         '
         'SaveCurrencyDataToFileToolStripMenuItem
