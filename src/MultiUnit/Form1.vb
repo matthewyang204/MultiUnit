@@ -711,5 +711,51 @@
         CustomGravityVal = CustomGravity.ConfigureGravity(EarthGravity, 0)
         UpdateWeightMassGravity()
     End Sub
+
+    Private Sub SaveCurrencyDataToFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveCurrencyDataToFileToolStripMenuItem.Click
+        If Not UnitCategorySelector.SelectedItem.ToString() = "Currency" Then
+            UnitCategorySelector.SelectedItem = "Currency"
+        End If
+
+        CurrencyAPI.SaveCurrencyRatios(CurrencyRatios)
+    End Sub
+
+    Private Sub LoadCurrencyDataFromFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadCurrencyDataFromFileToolStripMenuItem.Click
+        Dim json As String
+        Try
+            json = CurrencyAPI.LoadFromJSON()
+            If json Is Nothing Then
+                Exit Sub
+            End If
+            CurrencyRatios = CurrencyAPI.ParseJSON(json)
+        Catch ex As Exception
+            MessageBox.Show("Failed to load currency data from file. Please make sure the file exists and is in the correct format. Error: " & vbCrLf & ex.Message)
+            Exit Sub
+        End Try
+
+        If Not UnitCategorySelector.SelectedItem.ToString() = "Currency" Then
+            DownloadNewCurrencyData = False
+            UnitCategorySelector.SelectedItem = "Currency"
+        End If
+
+        UnitSelectionBox.Items.Clear()
+        Unit2SelectionBox.Items.Clear()
+
+        Dim KeyName As String
+        For Each KeyName In CurrencyRatios.Keys
+            Units.Add(KeyName)
+        Next
+        UnitSelectionBox.Items.AddRange(Units.ToArray())
+        Unit2SelectionBox.Items.AddRange(Units.ToArray())
+
+        Try
+            UnitSelectionBox.SelectedItem = "CNY"
+            Unit2SelectionBox.SelectedIndex = 1
+        Catch ex As ArgumentOutOfRangeException
+            MessageBox.Show("WARNING: Currency units loaded from file contains less than two entries; it may be useless for conversion.")
+        End Try
+
+        CurrencyRatiosBackup = New Dictionary(Of String, Double)(CurrencyRatios)
+    End Sub
 End Class
 
