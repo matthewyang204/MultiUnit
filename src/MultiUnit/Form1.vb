@@ -548,12 +548,26 @@
 
             UnitSelectionBox.SelectedItem = "CNY"
             Unit2SelectionBox.SelectedIndex = 1
-            CurrencyRatiosBackup = CurrencyRatios
+            CurrencyRatiosBackup = New Dictionary(Of String, Double)(CurrencyRatios)
         Catch ex As Exception
             MessageBox.Show("Failed to download currency data. Please check your internet connection and try again. Error: " & vbCrLf & ex.Message)
-            progDlg.Close()
-            progDlg.Dispose()
-            Return False
+            If CurrencyRatiosBackup.Count = 0 Then
+                progDlg.Close()
+                progDlg.Dispose()
+                Return False
+            Else
+                CurrencyRatios = CurrencyRatiosBackup
+                Dim KeyName As String
+                For Each KeyName In CurrencyRatios.Keys
+                    Units.Add(KeyName)
+                Next
+                UnitSelectionBox.Items.AddRange(Units.ToArray())
+                Unit2SelectionBox.Items.AddRange(Units.ToArray())
+
+                UnitSelectionBox.SelectedItem = "CNY"
+                Unit2SelectionBox.SelectedIndex = 1
+                Return True
+            End If
         End Try
 
         progDlg.Close()
