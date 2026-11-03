@@ -48,6 +48,9 @@ Partial Class MultiUnit
         Me.MainMenuBar = New System.Windows.Forms.MenuStrip()
         Me.GravityMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfigureCustomGravityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CurrencyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveCurrencyDataToFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoadCurrencyDataFromFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainMenuBar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,10 +59,10 @@ Partial Class MultiUnit
         Me.Input.AccessibleName = "input"
         Me.Input.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Input.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.Input.Location = New System.Drawing.Point(113, 132)
+        Me.Input.Location = New System.Drawing.Point(123, 138)
         Me.Input.Margin = New System.Windows.Forms.Padding(4)
         Me.Input.Name = "Input"
-        Me.Input.Size = New System.Drawing.Size(473, 50)
+        Me.Input.Size = New System.Drawing.Size(516, 56)
         Me.Input.TabIndex = 0
         '
         'inputmessage
@@ -67,10 +70,10 @@ Partial Class MultiUnit
         Me.inputmessage.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.inputmessage.AutoSize = True
         Me.inputmessage.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.inputmessage.Location = New System.Drawing.Point(124, 60)
+        Me.inputmessage.Location = New System.Drawing.Point(135, 62)
         Me.inputmessage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.inputmessage.Name = "inputmessage"
-        Me.inputmessage.Size = New System.Drawing.Size(432, 35)
+        Me.inputmessage.Size = New System.Drawing.Size(493, 39)
         Me.inputmessage.TabIndex = 1
         Me.inputmessage.Text = "Enter the value you want to convert:"
         '
@@ -81,10 +84,10 @@ Partial Class MultiUnit
         Me.UnitCategorySelector.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.UnitCategorySelector.FormattingEnabled = True
         Me.UnitCategorySelector.Items.AddRange(New Object() {"Temperature", "Length", "Area", "Volume", "Energy", "Speed", "Weight", "Mass", "Air Flow", "Angle", "Currency"})
-        Me.UnitCategorySelector.Location = New System.Drawing.Point(199, 292)
+        Me.UnitCategorySelector.Location = New System.Drawing.Point(217, 304)
         Me.UnitCategorySelector.Margin = New System.Windows.Forms.Padding(4)
         Me.UnitCategorySelector.Name = "UnitCategorySelector"
-        Me.UnitCategorySelector.Size = New System.Drawing.Size(301, 50)
+        Me.UnitCategorySelector.Size = New System.Drawing.Size(328, 57)
         Me.UnitCategorySelector.TabIndex = 2
         '
         'UnitSelectionBox
@@ -93,10 +96,10 @@ Partial Class MultiUnit
         Me.UnitSelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.UnitSelectionBox.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.UnitSelectionBox.FormattingEnabled = True
-        Me.UnitSelectionBox.Location = New System.Drawing.Point(41, 447)
+        Me.UnitSelectionBox.Location = New System.Drawing.Point(45, 466)
         Me.UnitSelectionBox.Margin = New System.Windows.Forms.Padding(4)
         Me.UnitSelectionBox.Name = "UnitSelectionBox"
-        Me.UnitSelectionBox.Size = New System.Drawing.Size(235, 50)
+        Me.UnitSelectionBox.Size = New System.Drawing.Size(256, 57)
         Me.UnitSelectionBox.TabIndex = 3
         '
         'Label1
@@ -104,10 +107,10 @@ Partial Class MultiUnit
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(13, 220)
+        Me.Label1.Location = New System.Drawing.Point(14, 229)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(644, 35)
+        Me.Label1.Size = New System.Drawing.Size(735, 39)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Select the category of conversion you want to perform:"
         '
@@ -116,10 +119,10 @@ Partial Class MultiUnit
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(83, 382)
+        Me.Label2.Location = New System.Drawing.Point(91, 398)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(509, 35)
+        Me.Label2.Size = New System.Drawing.Size(581, 39)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Select the conversion you want to perform:"
         '
@@ -127,11 +130,11 @@ Partial Class MultiUnit
         '
         Me.ResultBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ResultBox.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.ResultBox.Location = New System.Drawing.Point(41, 787)
+        Me.ResultBox.Location = New System.Drawing.Point(45, 820)
         Me.ResultBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultBox.Name = "ResultBox"
         Me.ResultBox.ReadOnly = True
-        Me.ResultBox.Size = New System.Drawing.Size(616, 50)
+        Me.ResultBox.Size = New System.Drawing.Size(672, 56)
         Me.ResultBox.TabIndex = 6
         '
         'Label3
@@ -139,10 +142,10 @@ Partial Class MultiUnit
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(301, 746)
+        Me.Label3.Location = New System.Drawing.Point(328, 777)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 35)
+        Me.Label3.Size = New System.Drawing.Size(106, 39)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Result:"
         '
@@ -150,10 +153,10 @@ Partial Class MultiUnit
         '
         Me.ConvertButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ConvertButton.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.ConvertButton.Location = New System.Drawing.Point(160, 677)
+        Me.ConvertButton.Location = New System.Drawing.Point(175, 705)
         Me.ConvertButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ConvertButton.Name = "ConvertButton"
-        Me.ConvertButton.Size = New System.Drawing.Size(378, 55)
+        Me.ConvertButton.Size = New System.Drawing.Size(412, 57)
         Me.ConvertButton.TabIndex = 8
         Me.ConvertButton.Text = "Convert"
         Me.ConvertButton.UseVisualStyleBackColor = True
@@ -164,10 +167,10 @@ Partial Class MultiUnit
         Me.Unit2SelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Unit2SelectionBox.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.Unit2SelectionBox.FormattingEnabled = True
-        Me.Unit2SelectionBox.Location = New System.Drawing.Point(423, 454)
+        Me.Unit2SelectionBox.Location = New System.Drawing.Point(461, 473)
         Me.Unit2SelectionBox.Margin = New System.Windows.Forms.Padding(4)
         Me.Unit2SelectionBox.Name = "Unit2SelectionBox"
-        Me.Unit2SelectionBox.Size = New System.Drawing.Size(235, 50)
+        Me.Unit2SelectionBox.Size = New System.Drawing.Size(256, 57)
         Me.Unit2SelectionBox.TabIndex = 9
         '
         'Label4
@@ -175,10 +178,10 @@ Partial Class MultiUnit
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(322, 464)
+        Me.Label4.Location = New System.Drawing.Point(351, 483)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 35)
+        Me.Label4.Size = New System.Drawing.Size(47, 39)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "To"
         '
@@ -187,9 +190,9 @@ Partial Class MultiUnit
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(6, 525)
+        Me.Label5.Location = New System.Drawing.Point(7, 547)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(657, 35)
+        Me.Label5.Size = New System.Drawing.Size(749, 39)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Enter the area (only required for conversions with CFM):"
         '
@@ -197,9 +200,9 @@ Partial Class MultiUnit
         '
         Me.AreaInputBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.AreaInputBox.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.AreaInputBox.Location = New System.Drawing.Point(90, 588)
+        Me.AreaInputBox.Location = New System.Drawing.Point(98, 612)
         Me.AreaInputBox.Name = "AreaInputBox"
-        Me.AreaInputBox.Size = New System.Drawing.Size(130, 50)
+        Me.AreaInputBox.Size = New System.Drawing.Size(141, 56)
         Me.AreaInputBox.TabIndex = 12
         '
         'AreaUnitSelector
@@ -208,18 +211,18 @@ Partial Class MultiUnit
         Me.AreaUnitSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.AreaUnitSelector.Font = New System.Drawing.Font("Calibri", 15.0!)
         Me.AreaUnitSelector.FormattingEnabled = True
-        Me.AreaUnitSelector.Location = New System.Drawing.Point(423, 588)
+        Me.AreaUnitSelector.Location = New System.Drawing.Point(461, 612)
         Me.AreaUnitSelector.Name = "AreaUnitSelector"
-        Me.AreaUnitSelector.Size = New System.Drawing.Size(266, 50)
+        Me.AreaUnitSelector.Size = New System.Drawing.Size(290, 57)
         Me.AreaUnitSelector.TabIndex = 13
         '
         'Area2InputBox
         '
         Me.Area2InputBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Area2InputBox.Font = New System.Drawing.Font("Calibri", 15.0!)
-        Me.Area2InputBox.Location = New System.Drawing.Point(280, 588)
+        Me.Area2InputBox.Location = New System.Drawing.Point(305, 612)
         Me.Area2InputBox.Name = "Area2InputBox"
-        Me.Area2InputBox.Size = New System.Drawing.Size(130, 50)
+        Me.Area2InputBox.Size = New System.Drawing.Size(141, 56)
         Me.Area2InputBox.TabIndex = 14
         '
         'Label6
@@ -227,9 +230,9 @@ Partial Class MultiUnit
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(225, 599)
+        Me.Label6.Location = New System.Drawing.Point(245, 624)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 35)
+        Me.Label6.Size = New System.Drawing.Size(54, 39)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "W:"
         '
@@ -238,9 +241,9 @@ Partial Class MultiUnit
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label7.Location = New System.Drawing.Point(38, 598)
+        Me.Label7.Location = New System.Drawing.Point(41, 623)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(35, 35)
+        Me.Label7.Size = New System.Drawing.Size(39, 39)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "L:"
         '
@@ -249,9 +252,9 @@ Partial Class MultiUnit
         Me.RefreshCurrencyDataButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RefreshCurrencyDataButton.AutoSize = True
         Me.RefreshCurrencyDataButton.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.RefreshCurrencyDataButton.Location = New System.Drawing.Point(193, 565)
+        Me.RefreshCurrencyDataButton.Location = New System.Drawing.Point(211, 589)
         Me.RefreshCurrencyDataButton.Name = "RefreshCurrencyDataButton"
-        Me.RefreshCurrencyDataButton.Size = New System.Drawing.Size(314, 58)
+        Me.RefreshCurrencyDataButton.Size = New System.Drawing.Size(343, 60)
         Me.RefreshCurrencyDataButton.TabIndex = 17
         Me.RefreshCurrencyDataButton.Text = "Refresh Currency Data"
         Me.RefreshCurrencyDataButton.UseVisualStyleBackColor = True
@@ -262,9 +265,9 @@ Partial Class MultiUnit
         Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.CheckBox1.Location = New System.Drawing.Point(103, 846)
+        Me.CheckBox1.Location = New System.Drawing.Point(112, 881)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(253, 39)
+        Me.CheckBox1.Size = New System.Drawing.Size(293, 43)
         Me.CheckBox1.TabIndex = 18
         Me.CheckBox1.Text = "Display exact value"
         Me.ToolTip1.SetToolTip(Me.CheckBox1, "Disables rounding the value to the maximum decimals found in the input(s).")
@@ -275,9 +278,9 @@ Partial Class MultiUnit
         Me.CheckBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.CheckBox2.Location = New System.Drawing.Point(103, 885)
+        Me.CheckBox2.Location = New System.Drawing.Point(112, 922)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(475, 39)
+        Me.CheckBox2.Size = New System.Drawing.Size(548, 43)
         Me.CheckBox2.TabIndex = 19
         Me.CheckBox2.Text = "Round using significant figures instead"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -289,19 +292,22 @@ Partial Class MultiUnit
         '
         Me.SciNoteBox.AutoSize = True
         Me.SciNoteBox.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.SciNoteBox.Location = New System.Drawing.Point(103, 920)
+        Me.SciNoteBox.Location = New System.Drawing.Point(112, 958)
         Me.SciNoteBox.Name = "SciNoteBox"
-        Me.SciNoteBox.Size = New System.Drawing.Size(295, 39)
+        Me.SciNoteBox.Size = New System.Drawing.Size(341, 43)
         Me.SciNoteBox.TabIndex = 20
         Me.SciNoteBox.Text = "Use scientific notation"
         Me.SciNoteBox.UseVisualStyleBackColor = True
         '
         'MainMenuBar
         '
-        Me.MainMenuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GravityMenu})
+        Me.MainMenuBar.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
+        Me.MainMenuBar.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.MainMenuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GravityMenu, Me.CurrencyToolStripMenuItem})
         Me.MainMenuBar.Location = New System.Drawing.Point(0, 0)
         Me.MainMenuBar.Name = "MainMenuBar"
-        Me.MainMenuBar.Size = New System.Drawing.Size(699, 38)
+        Me.MainMenuBar.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
+        Me.MainMenuBar.Size = New System.Drawing.Size(763, 40)
         Me.MainMenuBar.TabIndex = 21
         Me.MainMenuBar.Text = "MainMenuBar"
         '
@@ -309,20 +315,39 @@ Partial Class MultiUnit
         '
         Me.GravityMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfigureCustomGravityToolStripMenuItem})
         Me.GravityMenu.Name = "GravityMenu"
-        Me.GravityMenu.Size = New System.Drawing.Size(89, 34)
+        Me.GravityMenu.Size = New System.Drawing.Size(108, 36)
         Me.GravityMenu.Text = "Gravity"
         '
         'ConfigureCustomGravityToolStripMenuItem
         '
         Me.ConfigureCustomGravityToolStripMenuItem.Name = "ConfigureCustomGravityToolStripMenuItem"
-        Me.ConfigureCustomGravityToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
+        Me.ConfigureCustomGravityToolStripMenuItem.Size = New System.Drawing.Size(432, 44)
         Me.ConfigureCustomGravityToolStripMenuItem.Text = "Configure custom gravity..."
+        '
+        'CurrencyToolStripMenuItem
+        '
+        Me.CurrencyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadCurrencyDataFromFileToolStripMenuItem, Me.SaveCurrencyDataToFileToolStripMenuItem})
+        Me.CurrencyToolStripMenuItem.Name = "CurrencyToolStripMenuItem"
+        Me.CurrencyToolStripMenuItem.Size = New System.Drawing.Size(129, 36)
+        Me.CurrencyToolStripMenuItem.Text = "Currency"
+        '
+        'SaveCurrencyDataToFileToolStripMenuItem
+        '
+        Me.SaveCurrencyDataToFileToolStripMenuItem.Name = "SaveCurrencyDataToFileToolStripMenuItem"
+        Me.SaveCurrencyDataToFileToolStripMenuItem.Size = New System.Drawing.Size(462, 44)
+        Me.SaveCurrencyDataToFileToolStripMenuItem.Text = "Save currency data to file..."
+        '
+        'LoadCurrencyDataFromFileToolStripMenuItem
+        '
+        Me.LoadCurrencyDataFromFileToolStripMenuItem.Name = "LoadCurrencyDataFromFileToolStripMenuItem"
+        Me.LoadCurrencyDataFromFileToolStripMenuItem.Size = New System.Drawing.Size(462, 44)
+        Me.LoadCurrencyDataFromFileToolStripMenuItem.Text = "Load currency data from file..."
         '
         'MultiUnit
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(699, 1033)
+        Me.ClientSize = New System.Drawing.Size(763, 1076)
         Me.Controls.Add(Me.SciNoteBox)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
@@ -380,4 +405,7 @@ Partial Class MultiUnit
     Friend WithEvents MainMenuBar As System.Windows.Forms.MenuStrip
     Friend WithEvents GravityMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfigureCustomGravityToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CurrencyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveCurrencyDataToFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LoadCurrencyDataFromFileToolStripMenuItem As ToolStripMenuItem
 End Class
