@@ -7,6 +7,8 @@
     Dim EarthGravity As Double = 9.80665
     Dim CustomGravityVal As Nullable(Of Double)
 
+    Dim CategorySave As String = "Temperature"
+
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         If UnitCategorySelector.Items.Count > 0 Then
@@ -67,6 +69,7 @@
         Label6.Visible = False
         Label7.Visible = False
         RefreshCurrencyDataButton.Visible = False
+        Dim ShouldUpdateCatSave As Boolean = True
 
         ' Get UnitCategorySelector and set UnitSelectionBox accordingly
         Select Case UnitCategorySelector.SelectedItem.ToString()
@@ -237,7 +240,7 @@
                 Units.Clear()
                 UnitSelectionBox.Items.Clear()
                 Unit2SelectionBox.Items.Clear()
-                UpdateCRatios(Nothing, Nothing)
+                ShouldUpdateCatSave = UpdateCRatios(Nothing, Nothing)
 
                 ' Display error if the user doesn't select proper category
             Case Else
@@ -258,6 +261,12 @@
             CheckBox1.Enabled = True
             CheckBox2.Enabled = True
         End If
+
+        If ShouldUpdateCatSave Then
+            CategorySave = UnitCategorySelector.SelectedItem.ToString()
+        Else
+            UnitCategorySelector.SelectedItem = CategorySave
+        End If
     End Sub
 
     ' Define the ratios for each unit
@@ -270,7 +279,7 @@
     Private EnergyRatios As New Dictionary(Of String, Double)
     Private AngleRatios As New Dictionary(Of String, Double)
     Private CurrencyRatios As New Dictionary(Of String, Double)
-
+    Private CurrencyRatiosBackup As New Dictionary(Of String, Double)
     Private Sub LoadRatios()
         ' Length ratios
         LengthRatios.Add("Meters", 1) ' Base unit
@@ -517,7 +526,7 @@
         End If
     End Sub
 
-    Private Sub UpdateCRatios(sender As Object, e As EventArgs) Handles RefreshCurrencyDataButton.Click
+    Private Function UpdateCRatios(sender As Object, e As EventArgs) As Boolean Handles RefreshCurrencyDataButton.Click
         Dim progDlg As New ContinuousProgress()
         progDlg.Text = "Currency Data Downloader"
         progDlg.Label1.Text = "Downloading latest currency data..."
@@ -539,13 +548,18 @@
 
             UnitSelectionBox.SelectedItem = "CNY"
             Unit2SelectionBox.SelectedIndex = 1
+            CurrencyRatiosBackup = CurrencyRatios
         Catch ex As Exception
             MessageBox.Show("Failed to download currency data. Please check your internet connection and try again. Error: " & vbCrLf & ex.Message)
+            progDlg.Close()
+            progDlg.Dispose()
+            Return False
         End Try
 
         progDlg.Close()
         progDlg.Dispose()
-    End Sub
+        Return True
+    End Function
 
 
     ' Simulate ConvertButton click when user hits enter key with the Input box focused
