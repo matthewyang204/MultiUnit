@@ -25,8 +25,10 @@ Public Class DPIHelper
             ElseIf Environment.OSVersion.Version.Major = 6 AndAlso Environment.OSVersion.Version.Minor >= 3 Then
                 SetProcessDpiAwareness(2)
 
-            Else
+            ElseIf Environment.OSVersion.Version.Major >= 6
                 SetProcessDPIAware()
+            Else
+                Exit Sub
             End If
 
         Catch
