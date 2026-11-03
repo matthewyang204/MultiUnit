@@ -8,6 +8,7 @@
     Dim CustomGravityVal As Nullable(Of Double)
 
     Dim CategorySave As String = "Temperature"
+    Dim DownloadNewCurrencyData As Boolean = True
 
     Private Sub Load_Menus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -237,11 +238,13 @@
 
             Case "Currency"
                 RefreshCurrencyDataButton.Visible = True
-                Units.Clear()
-                UnitSelectionBox.Items.Clear()
-                Unit2SelectionBox.Items.Clear()
-                ShouldUpdateCatSave = UpdateCRatios(Nothing, Nothing)
-
+                If DownloadNewCurrencyData Then
+                    Units.Clear()
+                    UnitSelectionBox.Items.Clear()
+                    Unit2SelectionBox.Items.Clear()
+                    ShouldUpdateCatSave = UpdateCRatios(Nothing, Nothing)
+                End If
+                DownloadNewCurrencyData = True
                 ' Display error if the user doesn't select proper category
             Case Else
                 MessageBox.Show("Please select a valid category.")
