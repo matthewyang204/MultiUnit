@@ -47,7 +47,7 @@ Public Class CurrencyAPI
         Dim dialog As New SaveFileDialog()
 
         dialog.Title = "Save Currency Rates"
-        dialog.Filter = "JSON Files (*.json)|*.json"
+        dialog.Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*"
         dialog.DefaultExt = "json"
         dialog.FileName = "rates.json"
 
@@ -61,7 +61,7 @@ Public Class CurrencyAPI
     Public Shared Function LoadFromJSON() As String
         Dim dialog As New OpenFileDialog()
         dialog.Title = "Load Currency Rates"
-        dialog.Filter = "JSON Files (*.json)|*.json"
+        dialog.Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*"
         dialog.DefaultExt = "json"
         If dialog.ShowDialog() = DialogResult.OK Then
             Dim json As String = IO.File.ReadAllText(dialog.FileName)
