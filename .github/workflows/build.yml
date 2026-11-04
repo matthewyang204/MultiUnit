@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  # Build the MultiUnit project in Release / x86.
+  # Build the MultiUnit project in Release / AnyCPU.
   PROJECT_FILE_PATH: src/MultiUnit/MultiUnit.vbproj
   BUILD_CONFIGURATION: Release
-  BUILD_PLATFORM: x86
+  BUILD_PLATFORM: AnyCPU
 
 permissions:
   contents: read
