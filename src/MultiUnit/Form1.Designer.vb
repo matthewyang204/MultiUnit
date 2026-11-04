@@ -374,7 +374,7 @@ Partial Class MultiUnit
         Me.MainMenuStrip = Me.MainMenuBar
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MultiUnit"
-        Me.Text = "MultiUnit 2.2.3"
+        Me.Text = "MultiUnit 2.3.0"
         Me.MainMenuBar.ResumeLayout(False)
         Me.MainMenuBar.PerformLayout()
         Me.ResumeLayout(False)
