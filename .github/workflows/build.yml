@@ -58,7 +58,7 @@ jobs:
 
     - name: Exeosver the build
       run: |
-        .\exeosver.exe src\MultiUnit\bin\x86\Release\MultiUnit.exe
+        .\exeosver.exe src\MultiUnit\bin\Release\MultiUnit.exe
 
     - name: Build Inno Setup installer
       uses: Minionguyjpro/Inno-Setup-Action@v1.2.2
