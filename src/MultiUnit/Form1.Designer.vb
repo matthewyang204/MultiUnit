@@ -290,6 +290,7 @@ Partial Class MultiUnit
         '
         'SciNoteBox
         '
+        Me.SciNoteBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.SciNoteBox.AutoSize = True
         Me.SciNoteBox.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.SciNoteBox.Location = New System.Drawing.Point(112, 958)
