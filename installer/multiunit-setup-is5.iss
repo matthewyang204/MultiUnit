@@ -25,6 +25,7 @@ OutputBaseFilename=multiunit-setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+LicenseFile=..\LICENSE
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
