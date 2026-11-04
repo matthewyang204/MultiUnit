@@ -257,7 +257,7 @@
             Unit2SelectionBox.SelectedIndex = 1
         End If
 
-        If UnitCategorySelector.SelectedItem.ToString() Is "Temperature" Or UnitCategorySelector.SelectedItem.ToString() Is "Air Flow" Then
+        If UnitCategorySelector.SelectedItem.ToString() = "Temperature" Or UnitCategorySelector.SelectedItem.ToString() = "Air Flow" Then
             CheckBox1.Enabled = False
             CheckBox2.Enabled = False
         Else
