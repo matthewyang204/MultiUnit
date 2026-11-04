@@ -1,7 +1,7 @@
 # MultiUnit
  **This program has been ported to Qt and C++ as well for more modern platforms, such as mobile phones. This version is more mature and highly recommended for Windows users seeking a lightweight GUI, written in VB.NET. Check out the new version [here](https://github.com/matthewyang204/QMultiUnit).**
 
-<img alt="image" src="https://raw.githubusercontent.com/matthewyang204/MultiUnit/main/assets/screenshot-4.png" />
+<img alt="image" src="https://raw.githubusercontent.com/matthewyang204/MultiUnit/main/assets/screenshot-4.png" width="400"/>
 
  A simple unit converter written in Visual Basic. This app has a fairly self-explanatory GUI. Additionally, this app has a portable version that doesn't need to be installed alongside the ordinary installable version.
 
