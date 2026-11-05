@@ -24,9 +24,6 @@
             Unit2SelectionBox.SelectedIndex = 1
         End If
 
-        ' Load the ratios
-        LoadRatios()
-
         ' Make some components invisible
         ' CFM/LFM-specific stuff
         Label5.Visible = False
@@ -283,7 +280,7 @@
     Private AngleRatios As New Dictionary(Of String, Double)
     Private CurrencyRatios As New Dictionary(Of String, Double)
     Private CurrencyRatiosBackup As New Dictionary(Of String, Double)
-    Private Sub LoadRatios()
+    Public Sub LoadRatios()
         ' Length ratios
         LengthRatios.Add("Meters", 1) ' Base unit
         LengthRatios.Add("Yards", 0.9144)
