@@ -183,14 +183,14 @@
                 Units.Add("Pound-force")
                 Units.Add("Gram-force")
                 Units.Add("Ton-force")
-                Units.Add("Earth Grams")
-                Units.Add("Earth Ounces")
-                Units.Add("Earth Kilograms")
-                Units.Add("Earth Pounds")
-                Units.Add("Earth Metric Tonnes")
-                Units.Add("Earth Short Tonnes")
-                Units.Add("Earth Long Tonnes")
-                Units.Add("Earth Stones")
+                Units.Add("Grams")
+                Units.Add("Ounces")
+                Units.Add("Kilograms")
+                Units.Add("Pounds")
+                Units.Add("Metric Tonnes")
+                Units.Add("Short Tonnes")
+                Units.Add("Long Tonnes")
+                Units.Add("Stones")
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -413,9 +413,9 @@
 
         For Each kvp As KeyValuePair(Of String, Double) In MassRatios
             Try
-                WeightRatios.Add("Earth " & kvp.Key, kvp.Value * GravityVal)
+                WeightRatios.Add(kvp.Key, kvp.Value * GravityVal)
             Catch ex As ArgumentException
-                WeightRatios("Earth " & kvp.Key) = kvp.Value * GravityVal
+                WeightRatios(kvp.Key) = kvp.Value * GravityVal
             End Try
         Next
     End Sub
