@@ -218,19 +218,13 @@
         LengthRatios.Add("Parsecs", 3.0857E+16)
 
         ' Area ratios
-        AreaRatios.Add("Square Meters", 1) ' Base unit
-        AreaRatios.Add("Square Yards", Math.Pow(LengthRatios("Yards"), 2))
-        AreaRatios.Add("Square Centimeters", Math.Pow(LengthRatios("Centimeters"), 2))
-        AreaRatios.Add("Square Millimeters", Math.Pow(LengthRatios("Millimeters"), 2))
-        AreaRatios.Add("Square Inches", Math.Pow(LengthRatios("Inches"), 2))
-        AreaRatios.Add("Square Kilometers", Math.Pow(LengthRatios("Kilometers"), 2))
-        AreaRatios.Add("Square Miles", Math.Pow(LengthRatios("Miles"), 2))
-        AreaRatios.Add("Square Feet", Math.Pow(LengthRatios("Feet"), 2))
-        AreaRatios.Add("Square Decimeters", Math.Pow(LengthRatios("Decimeters"), 2))
+        ' Base unit in this other dictionary already
+        For Each kvp As KeyValuePair(Of String, Double) In LengthRatios
+            AreaRatios.Add("Square " & kvp.Key, Math.Pow(kvp.Value, 2))
+        Next
         AreaRatios.Add("Hectares", 10000.0)
         AreaRatios.Add("Acres", 4046.8564224)
         AreaRatios.Add("Ares", 100.0)
-        AreaRatios.Add("Square Nautical Miles", Math.Pow(LengthRatios("Nautical Miles"), 2))
         AreaRatios.Add("Barns", 1.0E-28)
 
         ' Volume Ratios
@@ -247,15 +241,10 @@
         VolumeRatios.Add("Fluid Ounces", 0.0000295735295625)
         VolumeRatios.Add("US Gill", 0.00011829411825)
         VolumeRatios.Add("UK Gill", 0.0001420653125)
-        VolumeRatios.Add("Cubic Meters", 1) ' Base unit
-        VolumeRatios.Add("Cubic Yards", Math.Pow(LengthRatios("Yards"), 3))
-        VolumeRatios.Add("Cubic Centimeters", Math.Pow(LengthRatios("Centimeters"), 3))
-        VolumeRatios.Add("Cubic Millimeters", Math.Pow(LengthRatios("Millimeters"), 3))
-        VolumeRatios.Add("Cubic Inches", Math.Pow(LengthRatios("Inches"), 3))
-        VolumeRatios.Add("Cubic Kilometers", Math.Pow(LengthRatios("Kilometers"), 3))
-        VolumeRatios.Add("Cubic Miles", Math.Pow(LengthRatios("Miles"), 3))
-        VolumeRatios.Add("Cubic Feet", Math.Pow(LengthRatios("Feet"), 3))
-        VolumeRatios.Add("Cubic Decimeters", Math.Pow(LengthRatios("Decimeters"), 3))
+        ' Base unit in this other dictionary already
+        For Each kvp As KeyValuePair(Of String, Double) In LengthRatios
+            VolumeRatios.Add("Cubic " & kvp.Key, Math.Pow(kvp.Value, 3))
+        Next
 
         ' Energy ratios
         EnergyRatios.Add("Joules", 1) ' Base unit
