@@ -79,131 +79,51 @@
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Speed"
-                Units.Add("MPH")
-                Units.Add("km/h")
-                Units.Add("ft/s")
-                Units.Add("m/s")
-                Units.Add("Knots")
-                Units.Add("Mach")
-                Units.Add("cm/s")
-                Units.Add("mm/s")
+                For Each kvp As KeyValuePair(Of String, Double) In SpeedRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Length"
-                Units.Add("Meters")
-                Units.Add("Yards")
-                Units.Add("Centimeters")
-                Units.Add("Millimeters")
-                Units.Add("Micrometers")
-                Units.Add("Nanometers")
-                Units.Add("Inches")
-                Units.Add("Kilometers")
-                Units.Add("Miles")
-                Units.Add("Feet")
-                Units.Add("Decimeters")
-                Units.Add("Microns")
-                Units.Add("Nautical Miles")
-                Units.Add("Astronomical Units")
-                Units.Add("Light Years")
-                Units.Add("Parsecs")
+                For Each kvp As KeyValuePair(Of String, Double) In LengthRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Area"
-                Units.Add("Square Meters")
-                Units.Add("Square Yards")
-                Units.Add("Square Centimeters")
-                Units.Add("Square Millimeters")
-                Units.Add("Square Inches")
-                Units.Add("Square Kilometers")
-                Units.Add("Square Miles")
-                Units.Add("Square Feet")
-                Units.Add("Square Decimeters")
-                Units.Add("Hectares")
-                Units.Add("Acres")
-                Units.Add("Ares")
-                Units.Add("Square Nautical Miles")
-                Units.Add("Barns")
+                For Each kvp As KeyValuePair(Of String, Double) In AreaRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Volume"
-                Units.Add("Milliliters")
-                Units.Add("Tablespoons")
-                Units.Add("Teaspoons")
-                Units.Add("Barrels")
-                Units.Add("Imperial Gallons")
-                Units.Add("Gallons")
-                Units.Add("Liters")
-                Units.Add("Quarts")
-                Units.Add("Pints")
-                Units.Add("Cups")
-                Units.Add("Fluid Ounces")
-                Units.Add("US Gill")
-                Units.Add("UK Gill")
-                Units.Add("Cubic Meters")
-                Units.Add("Cubic Yards")
-                Units.Add("Cubic Centimeters")
-                Units.Add("Cubic Millimeters")
-                Units.Add("Cubic Inches")
-                Units.Add("Cubic Kilometers")
-                Units.Add("Cubic Miles")
-                Units.Add("Cubic Feet")
-                Units.Add("Cubic Decimeters")
+                For Each kvp As KeyValuePair(Of String, Double) In VolumeRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Energy"
-                Units.Add("Joules")
-                Units.Add("Kilojoules")
-                Units.Add("Megajoules")
-                Units.Add("Watt-hours")
-                Units.Add("Kilowatt-hours")
-                Units.Add("Electronvolts")
-                Units.Add("Calories")
-                Units.Add("Kilocalories")
-                Units.Add("BTUs (British Thermal Units)")
-                Units.Add("Foot-Pounds")
-                Units.Add("Ergs")
-                Units.Add("Therms")
-                Units.Add("Ton TNT")
-                Units.Add("Horsepower-hours")
+                For Each kvp As KeyValuePair(Of String, Double) In EnergyRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Weight"
-                Units.Add("Dyne")
-                Units.Add("Newton")
-                Units.Add("Kilopond")
-                Units.Add("Kilonewton")
-                Units.Add("Pound-force")
-                Units.Add("Gram-force")
-                Units.Add("Ton-force")
-                Units.Add("Grams")
-                Units.Add("Ounces")
-                Units.Add("Kilograms")
-                Units.Add("Pounds")
-                Units.Add("Metric Tonnes")
-                Units.Add("Short Tonnes")
-                Units.Add("Long Tonnes")
-                Units.Add("Stones")
+                For Each kvp As KeyValuePair(Of String, Double) In WeightRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
             Case "Mass"
-                Units.Add("Grams")
-                Units.Add("Milligrams")
-                Units.Add("Micrograms")
-                Units.Add("Carats")
-                Units.Add("Atomic Mass Units")
-                Units.Add("Ounces")
-                Units.Add("Kilograms")
-                Units.Add("Pounds")
-                Units.Add("Metric Tonnes")
-                Units.Add("Short Tonnes")
-                Units.Add("Long Tonnes")
-                Units.Add("Stones")
+                For Each kvp As KeyValuePair(Of String, Double) In MassRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
@@ -225,11 +145,9 @@
                 Label7.Visible = True
 
             Case "Angle"
-                Units.Add("Degrees")
-                Units.Add("Radians")
-                Units.Add("Gradians")
-                Units.Add("Arcminutes")
-                Units.Add("Arcseconds")
+                For Each kvp As KeyValuePair(Of String, Double) In AngleRatios
+                    Units.Add(kvp.Key)
+                Next
                 UnitSelectionBox.Items.AddRange(Units.ToArray())
                 Unit2SelectionBox.Items.AddRange(Units.ToArray())
 
