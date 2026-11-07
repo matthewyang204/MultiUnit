@@ -79,7 +79,11 @@ Friend NotInheritable Class ResponsiveFormScaler
 
         ' Return New Font(value.FontFamily, Math.Max(1.0F, value.Size * factor), value.Style,
         '                 value.Unit, value.GdiCharSet, value.GdiVerticalFont)
-        Return New Font("Calibri", Math.Max(1.0F, 30.0F * factor), FontStyle.Regular, GraphicsUnit.Point)
+        If OperatingSystem.IsMacOS() Then
+            Return New Font("Helvetica", Math.Max(1.0F, 30.0F * factor), FontStyle.Regular, GraphicsUnit.Point)
+        Else
+            Return New Font("Calibri", Math.Max(1.0F, 20.0F * factor), FontStyle.Regular, GraphicsUnit.Point)
+        End If
     End Function
 
     Private NotInheritable Class ControlLayout
