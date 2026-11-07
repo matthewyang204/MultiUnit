@@ -99,7 +99,7 @@ Friend NotInheritable Class ResponsiveFormScaler
             _font = control.Font
             _padding = control.Padding
             _margin = control.Margin
-            _control.Anchor = AnchorStyles.Top Or AnchorStyles.Left
+            _control.Anchor = AnchorStyles.Top
         End Sub
 
         Public Sub Apply(factor As Single)
