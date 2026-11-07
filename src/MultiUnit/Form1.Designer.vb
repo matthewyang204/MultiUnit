@@ -302,7 +302,7 @@ Partial Class MultiUnit
         '
         'MainMenuBar
         '
-        Me.MainMenuBar.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
+        ' Me.MainMenuBar.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MainMenuBar.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainMenuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrencyToolStripMenuItem, Me.GravityMenu})
         Me.MainMenuBar.Location = New System.Drawing.Point(0, 0)
