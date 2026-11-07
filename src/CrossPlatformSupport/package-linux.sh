@@ -42,7 +42,7 @@ PIXBUF_BINDIR="$(pkg-config --variable=bindir gdk-pixbuf-2.0)"
 SEEN="$STAGE/native-files.txt"
 QUEUE="$STAGE/native-queue.txt"
 : > "$SEEN"
-printf '%s\n' "$GTK_LIBDIR/libgtk-3.so.0" "$PIXBUF_BINDIR/gdk-pixbuf-query-loaders" >> "$QUEUE"
+printf '%s\n' "$GTK_LIBDIR/libgtk-3.so.0" "$PIXBUF_LIBDIR/gdk-pixbuf-query-loaders" >> "$QUEUE"
 if [ -x "$GTK_PREFIX/bin/gtk-query-immodules-3.0" ]; then
     printf '%s\n' "$GTK_PREFIX/bin/gtk-query-immodules-3.0" >> "$QUEUE"
 fi
@@ -94,7 +94,7 @@ fi
 chmod -R u+w "$GTKROOT/lib"
 if [ -d /etc/gtk-3.0 ]; then cp -R /etc/gtk-3.0 "$GTKROOT/etc/"; fi
 mkdir -p "$GTKROOT/bin" "$GTKROOT/etc/gtk-3.0"
-cp "$PIXBUF_BINDIR/gdk-pixbuf-query-loaders" "$GTKROOT/bin/"
+cp "$PIXBUF_LIBDIR/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders" "$GTKROOT/bin/"
 if [ -x "$GTK_PREFIX/bin/gtk-query-immodules-3.0" ]; then
     cp "$GTK_PREFIX/bin/gtk-query-immodules-3.0" "$GTKROOT/bin/"
 fi
