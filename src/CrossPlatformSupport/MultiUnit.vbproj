@@ -89,6 +89,7 @@
     </Compile>
     <Compile Include="..\MultiUnit\SigFigs.vb" />
     <Compile Include="CrossPlatformProgram.vb" />
+    <Compile Include="ResponsiveFormScaler.vb" />
     <Compile Include="JavaScriptSerializer.vb" />
   </ItemGroup>
   <ItemGroup>
