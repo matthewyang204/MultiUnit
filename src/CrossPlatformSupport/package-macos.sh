@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
+if command -v port >/dev/null 2>&1; then
+    PATH=$PWD/shims/macports:$PATH
+fi
+
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 OUTPUT="${1:-$ROOT/dist/macos/MultiUnit.app}"
 if [ -e "$OUTPUT" ]; then
