@@ -25,7 +25,7 @@ command -v brew >/dev/null || { echo "Homebrew is required to resolve and valida
 # Homebrew's rolling bottles can target a newer macOS release than this app's
 # deployment target. Reject those libraries rather than emitting a bundle that
 # appears complete but fails on older clean installations at dyld load time.
-APP_MIN_MACOS="${MACOSX_DEPLOYMENT_TARGET:-11.0}"
+APP_MIN_MACOS="${MACOSX_DEPLOYMENT_TARGET:-$(sw_vers -productVersion)}"
 version_at_least() {
     awk -v actual="$1" -v minimum="$2" 'BEGIN {
         split(actual, a, "."); split(minimum, b, ".");
